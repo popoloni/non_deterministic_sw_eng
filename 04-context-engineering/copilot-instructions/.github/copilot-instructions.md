@@ -1,10 +1,8 @@
----
-tool: copilot
-tool_version: "1.0"
-last_verified: 2025-12-16
-book_chapter: 10
-book_section: "Static Context Engineering"
----
+<!-- 
+  Book Reference: Chapter 10, Section 3 - Static Context Engineering
+  Tool: GitHub Copilot
+  Last Verified: 2025-12-16
+-->
 
 # GitHub Copilot Instructions
 
