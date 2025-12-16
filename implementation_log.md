@@ -41,21 +41,50 @@
 
 ---
 
-## Task 1.2: Extract Context Engineering Examples
+## Task 1.2: Extract Context Engineering Examples ✅
 **Date:** 2025-12-16  
-**Status:** In Progress
+**Status:** Complete
 
 ### Source Files
-- `chapters_verbose/chapter10/03_static_context.tex`
-- `chapters_verbose/chapter10/04_dynamic_context.tex`
+- `chapters_verbose/chapter10/03_static_context.tex` (424 lines)
+- `chapters_verbose/chapter10/04_dynamic_context.tex` (312 lines)
 
-### Target Output
-- `04-context-engineering/agents-md/` — AGENTS.md templates
-- `04-context-engineering/cursor-rules/` — Cursor .mdc files
-- `04-context-engineering/copilot-instructions/` — GitHub Copilot instructions
-- `04-context-engineering/claude/` — CLAUDE.md template
+### Files Created
 
-### Actions Performed
-(To be updated as task progresses)
+#### AGENTS.md Templates (`04-context-engineering/agents-md/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `minimal.md` | ~40 | Book's 40-line starter template |
+| `full-stack-project.md` | ~150 | Expanded full-stack example |
+| `monorepo.md` | ~200 | Enterprise monorepo with multiple services |
+
+#### Cursor Rules (`04-context-engineering/cursor-rules/`)
+| File | Description |
+|------|-------------|
+| `api-validation.mdc` | Zod validation, error responses |
+| `testing.mdc` | Table-driven tests, mocking patterns |
+| `security.mdc` | Auth, input validation, secrets |
+
+#### GitHub Copilot (`04-context-engineering/copilot-instructions/.github/`)
+| File | Scope |
+|------|-------|
+| `copilot-instructions.md` | Global project instructions |
+| `instructions/api.instructions.md` | `src/api/**/*.ts` |
+| `instructions/tests.instructions.md` | `**/*.test.ts` |
+
+#### Claude Code (`04-context-engineering/claude/`)
+| File | Description |
+|------|-------------|
+| `CLAUDE.md` | Python/FastAPI project example |
+
+### Book Alignment Verified
+- ✅ 40-line minimal template matches book exactly
+- ✅ MDC format matches Cursor documentation
+- ✅ Copilot frontmatter uses `applyTo` as shown in book
+- ✅ CLAUDE.md follows Anthropic's recommended structure
+- ✅ All files include YAML frontmatter with version metadata
+
+### Git Commit
+`c6e4e71` - "Add context engineering examples (Task 1.2)"
 
 ---
