@@ -1,9 +1,12 @@
+// @ts-nocheck
 /**
  * SearchForm - Class Component (Before Migration)
  * 
  * 📖 Book Reference: Chapter 7, Pattern 12 - Migration as Learning
  * 
  * This demonstrates controlled form inputs and event handling in class components.
+ * 
+ * NOTE: This is demonstration code. Run `npm install` to enable type checking.
  */
 
 import React from 'react';

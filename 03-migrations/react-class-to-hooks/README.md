@@ -47,6 +47,9 @@ Apply prompt to ONE more file and verify:
 
 ## Files
 
+> **Note:** These files use `// @ts-nocheck` since they're demonstration code without `node_modules` installed. 
+> To enable full type checking, run `npm install` in this folder.
+
 ### Before (Class Components)
 
 | File | Description |
