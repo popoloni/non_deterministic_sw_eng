@@ -1,0 +1,323 @@
+# Enterprise Workflow Configuration
+# Defines agent handoffs and validation rules for the two-phase development workflow
+
+schema_version: "1.0"
+workflow_name: "Enterprise AI-Assisted Development"
+book_reference: "Chapter 4 & Appendix C"
+
+# =============================================================================
+# PHASE 1: PLANNING
+# =============================================================================
+planning_phase:
+  description: "Transform business needs into structured documentation before code"
+  
+  agents:
+    - id: requirement-analyst
+      name: "Requirement Analyst"
+      file: "../planning-phase/requirements-analyst.md"
+      player: "Functional Analyst or Developer"
+      input: "Raw requirements (issues, epics, emails)"
+      output:
+        artifact: "docs/planning/business-context.md"
+        required_sections:
+          - problem_statement
+          - user_stories
+          - acceptance_criteria
+          - out_of_scope
+          - dependencies
+      
+    - id: architect
+      name: "Software Architect"
+      file: "../planning-phase/architect-agent.md"
+      player: "Developer"
+      input: "docs/planning/business-context.md"
+      output:
+        artifact: "docs/planning/solution-design.md"
+        required_sections:
+          - component_diagram
+          - data_model
+          - data_flow
+          - security_considerations
+          - technical_constraints
+          - integration_points
+          
+    - id: api-champion
+      name: "API Champion"
+      file: "../planning-phase/api-champion.md"
+      player: "Developer"
+      input: "docs/planning/solution-design.md"
+      output:
+        artifact: "docs/planning/api-definitions.yaml"
+        format: "OpenAPI 3.0"
+        validation: "npx @redocly/cli lint"
+        
+    - id: messaging-champion
+      name: "Messaging Champion"
+      file: "../planning-phase/messaging-champion.md"
+      player: "Developer"
+      input:
+        - "docs/planning/solution-design.md"
+        - "docs/planning/api-definitions.yaml"
+      output:
+        artifact: "docs/planning/messaging-definitions.yaml"
+        format: "AsyncAPI 3.0"
+        validation: "npx @asyncapi/cli validate"
+
+  flow:
+    sequence:
+      - requirement-analyst
+      - architect
+      - api-champion
+      - messaging-champion
+    
+    gate:
+      name: "Planning Review"
+      type: "merge_request"
+      required_approvals: 1
+      artifacts_required:
+        - "docs/planning/business-context.md"
+        - "docs/planning/solution-design.md"
+        - "docs/planning/api-definitions.yaml"
+        - "docs/planning/messaging-definitions.yaml"
+
+# =============================================================================
+# PHASE 2: EXECUTION
+# =============================================================================
+execution_phase:
+  description: "Implement specifications through parallel test and code tracks"
+  
+  agents:
+    - id: test-explorer
+      name: "Test Explorer"
+      file: "../execution-phase/test-explorer.md"
+      player: "QA Engineer"
+      input:
+        - "docs/planning/business-context.md"
+        - "docs/planning/api-definitions.yaml"
+        - "docs/planning/messaging-definitions.yaml"
+      output:
+        artifact: "docs/execution/test-cases.md"
+        required_sections:
+          - summary
+          - traceability_matrix
+          - test_cases
+          
+    - id: test-engineer
+      name: "Test Engineer"
+      file: "../execution-phase/test-engineer.md"
+      player: "QA Engineer"
+      input: "docs/execution/test-cases.md"
+      output:
+        locations:
+          - "tests/unit/"
+          - "tests/integration/"
+          - "tests/e2e/"
+          - "tests/contract/"
+        validation: "npm test"
+        
+    - id: software-engineer
+      name: "Software Engineer"
+      file: "../execution-phase/software-engineer.md"
+      player: "Developer"
+      input:
+        - "docs/planning/api-definitions.yaml"
+        - "docs/planning/messaging-definitions.yaml"
+        - "docs/execution/test-cases.md"
+      output:
+        locations:
+          - "src/"
+        validation:
+          - "npm run lint"
+          - "npm test"
+          - "npm run build"
+
+  flow:
+    # Test Explorer runs first, then Test Engineer and Software Engineer in parallel
+    sequence:
+      - test-explorer
+      - parallel:
+          - test-engineer
+          - software-engineer
+    
+    gate:
+      name: "Execution Review"
+      type: "merge_request"
+      required_approvals: 1
+      checks_required:
+        - "npm test (exit 0)"
+        - "npm run lint (exit 0)"
+        - "npm run build (exit 0)"
+
+# =============================================================================
+# HANDOFF CONFIGURATION
+# =============================================================================
+handoffs:
+  # Planning Phase Handoffs
+  - from: requirement-analyst
+    to: architect
+    label: "Hand off to Architect"
+    prompt: |
+      Review the business context and create a technical design.
+      Artifact: docs/planning/business-context.md
+    validation:
+      - file_exists: "docs/planning/business-context.md"
+      - sections_present:
+          - "Problem Statement"
+          - "User Stories"
+          - "Acceptance Criteria"
+    send: false
+    
+  - from: architect
+    to: api-champion
+    label: "Hand off to API Champion"
+    prompt: |
+      Define API contracts based on the solution design.
+      Artifact: docs/planning/solution-design.md
+    validation:
+      - file_exists: "docs/planning/solution-design.md"
+      - sections_present:
+          - "Component Diagram"
+          - "Data Model"
+    send: false
+    
+  - from: api-champion
+    to: messaging-champion
+    label: "Hand off to Messaging Champion"
+    prompt: |
+      Define async messaging contracts. API definitions complete.
+      Artifact: docs/planning/api-definitions.yaml
+    validation:
+      - file_exists: "docs/planning/api-definitions.yaml"
+      - command_passes: "npx @redocly/cli lint docs/planning/api-definitions.yaml"
+    send: false
+    
+  - from: messaging-champion
+    to: test-explorer
+    label: "Start Execution Phase"
+    prompt: |
+      Planning Phase complete. Generate test strategy and cases.
+      All planning artifacts are ready for review.
+    validation:
+      - file_exists: "docs/planning/messaging-definitions.yaml"
+      - command_passes: "npx @asyncapi/cli validate docs/planning/messaging-definitions.yaml"
+    send: false
+    
+  # Execution Phase Handoffs
+  - from: test-explorer
+    to: test-engineer
+    label: "Hand off to Test Engineer"
+    prompt: |
+      Implement the test cases defined in test-cases.md.
+      Tests should fail initially (TDD approach).
+    validation:
+      - file_exists: "docs/execution/test-cases.md"
+    send: false
+    
+  - from: test-explorer
+    to: software-engineer
+    label: "Hand off to Software Engineer"
+    prompt: |
+      Implement features to pass the test cases.
+      Review test-cases.md for requirements.
+    validation:
+      - file_exists: "docs/execution/test-cases.md"
+    send: false
+
+# =============================================================================
+# VALIDATION SCHEMA
+# =============================================================================
+handoff_payload_schema:
+  type: object
+  required:
+    - schema_version
+    - trace_id
+    - from_agent
+    - to_agent
+    - artifacts
+    - validation_status
+  properties:
+    schema_version:
+      type: string
+      enum: ["1.0"]
+    trace_id:
+      type: string
+      description: "Unique identifier linking to original issue/epic"
+    timestamp:
+      type: string
+      format: date-time
+    from_agent:
+      type: string
+      enum:
+        - requirement-analyst
+        - architect
+        - api-champion
+        - messaging-champion
+        - test-explorer
+        - test-engineer
+        - software-engineer
+    to_agent:
+      type: string
+      enum:
+        - architect
+        - api-champion
+        - messaging-champion
+        - test-explorer
+        - test-engineer
+        - software-engineer
+        - human-review
+    artifacts:
+      type: array
+      items:
+        type: object
+        required:
+          - path
+          - checksum
+        properties:
+          path:
+            type: string
+          checksum:
+            type: string
+          validation_passed:
+            type: boolean
+    validation_status:
+      type: string
+      enum:
+        - passed
+        - failed
+        - skipped
+    notes:
+      type: string
+
+# =============================================================================
+# ESCALATION RULES
+# =============================================================================
+escalation:
+  # 70% Threshold from Chapter 5
+  seventy_percent_threshold:
+    trigger: "3 failed attempts at same task"
+    action: "STOP and escalate to human"
+    output_format: |
+      ! 70% THRESHOLD REACHED !
+      
+      Task: {task_description}
+      Attempts: 3
+      Last Error: {error_message}
+      
+      Analysis:
+      - What worked: {progress}
+      - What's blocking: {obstacle}
+      
+      Recommendation: Human takeover for {subtask}
+      
+  # Self-Assessment Protocol
+  self_assessment:
+    trigger: "3 failed test implementations"
+    action: "STOP and request human review"
+    output_format: |
+      ! TEST IMPLEMENTATION BLOCKED !
+      
+      Test Case: TC-XXX
+      Attempts: 3
+      Issue: {specific_problem}
+      
+      Recommendation: Human review of test case TC-XXX
