@@ -513,53 +513,177 @@ Each checklist includes:
 **Status:** Complete - Awaiting Validation
 
 ### Approach
-Scanned all book source files systematically:
+Comprehensive scan of all book source files in three phases:
+
+**Phase 1: Chapter 7 & Appendices Scan**
 - `chapters_verbose/chapter07/` — All parts including antipatterns
 - `appendices/appendix_a.tex` — Quick reference guides
 - `appendices/appendix_b1.tex` — Expert insights (Kent Beck, Farhan Thawar, etc.)
-- Compared against current repository contents
 
-### Missing Examples Identified
+**Phase 2: Chapter 10 Deep Scan**
+- `chapters_verbose/chapter10/03_static_context.tex` — Static context engineering
+- `chapters_verbose/chapter10/04_dynamic_context.tex` — Dynamic context & MCP
+- `chapters_verbose/chapter10/05_context_flow.tex` — Context flow control
+- `chapters_verbose/chapter10/06_multi_agent.tex` — Multi-agent workflows
+- `chapters_verbose/chapter10/07_dev_practices.tex` — TDD + AI practices
+- `chapters_verbose/chapter10/10_measurement.tex` — Measurement scripts
+- `chapters_verbose/chapter10/11_pitfalls.tex` — 5 organizational pitfalls
 
-#### High Priority
-1. **Antipatterns Detection/Prevention** (`/11-antipatterns/`)
-   - 8 antipatterns documented in book with no corresponding examples
-   - Includes: Blind Acceptance, 70% Trap, Vibe Production, Context-Free, Batch Explosion, Security Afterthought, Learning Loop Destruction, Measurement Theater
-   - Source: `chapter07_antipatterns.tex`
+**Phase 3: Appendix C Deep Scan**
+- `appendices/appendix_c_v4.tex` (2199 lines) — Complete agent implementations, checklists, exercise solutions
 
-2. **TDD + AI Testing Examples** (`/09-testing/examples/`)
-   - `parseUserInput` test suite from book not implemented
-   - Kent Beck's "immutable tests" pattern not demonstrated
-   - Source: `chapter07_part1.tex`, `appendix_b1.tex`
+### KEY FINDING: 13 Total Antipatterns (Not 8!)
 
-#### Medium Priority
-3. **Trio Programming Templates** (`/06-custom-agents/trio-programming/`)
-   - Session planning, senior guide, junior checklist
-   - Source: `chapter07_part3.tex` (Pattern 13)
+The book documents **two distinct sets** of failure modes:
 
-4. **Cost Management Examples** (`/10-reference/cost-management/`)
-   - ROI calculation, value tracking dashboard
-   - Source: `chapter07_part4.tex`, Farhan Thawar quotes
+| Category | Source | Count | Description |
+|----------|--------|-------|-------------|
+| **Chapter 7 Antipatterns** | `chapter07_antipatterns.tex` | 8 | "Timeless" AI-assisted development failures |
+| **Chapter 10 Pitfalls** | `chapter10/11_pitfalls.tex` | 5 | "2025-specific" organizational/tool pitfalls |
 
-5. **Structured Enablement Materials** (`/10-reference/enablement/`)
-   - Training agendas, certification checklist
-   - Source: `chapter07_part4.tex` (Pattern 15)
+**Chapter 7 Antipatterns:**
+1. Blind Acceptance
+2. The 70% Trap
+3. Vibe Production Deployment
+4. Context-Free Generation
+5. Batch Size Explosion
+6. Security as Afterthought
+7. Learning Loop Destruction
+8. Measurement Theater
 
-#### Low Priority (Nice to Have)
-6. Quick reference printable cards
-7. Expert quotes collection
+**Chapter 10 Pitfalls (All HOLD status):**
+1. AI-Accelerated Shadow IT
+2. Text-to-SQL
+3. Capacity-Driven Development
+4. Standalone Data Engineering Teams
+5. Unoptimized MCP Token Usage
 
-### Output
-Created `TASK_5_1_SCAN_RESULTS.md` with:
-- Detailed inventory of missing examples
-- Proposed file structures
-- Priority recommendations
-- Implementation order suggestions
+### Missing Content by Priority
+
+#### CRITICAL Priority
+
+| Addition | Source | Description |
+|----------|--------|-------------|
+| TDD Workflow Agents | Ch10 §5 | `tdd-red.agent.md` → `tdd-green.agent.md` → `tdd-refactor.agent.md` |
+| Starter Agents | Ch10 §4 | docs-agent, test-agent, security-agent, refactor-agent |
+| Context Engineering Maturity Model | Ch10 §4 | 5-level maturity model with checklists |
+| Enterprise Workflow Checklists | App C | 3 checklists: Agent Config, Multi-Agent, Background Agents |
+| Chapter 10 Pitfalls | Ch10 §11 | 5 pitfalls with code samples, policy templates |
+
+#### HIGH Priority
+
+| Addition | Source | Description |
+|----------|--------|-------------|
+| Antipatterns Detection/Prevention | Ch7 | 8 antipatterns with detection and prevention materials |
+| TDD + AI Testing Examples | Ch7, App B | parseUserInput tests, Kent Beck's immutable tests |
+| Exercise Solutions | App C | 6 complete exercise solutions for all 3 tools |
+| MCP Server Templates | Ch10 §2 | wiki-server, schema-server, API-server, observability-server |
+| Measurement Scripts | Ch10 §6 | Git analysis scripts, PR size monitor, dashboards |
+
+#### MEDIUM Priority
+
+| Addition | Source | Description |
+|----------|--------|-------------|
+| Cross-tool Compatibility Guide | Ch10 §1 | AGENTS.md sync across tools |
+| Context Commands Reference | Ch10 §3 | /init, /clear, /compact commands |
+| Handoff JSON Schema | App C | Validation schema for handoffs |
+| Agent Writing Guide | App C | How to write effective custom agents |
+| Trio Programming Templates | Ch7 | Session planning, senior guide, junior checklist |
+| Cost Management Examples | Ch7, App B | ROI calculation, value tracking |
+
+### High-Value Code Extractions Identified
+
+**From Chapter 10 Pitfalls:**
+- MCP token optimization patterns (progressive discovery, data filtering, privacy-preserving)
+- Text-to-SQL alternatives (semantic layer YAML, GraphQL schema, query templates)
+- Policy templates (AI tools policy, WIP limits policy)
+- Governance flowchart (Shadow IT fast-lane)
+
+**From Appendix C:**
+- Complete agent implementations (7 enterprise agents verified)
+- 3 best practices checklists (28 total items)
+- 6 exercise solutions with tool-specific variations
+
+### Proposed Repository Structure Additions
+
+```
+/11-antipatterns/
+├── README.md                        # Overview: 8 + 5 = 13 total
+├── chapter7-antipatterns/           # 8 "Timeless" antipatterns
+│   ├── 01-blind-acceptance/
+│   ├── 02-the-70-percent-trap/
+│   └── ... (8 total)
+├── chapter10-pitfalls/              # 5 "2025-specific" pitfalls
+│   ├── 01-shadow-it/
+│   ├── 02-text-to-sql/
+│   ├── 03-capacity-driven/
+│   ├── 04-standalone-data-teams/
+│   └── 05-mcp-token-bloat/
+├── detection/
+│   ├── organizational-audit.md
+│   └── pr-size-analyzer/
+└── ANTIPATTERN_MATRIX.md
+
+/06-custom-agents/
+├── tdd-workflow/                    # NEW
+│   ├── tdd-red.agent.md
+│   ├── tdd-green.agent.md
+│   └── tdd-refactor.agent.md
+├── starter-agents/                  # NEW
+│   ├── docs-agent.agent.md
+│   ├── test-agent.agent.md
+│   ├── security-agent.agent.md
+│   └── refactor-agent.agent.md
+└── ...existing folders...
+
+/07-enterprise-workflow/
+├── checklists/                      # NEW
+│   ├── agent-configuration.md
+│   ├── multi-agent-workflow.md
+│   └── background-agents.md
+└── ...existing folders...
+
+/10-reference/
+├── maturity-model.md                # NEW
+├── context-commands.md              # NEW
+├── measurement/                     # NEW
+│   ├── git-analysis-scripts.sh
+│   └── dashboards/
+├── exercise-solutions/              # NEW
+│   ├── 01-first-instruction-file/
+│   ├── 02-mcp-workflow/
+│   └── ... (6 total)
+└── ...existing folders...
+```
+
+### Output Files Created
+
+| File | Lines | Description |
+|------|-------|-------------|
+| `TASK_5_1_SCAN_RESULTS.md` | ~700 | Complete scan results with 3 addendums |
+
+### Git Commits
+- `3d030b5` - "Add Task 5.1 book scan results - missing examples identified"
+- `97fe3a9` - "Add deep scan of Chapter 10 and Appendix C to Task 5.1 results"
+- `498df72` - "Add Chapter 10 pitfalls analysis to Task 5.1 scan results"
 
 ### Validation Requested
-Please review `TASK_5_1_SCAN_RESULTS.md` and indicate which additions to implement.
 
-### Git Commit
-Pending (awaiting validation)
+**CRITICAL (Recommend immediate implementation):**
+- [ ] Create `/11-antipatterns/` with both Chapter 7 (8) and Chapter 10 (5) content
+- [ ] Create `/06-custom-agents/tdd-workflow/` with TDD agent chain
+- [ ] Create `/06-custom-agents/starter-agents/` with 4 essential agents
+- [ ] Create `/07-enterprise-workflow/checklists/` with 3 checklists
+- [ ] Create `/10-reference/maturity-model.md`
+
+**HIGH Priority:**
+- [ ] Create `/10-reference/exercise-solutions/` with Appendix C solutions
+- [ ] Create `/05-mcp-servers/templates/` with MCP patterns
+- [ ] Create `/10-reference/measurement/` with git scripts
+
+**MEDIUM Priority:**
+- [ ] Add cross-tool compatibility README
+- [ ] Add context commands quick reference
+- [ ] Add handoff JSON schema
 
 ---
