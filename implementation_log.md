@@ -504,6 +504,62 @@ Each checklist includes:
 6. **Accountability Framework** — Engineer, reviewer, manager, organization
 
 ### Git Commit
-`86e28c2` - "Add security checklists (Task 3.3)"
+`8009fcf` - "Add security checklists (Task 3.3)"
+
+---
+
+## Task 5.1: Book Scan for Missing Examples ✅
+**Date:** 2025-12-16  
+**Status:** Complete - Awaiting Validation
+
+### Approach
+Scanned all book source files systematically:
+- `chapters_verbose/chapter07/` — All parts including antipatterns
+- `appendices/appendix_a.tex` — Quick reference guides
+- `appendices/appendix_b1.tex` — Expert insights (Kent Beck, Farhan Thawar, etc.)
+- Compared against current repository contents
+
+### Missing Examples Identified
+
+#### High Priority
+1. **Antipatterns Detection/Prevention** (`/11-antipatterns/`)
+   - 8 antipatterns documented in book with no corresponding examples
+   - Includes: Blind Acceptance, 70% Trap, Vibe Production, Context-Free, Batch Explosion, Security Afterthought, Learning Loop Destruction, Measurement Theater
+   - Source: `chapter07_antipatterns.tex`
+
+2. **TDD + AI Testing Examples** (`/09-testing/examples/`)
+   - `parseUserInput` test suite from book not implemented
+   - Kent Beck's "immutable tests" pattern not demonstrated
+   - Source: `chapter07_part1.tex`, `appendix_b1.tex`
+
+#### Medium Priority
+3. **Trio Programming Templates** (`/06-custom-agents/trio-programming/`)
+   - Session planning, senior guide, junior checklist
+   - Source: `chapter07_part3.tex` (Pattern 13)
+
+4. **Cost Management Examples** (`/10-reference/cost-management/`)
+   - ROI calculation, value tracking dashboard
+   - Source: `chapter07_part4.tex`, Farhan Thawar quotes
+
+5. **Structured Enablement Materials** (`/10-reference/enablement/`)
+   - Training agendas, certification checklist
+   - Source: `chapter07_part4.tex` (Pattern 15)
+
+#### Low Priority (Nice to Have)
+6. Quick reference printable cards
+7. Expert quotes collection
+
+### Output
+Created `TASK_5_1_SCAN_RESULTS.md` with:
+- Detailed inventory of missing examples
+- Proposed file structures
+- Priority recommendations
+- Implementation order suggestions
+
+### Validation Requested
+Please review `TASK_5_1_SCAN_RESULTS.md` and indicate which additions to implement.
+
+### Git Commit
+Pending (awaiting validation)
 
 ---

@@ -225,6 +225,12 @@ ai-assisted-engineering-examples/
   - Skill transformation guide
   - clickable set of link to navigate the reference matherials
 
+
+### Phase 5: DOUBLE CHECK and nice to have addition
+
+**Task 5.1:** Scan the entire book and look for missing example not reported here
+- create addition to this plan and then let me validate:
+    - i.e. Look at the antipattern and plan the implementation of the MCP alternative described.
 ---
 
 ## Metadata Standards
