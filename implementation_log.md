@@ -285,6 +285,6 @@ test-cases.md   Test Engineer  ←→  Software Engineer
 7. **Traceability** — TC-XXX → AC-XXX → US-XXX linking
 
 ### Git Commit
-`[pending]` - "Add enterprise workflow suite (Task 2.2)"
+`26c0d20` - "Add enterprise workflow suite (Task 2.2)"
 
 ---
