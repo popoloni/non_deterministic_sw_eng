@@ -148,3 +148,60 @@
 `90f440d` - "Add MCP server examples (Task 1.3)"
 
 ---
+
+## Task 2.1: Create Custom Agents Collection ✅
+**Date:** 2025-12-16  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter10/06_multi_agent.tex` (487 lines)
+
+### Files Created
+
+#### GitHub Agents (`06-custom-agents/github-agents/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `test-agent.md` | ~117 | QA engineer for writing tests, TDD workflow |
+| `docs-agent.md` | ~140 | Technical writer for documentation |
+| `security-agent.md` | ~160 | Security reviewer for vulnerabilities |
+| `refactor-agent.md` | ~180 | Code quality improvements |
+
+#### Claude Agents (`06-custom-agents/claude-agents/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `planning-agent.md` | ~150 | Strategic planner (read-only mode) |
+| `implementation-agent.md` | ~160 | Developer following TDD (read-write) |
+| `review-agent.md` | ~180 | Code reviewer (read-only, finds issues) |
+
+### Agent Structure Implemented
+
+Each agent includes:
+- **YAML frontmatter** with name, description, tools, version, book_reference
+- **Role definition** — Clear purpose and constraints
+- **Capabilities** — What the agent can do
+- **Commands** — Terminal commands available
+- **Boundaries** — Always/Ask First/Never sections
+- **Output format** — Structured template for deliverables
+- **Handoff** — How to transition to next agent
+
+### Book Alignment Verified
+
+- ✅ Test-agent format matches book's example exactly (tools array, boundaries)
+- ✅ GitHub's insight included: "Most agent files fail because they're too vague"
+- ✅ Recommended starter agents from book: docs, test, security, refactor
+- ✅ Planning/Implementation/Review workflow from book's multi-agent section
+- ✅ 70% threshold concept referenced in implementation-agent
+- ✅ Read-only vs read-write modes as specified in book
+
+### Key Concepts from Book Included
+
+1. **Custom Agent Personas** (TRIAL status) — Specialist roles over generic assistants
+2. **Tool Configuration** — Each agent gets specific tools
+3. **Boundary Definitions** — Prevents scope creep and conflicts
+4. **Handoff Patterns** — Planning → Implementation → Review workflow
+5. **TDD Integration** — Test-agent writes tests, implementation-agent makes them pass
+
+### Git Commit
+`[pending]` - "Add custom agents collection (Task 2.1)"
+
+---
