@@ -380,3 +380,70 @@ Each specification template includes:
 `c3d5afa` - "Add specification templates (Task 3.1)"
 
 ---
+
+## Task 3.2: Create Migration Examples ✅
+**Date:** 2025-12-16  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter07/chapter07_part3.tex` (953 lines) - Pattern 12: Migration as Learning
+
+### Files Created
+
+#### Migration Documentation (`03-migrations/react-class-to-hooks/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `README.md` | ~120 | Overview of Migration as Learning pattern |
+| `MIGRATION_PATTERN.md` | ~280 | Documented transformation rules and edge cases |
+| `MIGRATION_PROMPT.md` | ~150 | Reusable AI prompt template |
+
+#### Before (Class Components) (`03-migrations/react-class-to-hooks/before/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `UserProfile.tsx` | ~140 | Data fetching, lifecycle methods, callbacks |
+| `SearchForm.tsx` | ~160 | Controlled inputs, refs, complex state |
+| `DataTable.tsx` | ~260 | Sorting, pagination, selection, debouncing |
+
+#### After (Hooks Components) (`03-migrations/react-class-to-hooks/after/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `UserProfile.tsx` | ~130 | useState, useEffect, useCallback |
+| `SearchForm.tsx` | ~150 | useState, useRef, useEffect, useCallback |
+| `DataTable.tsx` | ~270 | useState, useEffect, useMemo, useCallback, useRef |
+
+### Migration Patterns Demonstrated
+
+| Class Pattern | Hooks Equivalent |
+|---------------|------------------|
+| `state = { ... }` | `useState()` for each variable |
+| `componentDidMount` | `useEffect(() => {}, [])` |
+| `componentDidUpdate` | `useEffect(() => {}, [deps])` |
+| `componentWillUnmount` | `useEffect(() => { return cleanup }, [])` |
+| `this.setState()` | `setStateVar()` |
+| `shouldComponentUpdate` | `useMemo` for computed values |
+| `createRef` | `useRef` |
+| Class methods | `useCallback` or regular functions |
+| Instance variables | `useRef` |
+
+### Book Alignment Verified
+
+- ✅ UserProfile example matches book's class-to-hooks transformation exactly
+- ✅ "Do one migration by hand, give AI both before/after" (Laura Tacho quote)
+- ✅ 7-step Migration as Learning process documented
+- ✅ Edge cases documented: async cleanup, stale closures, missing deps
+- ✅ Verification checklist matches book's approach
+- ✅ Case study metrics included (3 weeks vs 6 weeks)
+
+### Key Concepts from Book Included
+
+1. **Learn manually first** — Manual migration builds understanding
+2. **Document transformation rules** — Explicit patterns for AI to follow
+3. **Include edge cases** — Async cleanup, dependency arrays, stale closures
+4. **Batch with sampling** — 10 files at a time, review 2-3 in detail
+5. **Share your learning** — Multiply understanding across team
+6. **Handle exceptions manually** — Complex cases are where deepest learning happens
+
+### Git Commit
+`31fef97` - "Add migration examples (Task 3.2)"
+
+---
