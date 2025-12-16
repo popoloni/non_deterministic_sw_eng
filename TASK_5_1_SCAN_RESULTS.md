@@ -631,3 +631,266 @@ Please review and approve these additions from the deep scan:
 | Task 2.1: Custom Agents | Chapter 10 §4 + App C | ⚠️ Add starter agents |
 | Task 2.2: Enterprise Workflow | App C §3 | ⚠️ Add checklists |
 | Task 4.4: Reference Materials | Chapter 10 §5-6 + App C §6 | ❌ Add measurement + exercises |
+
+---
+---
+
+# ADDENDUM 2: Chapter 10 Pitfalls Section Analysis
+
+> **Scan Date:** 2025-12-16  
+> **Source:** `chapters_verbose/chapter10/11_pitfalls.tex`  
+> **Purpose:** Identify additional content for antipatterns folder
+
+---
+
+## KEY FINDING: Two Distinct Sets of Antipatterns
+
+The book explicitly distinguishes between:
+
+1. **Chapter 7 Antipatterns (8 total)** — "Timeless failure modes of AI-assisted development"
+2. **Chapter 10 Pitfalls (5 total)** — "2025-specific organizational and tool landscape pitfalls"
+
+> *"Unlike the timeless antipatterns in Chapter 7, these five pitfalls arise from specific characteristics of the 2025 AI landscape"*
+
+**All 5 pitfalls are marked `Status: HOLD` in ThoughtWorks Radar** — meaning "Proceed with extreme caution or avoid entirely."
+
+---
+
+## THE 5 CHAPTER 10 PITFALLS
+
+### Pitfall 1: AI-Accelerated Shadow IT
+
+**Definition:** Employees using AI tools to build business-critical applications outside IT governance.
+
+**Key Content to Extract:**
+
+| Content Type | Description | Lines |
+|--------------|-------------|-------|
+| Comparison table | Traditional vs AI-Accelerated Shadow IT | 65-80 |
+| Warning signs checklist | 7 organizational warning signs | 95-105 |
+| Risk categories | Data breach, Continuity, Compliance | 110-120 |
+| Governance flowchart | Fast-lane governance diagram | 130-180 |
+| Policy template | AI Development Tools Policy (Markdown) | 240-260 |
+| Incident response | Adopt/Replace/Sunset pathways | 195-230 |
+
+**Proposed Files:**
+```
+/11-antipatterns/pitfalls/
+├── shadow-it/
+│   ├── README.md                    # Overview and risks
+│   ├── warning-signs-checklist.md   # 7 organizational symptoms
+│   ├── governance-fast-lane.md      # Risk-based triage process
+│   ├── ai-tools-policy.md           # Template policy document
+│   └── incident-response.md         # Adopt/Replace/Sunset guide
+```
+
+---
+
+### Pitfall 2: Text-to-SQL
+
+**Definition:** Allowing AI to convert natural language directly into SQL without human review.
+
+**Key Content to Extract:**
+
+| Content Type | Description | Lines |
+|--------------|-------------|-------|
+| Problem examples | 4 core problems with code samples | 290-380 |
+| Alternatives table | What to use instead | 385-400 |
+| Semantic layer example | YAML definition for dbt/Cube | 410-450 |
+| GraphQL pattern | Schema example for LLM data access | 455-485 |
+| Query templates | Validated query library pattern | 490-520 |
+| Acceptable conditions | 6 conditions checklist | 525-535 |
+
+**Proposed Files:**
+```
+/11-antipatterns/pitfalls/
+├── text-to-sql/
+│   ├── README.md                    # Why it fails
+│   ├── problems-examples.md         # 4 problems with code
+│   ├── semantic-layer-example.yaml  # dbt/Cube pattern
+│   ├── graphql-alternative.md       # GraphQL as safer option
+│   ├── query-templates.py           # Validated query pattern
+│   └── acceptable-conditions.md     # When it might be OK
+```
+
+---
+
+### Pitfall 3: Capacity-Driven Development
+
+**Definition:** Assigning developers to features outside their primary stream because "they have capacity."
+
+**Key Content to Extract:**
+
+| Content Type | Description | Lines |
+|--------------|-------------|-------|
+| Congestion collapse example | Week-by-week velocity decline | 590-620 |
+| Better alternatives | 5 alternatives to context switching | 640-720 |
+| WIP limits policy | Cross-stream work policy template | 725-745 |
+| Dynamic reteaming | Permanent vs temporary assignment | 750-780 |
+| Decision framework | DO/DON'T table by situation | 785-800 |
+| Warning signs | 8 organizational symptoms | 810-825 |
+
+**Proposed Files:**
+```
+/11-antipatterns/pitfalls/
+├── capacity-driven/
+│   ├── README.md                    # The antipattern explained
+│   ├── congestion-collapse.md       # Example scenario
+│   ├── better-alternatives.md       # 5 alternatives
+│   ├── wip-limits-policy.md         # Policy template
+│   ├── reteaming-guide.md           # Dynamic reteaming vs temp assignment
+│   └── warning-signs.md             # 8 symptoms checklist
+```
+
+---
+
+### Pitfall 4: Standalone Data Engineering Teams
+
+**Definition:** Dedicated data team separate from product teams, creating domain knowledge gaps.
+
+**Key Content to Extract:**
+
+| Content Type | Description | Lines |
+|--------------|-------------|-------|
+| Domain knowledge gap example | CLV calculation scenario | 865-900 |
+| Data Mesh structure | Team topology diagram | 945-970 |
+| Transition phases | 4-phase migration guide | 980-1020 |
+| Concerns/responses | FAQ addressing objections | 1025-1055 |
+| Decision framework | Recommendations by org size | 1060-1075 |
+
+**Proposed Files:**
+```
+/11-antipatterns/pitfalls/
+├── standalone-data-teams/
+│   ├── README.md                    # Why it's an antipattern
+│   ├── domain-gap-example.md        # CLV scenario
+│   ├── data-mesh-topology.md        # Alternative structure
+│   ├── transition-guide.md          # 4-phase migration
+│   └── objections-faq.md            # Common concerns addressed
+```
+
+---
+
+### Pitfall 5: Unoptimized MCP Token Usage (HIGH VALUE)
+
+**Definition:** Loading all MCP tool definitions into context upfront, causing token bloat.
+
+**Key Content to Extract:**
+
+| Content Type | Description | Lines |
+|--------------|-------------|-------|
+| Scale example | Token overhead by server count | 1115-1135 |
+| Data round-tripping | Before/after code examples | 1140-1180 |
+| Pattern comparison table | Default vs Code execution | 1215-1230 |
+| Progressive discovery | Filesystem structure for tools | 1245-1280 |
+| Data filtering example | Before/after code (99% reduction) | 1285-1340 |
+| Privacy-preserving pattern | Tokenization example | 1345-1395 |
+| Skills/state persistence | Reusable code pattern | 1400-1430 |
+| Decision framework | When to use each pattern | 1475-1500 |
+| Migration strategy | 4-phase optimization plan | 1515-1555 |
+| Warning signs | 7 symptoms of token bloat | 1560-1575 |
+
+**Proposed Files:**
+```
+/11-antipatterns/pitfalls/
+├── mcp-token-bloat/
+│   ├── README.md                    # The problem explained
+│   ├── scale-calculations.md        # Token overhead examples
+│   ├── optimization-patterns/
+│   │   ├── progressive-discovery.ts # On-demand tool loading
+│   │   ├── data-filtering.ts        # Sandbox processing
+│   │   ├── privacy-preserving.ts    # PII tokenization
+│   │   └── skills-persistence.ts    # Reusable code
+│   ├── pattern-comparison.md        # Default vs Code execution
+│   ├── decision-framework.md        # When to use each
+│   ├── migration-strategy.md        # 4-phase plan
+│   └── warning-signs.md             # 7 symptoms
+```
+
+---
+
+## UPDATED ANTIPATTERNS FOLDER STRUCTURE
+
+The `/11-antipatterns/` folder should now include BOTH sets:
+
+```
+/11-antipatterns/
+├── README.md                        # Overview: 8 + 5 = 13 total
+│
+├── chapter7-antipatterns/           # 8 "Timeless" antipatterns
+│   ├── 01-blind-acceptance/
+│   ├── 02-the-70-percent-trap/
+│   ├── 03-vibe-production-deployment/
+│   ├── 04-context-free-generation/
+│   ├── 05-batch-size-explosion/
+│   ├── 06-security-as-afterthought/
+│   ├── 07-learning-loop-destruction/
+│   └── 08-measurement-theater/
+│
+├── chapter10-pitfalls/              # 5 "2025-specific" pitfalls
+│   ├── 01-shadow-it/
+│   ├── 02-text-to-sql/
+│   ├── 03-capacity-driven/
+│   ├── 04-standalone-data-teams/
+│   └── 05-mcp-token-bloat/
+│
+├── detection/                       # Cross-cutting detection tools
+│   ├── organizational-audit.md      # Audit against all 13
+│   └── pr-size-analyzer/            # GitHub Action
+│
+└── ANTIPATTERN_MATRIX.md            # Summary table of all 13
+```
+
+---
+
+## HIGH-VALUE EXTRACTIONS FROM PITFALLS
+
+### Summary Table from Book (Line 1600-1620)
+
+| Pitfall | Core Problem | Primary Risk | Quick Test |
+|---------|--------------|--------------|------------|
+| AI-accelerated shadow IT | Ungoverned apps proliferate | Security, compliance, continuity | Do you know what your staff is building? |
+| Text-to-SQL | AI generates unreliable queries | Wrong data → bad decisions | Can AI explain the business logic? |
+| Capacity-driven development | Context switching destroys productivity | Congestion collapse, burnout | Are developers regularly switching streams? |
+| Standalone data teams | Domain knowledge gap | Useless data products, bottlenecks | Do data engineers sit with product teams? |
+| Unoptimized MCP token usage | Tool/data bloat in context | Cost explosion, context limits | What % of tokens do actual work? |
+
+### Book Quote (Critical Framing)
+
+> *"All five share a pattern: They optimize for the wrong thing. They look efficient in isolation but create systemic problems."*
+
+---
+
+## UPDATED PRIORITY RECOMMENDATIONS
+
+### Antipatterns Folder - Now CRITICAL Priority
+
+| Component | Source | Effort | Value |
+|-----------|--------|--------|-------|
+| Chapter 7: 8 antipatterns | chapter07_antipatterns.tex | High | Very High |
+| Chapter 10: 5 pitfalls | chapter10/11_pitfalls.tex | High | Very High |
+| MCP Token Optimization patterns | 11_pitfalls.tex (code samples) | Medium | Very High |
+| Organizational audit checklist | Combined | Low | High |
+| PR size analyzer GitHub Action | 11_pitfalls.tex reference | Medium | High |
+
+**Total: 13 antipatterns/pitfalls to document**
+
+---
+
+## VALIDATION REQUESTED (Pitfalls Addition)
+
+Please approve these additions from the pitfalls scan:
+
+**New Structure:**
+- [ ] Expand `/11-antipatterns/` to include both Chapter 7 antipatterns AND Chapter 10 pitfalls
+- [ ] Create `chapter7-antipatterns/` subfolder (8 items)
+- [ ] Create `chapter10-pitfalls/` subfolder (5 items)
+
+**High-Value Code Extractions:**
+- [ ] MCP token optimization patterns (progressive discovery, data filtering, privacy-preserving, skills persistence)
+- [ ] Text-to-SQL alternatives (semantic layer YAML, GraphQL schema, query templates)
+- [ ] Policy templates (AI tools policy, WIP limits policy)
+
+**Detection Tools:**
+- [ ] Organizational audit checklist (all 13 antipatterns)
+- [ ] ANTIPATTERN_MATRIX.md summary table
