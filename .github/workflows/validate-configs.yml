@@ -1,0 +1,89 @@
+name: Validate Configs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install validation tools
+        run: |
+          npm install -g ajv-cli
+          npm install -g markdownlint-cli
+
+      - name: Validate JSON files
+        run: |
+          echo "Validating JSON files..."
+          find . -name "*.json" -type f | while read file; do
+            echo "Checking $file"
+            python -m json.tool "$file" > /dev/null || exit 1
+          done
+
+      - name: Validate YAML files
+        run: |
+          echo "Validating YAML files..."
+          pip install pyyaml
+          python -c "
+          import yaml
+          import glob
+          import sys
+          
+          errors = []
+          for pattern in ['**/*.yml', '**/*.yaml']:
+              for file in glob.glob(pattern, recursive=True):
+                  try:
+                      with open(file) as f:
+                          yaml.safe_load(f)
+                      print(f'✓ {file}')
+                  except Exception as e:
+                      errors.append(f'✗ {file}: {e}')
+                      print(f'✗ {file}: {e}')
+          
+          if errors:
+              sys.exit(1)
+          "
+
+      - name: Lint Markdown files
+        run: |
+          markdownlint '**/*.md' --ignore node_modules || true
+        continue-on-error: true
+
+      - name: Check for required metadata
+        run: |
+          echo "Checking for YAML frontmatter in config files..."
+          python -c "
+          import glob
+          import re
+          
+          patterns = ['04-context-engineering/**/*.md', '06-custom-agents/**/*.md']
+          missing = []
+          
+          for pattern in patterns:
+              for file in glob.glob(pattern, recursive=True):
+                  if 'README' in file:
+                      continue
+                  with open(file) as f:
+                      content = f.read()
+                      if not content.startswith('---'):
+                          missing.append(file)
+          
+          if missing:
+              print('Files missing YAML frontmatter:')
+              for f in missing:
+                  print(f'  - {f}')
+          else:
+              print('All config files have frontmatter ✓')
+          "

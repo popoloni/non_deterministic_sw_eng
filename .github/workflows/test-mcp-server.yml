@@ -1,0 +1,59 @@
+name: Test MCP Server
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '05-mcp-servers/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - '05-mcp-servers/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd 05-mcp-servers/company-docs-server
+          pip install -r requirements.txt
+
+      - name: Run smoke test
+        run: |
+          cd 05-mcp-servers/company-docs-server
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          
+          # Import test - verify server can be loaded
+          try:
+              from server import mcp
+              print('✓ Server module loads successfully')
+          except ImportError as e:
+              print(f'✗ Failed to import server: {e}')
+              sys.exit(1)
+          
+          # Verify MCP instance exists
+          if mcp:
+              print('✓ MCP instance created')
+          else:
+              print('✗ MCP instance not found')
+              sys.exit(1)
+          
+          print('All smoke tests passed!')
+          "
+
+      - name: Check Python syntax
+        run: |
+          python -m py_compile 05-mcp-servers/company-docs-server/server.py
+          echo "✓ Python syntax valid"
