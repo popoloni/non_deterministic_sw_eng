@@ -1,0 +1,71 @@
+---
+tool: cursor
+tool_version: "1.0"
+last_verified: 2025-12-16
+book_chapter: 10
+book_section: "Static Context Engineering"
+---
+
+# Testing Guidelines
+
+When writing tests for this project:
+
+## Test Structure
+
+Use table-driven tests for utilities and pure functions:
+
+```typescript
+describe('formatCurrency', () => {
+  const testCases = [
+    { input: 100, expected: '$1.00', description: 'whole dollars' },
+    { input: 99, expected: '$0.99', description: 'cents only' },
+    { input: 0, expected: '$0.00', description: 'zero' },
+    { input: -100, expected: '-$1.00', description: 'negative' },
+  ];
+
+  testCases.forEach(({ input, expected, description }) => {
+    it(`handles ${description}`, () => {
+      expect(formatCurrency(input)).toBe(expected);
+    });
+  });
+});
+```
+
+## Coverage Requirements
+
+- Minimum 80% coverage for new code
+- 100% coverage for utility functions
+- Integration tests for all API endpoints
+
+## Mocking
+
+```typescript
+// Use vi.mock for module mocking
+vi.mock('@/services/api', () => ({
+  api: {
+    users: {
+      get: vi.fn(),
+    },
+  },
+}));
+
+// Use MSW for API mocking in integration tests
+import { rest } from 'msw';
+import { server } from '@/tests/server';
+
+server.use(
+  rest.get('/api/users/:id', (req, res, ctx) => {
+    return res(ctx.json({ id: req.params.id, name: 'Test User' }));
+  })
+);
+```
+
+## Naming Conventions
+
+- Test files: `*.test.ts` or `*.spec.ts`
+- Test descriptions: Start with verb ("renders", "returns", "throws")
+- Use `describe` blocks to group related tests
+
+## Reference Implementation
+
+See @src/utils/__tests__/formatters.test.ts for examples.

@@ -18,10 +18,36 @@ Two types of context:
 
 | Folder | Description | Tool |
 |--------|-------------|------|
-| [agents-md/](./agents-md/) | AGENTS.md templates | Cross-platform |
-| [cursor-rules/](./cursor-rules/) | Cursor .mdc rule files | Cursor |
+| [agents-md/](./agents-md/) | AGENTS.md templates (3 variants) | Cross-platform |
+| [cursor-rules/](./cursor-rules/) | Cursor .mdc rule files (3 rules) | Cursor |
 | [copilot-instructions/](./copilot-instructions/) | GitHub Copilot instructions | GitHub Copilot |
-| [claude/](./claude/) | CLAUDE.md templates | Claude Code |
+| [claude/](./claude/) | CLAUDE.md template | Claude Code |
+
+### AGENTS.md Templates
+| File | Lines | Use Case |
+|------|-------|----------|
+| [minimal.md](./agents-md/minimal.md) | ~40 | Quick start, any project |
+| [full-stack-project.md](./agents-md/full-stack-project.md) | ~150 | Full-stack web application |
+| [monorepo.md](./agents-md/monorepo.md) | ~200 | Enterprise monorepo |
+
+### Cursor Rules (.mdc)
+| File | Trigger | Purpose |
+|------|---------|---------|
+| [api-validation.mdc](./cursor-rules/api-validation.mdc) | `src/api/**/*.ts` | API validation patterns |
+| [testing.mdc](./cursor-rules/testing.mdc) | `**/*.test.ts` | Test writing guidelines |
+| [security.mdc](./cursor-rules/security.mdc) | Agent-requested | Security best practices |
+
+### GitHub Copilot
+| File | Scope | Purpose |
+|------|-------|---------|
+| [copilot-instructions.md](./copilot-instructions/.github/copilot-instructions.md) | Global | Project-wide instructions |
+| [api.instructions.md](./copilot-instructions/.github/instructions/api.instructions.md) | `src/api/**` | API-specific guidance |
+| [tests.instructions.md](./copilot-instructions/.github/instructions/tests.instructions.md) | `*.test.ts` | Test-specific guidance |
+
+### Claude Code
+| File | Purpose |
+|------|---------|
+| [CLAUDE.md](./claude/CLAUDE.md) | Python/FastAPI project context |
 
 ---
 

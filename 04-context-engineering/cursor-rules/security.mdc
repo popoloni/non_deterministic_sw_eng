@@ -1,0 +1,107 @@
+---
+tool: cursor
+tool_version: "1.0"
+last_verified: 2025-12-16
+book_chapter: 10
+book_section: "Static Context Engineering"
+---
+
+# Security Guidelines
+
+When writing code that handles authentication, authorization, or sensitive data:
+
+## Authentication
+
+- Use constant-time comparison for token validation
+- Never log token contents, only token IDs
+- Set secure cookie flags: `httpOnly`, `secure`, `sameSite`
+- Implement rate limiting (max 5 attempts per minute)
+- Return identical error messages for "user not found" and "wrong password"
+
+```typescript
+// GOOD: Constant-time comparison
+import { timingSafeEqual } from 'crypto';
+
+function verifyToken(provided: string, expected: string): boolean {
+  const a = Buffer.from(provided);
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+// BAD: Vulnerable to timing attacks
+function verifyToken(provided: string, expected: string): boolean {
+  return provided === expected; // DON'T DO THIS
+}
+```
+
+## Input Validation
+
+- Validate ALL user input at API boundary
+- Use allowlists, not blocklists
+- Sanitize output for XSS prevention
+- Use parameterized queries (NEVER string concatenation)
+
+```typescript
+// GOOD: Parameterized query
+const user = await prisma.user.findUnique({
+  where: { id: userId }
+});
+
+// BAD: SQL injection vulnerability
+const user = await prisma.$queryRaw`
+  SELECT * FROM users WHERE id = ${userId}  // DON'T DO THIS
+`;
+```
+
+## Secrets Management
+
+- Store secrets in environment variables
+- Never commit secrets to git
+- Use secret scanning in CI/CD
+- Rotate secrets regularly
+
+```typescript
+// GOOD: Environment variable
+const apiKey = process.env.API_KEY;
+
+// BAD: Hardcoded secret
+const apiKey = 'sk-1234567890abcdef'; // DON'T DO THIS
+```
+
+## Error Handling
+
+- Never expose stack traces to users
+- Log errors with context, but sanitize sensitive data
+- Return generic error messages to clients
+
+```typescript
+// GOOD: Safe error response
+catch (error) {
+  logger.error('Authentication failed', { 
+    userId: user.id,  // OK to log
+    // token: token,  // NEVER log tokens
+  });
+  return res.status(401).json({ 
+    error: 'Authentication failed' 
+  });
+}
+
+// BAD: Exposes internal details
+catch (error) {
+  return res.status(500).json({ 
+    error: error.message,
+    stack: error.stack  // DON'T DO THIS
+  });
+}
+```
+
+## Security Checklist
+
+Before merging code that handles auth or sensitive data:
+- [ ] Input validated with schema (zod)
+- [ ] Parameterized queries used
+- [ ] No secrets hardcoded
+- [ ] Error messages don't leak info
+- [ ] Rate limiting in place
+- [ ] Audit logging added

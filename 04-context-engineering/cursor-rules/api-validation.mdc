@@ -1,0 +1,54 @@
+---
+tool: cursor
+tool_version: "1.0"
+last_verified: 2025-12-16
+book_chapter: 10
+book_section: "Static Context Engineering"
+---
+
+# API Validation Guidelines
+
+When working with API endpoints:
+- Use zod schemas for all request validation
+- Return standardized error responses
+- Include rate limiting on public endpoints
+
+## Request Validation Pattern
+
+```typescript
+import { z } from 'zod';
+import { validateRequest } from '@/middleware/validation';
+
+const createUserSchema = z.object({
+  body: z.object({
+    email: z.string().email(),
+    name: z.string().min(1).max(100),
+    role: z.enum(['user', 'admin']).default('user'),
+  }),
+});
+
+router.post('/users', 
+  validateRequest(createUserSchema),
+  async (req, res) => {
+    // req.body is now typed and validated
+  }
+);
+```
+
+## Error Response Format
+
+```typescript
+// All errors should use this format
+interface ErrorResponse {
+  error: {
+    code: string;        // Machine-readable code
+    message: string;     // Human-readable message
+    details?: unknown;   // Optional validation details
+  };
+  requestId: string;     // For tracing
+}
+```
+
+## Reference Implementation
+
+See @src/api/users/validation.ts for the canonical pattern.
