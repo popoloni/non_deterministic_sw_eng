@@ -202,6 +202,6 @@ Each agent includes:
 5. **TDD Integration** — Test-agent writes tests, implementation-agent makes them pass
 
 ### Git Commit
-`[pending]` - "Add custom agents collection (Task 2.1)"
+`3163e47` - "Add custom agents collection (Task 2.1)"
 
 ---
