@@ -1,0 +1,25 @@
+# MCP Server Dependencies
+# Book Reference: Chapter 10, Section 4 (Dynamic Context Engineering)
+
+# FastMCP - Python framework for building MCP servers
+# https://github.com/jlowin/fastmcp
+fastmcp>=0.1.0
+
+# Optional: For production deployments
+uvicorn>=0.30.0        # ASGI server for HTTP transport
+httpx>=0.27.0          # HTTP client for external API calls
+
+# Optional: For enhanced functionality
+# Uncomment based on your needs:
+
+# Vector search for semantic document search
+# sentence-transformers>=2.2.0
+# faiss-cpu>=1.7.0
+
+# Database access
+# sqlalchemy>=2.0.0
+# asyncpg>=0.29.0      # PostgreSQL async driver
+
+# Wiki/documentation integrations
+# atlassian-python-api>=3.41.0  # Confluence
+# notion-client>=2.0.0          # Notion

@@ -20,8 +20,27 @@ The **Model Context Protocol (MCP)** enables AI assistants to access external to
 
 | Folder | Description |
 |--------|-------------|
-| [company-docs-server/](./company-docs-server/) | Complete FastMCP server example |
+| [company-docs-server/](./company-docs-server/) | Complete FastMCP server example (Python) |
 | [setup-guides/](./setup-guides/) | Configuration guides for popular MCP servers |
+
+### Company Docs Server
+A fully-functional MCP server demonstrating:
+- **Resources:** Documentation, ADRs, onboarding guides
+- **Tools:** Search docs, get ADRs, service info, naming validation
+- **Prompts:** Code review checklist, architecture review
+
+| File | Purpose |
+|------|---------|
+| [server.py](./company-docs-server/server.py) | Main server implementation (~350 lines) |
+| [requirements.txt](./company-docs-server/requirements.txt) | Python dependencies |
+| [pyproject.toml](./company-docs-server/pyproject.toml) | Modern Python packaging |
+| [config/](./company-docs-server/config/) | Tool configuration examples |
+| [README.md](./company-docs-server/README.md) | Installation and usage guide |
+
+### Setup Guides
+| Guide | Description |
+|-------|-------------|
+| [context7-setup.md](./setup-guides/context7-setup.md) | Framework documentation on demand |
 
 ---
 

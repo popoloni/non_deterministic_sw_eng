@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "company-docs": {
+      "command": "python",
+      "args": ["path/to/company-docs-server/server.py"],
+      "env": {}
+    }
+  }
+}
