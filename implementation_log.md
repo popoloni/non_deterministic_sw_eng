@@ -288,3 +288,95 @@ test-cases.md   Test Engineer  ←→  Software Engineer
 `26c0d20` - "Add enterprise workflow suite (Task 2.2)"
 
 ---
+
+## Bug Fix: copilot-instructions.md YAML Warnings ✅
+**Date:** 2025-12-16  
+**Status:** Complete
+
+### Issue
+VS Code showed warnings in `copilot-instructions.md` about unsupported YAML frontmatter attributes. According to GitHub's documentation, only three attributes are supported:
+- `applyTo` — Glob pattern for file matching
+- `description` — Human-readable description
+- `name` — Short identifier
+
+### Attributes Causing Warnings
+- `tool` — Not supported
+- `tool_version` — Not supported
+- `last_verified` — Not supported
+- `book_chapter` — Not supported
+- `book_section` — Not supported
+
+### Solution Applied
+Moved unsupported metadata to an HTML comment block at the top of the file:
+
+```markdown
+<!--
+  Book Reference:
+    Tool: GitHub Copilot
+    Tool Version: Copilot Chat 0.22+
+    Last Verified: 2025-01
+    Book Chapter: 10
+    Book Section: 3.3 - GitHub Copilot Custom Instructions
+-->
+```
+
+### Files Modified
+- `04-context-engineering/copilot-instructions/.github/copilot-instructions.md`
+
+### Git Commit
+`cdc0691` - "Fix copilot-instructions.md: move unsupported YAML to comments"
+
+---
+
+## Task 3.1: Add Specification Templates ✅
+**Date:** 2025-12-16  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter07/chapter07_part1.tex` (1462 lines) - Pattern 1: Spec-First Generation
+
+### Files Created
+
+#### Specification Templates (`02-specifications/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `auth-middleware-spec.md` | ~320 | Complete JWT authentication middleware spec from book |
+| `api-endpoint-spec.md` | ~380 | Reusable API endpoint specification template |
+| `feature-spec-template.md` | ~350 | Generic feature specification template |
+
+### Template Structure Implemented
+
+Each specification template includes:
+- **Purpose** — What the component/feature does
+- **Requirements** — Functional and non-functional requirements
+- **Interface** — TypeScript interfaces, function signatures, request/response schemas
+- **Edge Cases** — Table of scenarios and expected behavior
+- **Error Handling** — Error codes, response formats, logging requirements
+- **Security Considerations** — Authentication, authorization, input validation
+- **Performance Requirements** — Latency targets, caching strategy
+- **Integration Points** — Dependencies, events, configuration
+- **Examples** — Request/response examples for common scenarios
+- **Verification Checklist** — Checklist for implementation validation
+- **AI Prompt Template** — Structured prompt for AI implementation
+
+### Book Alignment Verified
+
+- ✅ JWT auth middleware spec matches book's example (Ch. 7, Pattern 1)
+- ✅ Spec structure follows book's recommendations: PURPOSE, REQUIREMENTS, EDGE CASES, SECURITY, PERFORMANCE, INTEGRATION, EXAMPLES
+- ✅ Verification checklists included for deterministic validation
+- ✅ AI prompt templates follow book's spec-first methodology
+- ✅ "Do not add features not in the spec" guidance included
+
+### Key Concepts from Book Included
+
+1. **Spec-First Generation** — Write complete specification before implementation
+2. **Edge Case Enumeration** — Explicit handling for all boundary conditions
+3. **Interface Contracts** — TypeScript interfaces as the source of truth
+4. **Verification Checklists** — Deterministic pass/fail criteria
+5. **AI Prompt Templates** — Structured prompts for consistent AI output
+6. **Security-by-Design** — Security considerations as first-class spec elements
+
+### Git Commit
+`c3d5afa` - "Add specification templates (Task 3.1)"
+
+---
