@@ -444,6 +444,66 @@ Each specification template includes:
 6. **Handle exceptions manually** — Complex cases are where deepest learning happens
 
 ### Git Commit
-`31fef97` - "Add migration examples (Task 3.2)"
+`5ac0822` - "Add migration examples (Task 3.2)"
+
+---
+
+## Task 3.3: Add Security Checklists ✅
+**Date:** 2025-12-16  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter07/chapter07_part2.tex` (1077 lines) - Pattern 9: Security-First Development
+
+### Files Created
+
+#### Security Checklists (`08-security/checklists/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `auth-review.md` | ~320 | Authentication & authorization review checklist |
+| `input-validation.md` | ~310 | Input validation and injection prevention checklist |
+| `data-protection.md` | ~340 | Data protection, encryption, and PII handling checklist |
+
+### Checklist Structure Implemented
+
+Each checklist includes:
+- **Overview** — When to use this checklist
+- **AI-Specific Red Flags** — Quick scan for common AI mistakes
+- **Detailed Checklist** — Section-by-section review items
+- **Code Examples** — Wrong vs. Correct patterns
+- **Security Tests** — Required test cases
+- **Review Sign-Off** — Documentation section
+- **Quick Reference** — Grep patterns for detection
+
+### AI-Specific Security Risks Documented
+
+| Category | AI Common Mistakes |
+|----------|-------------------|
+| **Auth** | User ID from request body, auth without authz, jwt.decode vs verify |
+| **Input** | SQL string concatenation, innerHTML with user data, path traversal |
+| **Data** | MD5/SHA1 for passwords, hardcoded secrets, logging full user objects |
+
+### Book Alignment Verified
+
+- ✅ Security Review Checklist matches book (Ch. 7, Pattern 9)
+- ✅ Authentication & Authorization section matches book exactly
+- ✅ Input Validation section matches book exactly
+- ✅ Data Protection section matches book exactly
+- ✅ AI Common Mistakes documented for each category
+- ✅ Security test examples match book's code samples
+- ✅ Fowler's warning included: "We're going to have some noticeable crashes"
+- ✅ Osmani's observation: AI trained on "lowest common denominator"
+
+### Key Concepts from Book Included
+
+1. **Multi-Layer Security** — Automated scanning + contextual review + security tests
+2. **AI-Specific Risks** — Training data contains insecure patterns
+3. **Security Gauntlet** — Gates before production
+4. **Incident Response** — Protocol when vulnerabilities discovered
+5. **Blameless Postmortem** — Fix systems, not blame people
+6. **Accountability Framework** — Engineer, reviewer, manager, organization
+
+### Git Commit
+`86e28c2` - "Add security checklists (Task 3.3)"
 
 ---

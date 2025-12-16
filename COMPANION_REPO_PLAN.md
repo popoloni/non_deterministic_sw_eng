@@ -223,6 +223,7 @@ ai-assisted-engineering-examples/
   - 70% Rule checklist
   - Vibe Coding vs Engineering comparison
   - Skill transformation guide
+  - clickable set of link to navigate the reference matherials
 
 ---
 
