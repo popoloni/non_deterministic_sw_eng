@@ -95,8 +95,10 @@ Copy agent definitions to your project's `.github/agents/` folder (for GitHub Co
 **Author:** Enrico Papalini  
 **Year:** 2025  
 
-- 📕 [Paperback ISBN: 979-8-278715-41-2]
-- 📘 [Hardcover ISBN: 979-8-278829-88-1]
+📕 **[Buy on Amazon](https://www.amazon.com/dp/B0G7LPR4KB)**
+
+- Paperback ISBN: 979-8-278715-41-2
+- Hardcover ISBN: 979-8-278829-88-1
 
 ---
 
