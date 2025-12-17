@@ -798,3 +798,75 @@ VS Code reported 100+ TypeScript errors in the React migration example files (`0
 `0208e93` - "Add TDD workflow agent chain (Task 5.2)"
 
 ---
+
+## Task 5.3: Create Starter Agents Collection ✅
+**Date:** 2025-12-17  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter10/06_multi_agent.tex` (487 lines) — Custom Agent Personas, Recommended Starters
+- `appendices/appendix_c_v4.tex` (2199 lines) — Agent file structure, writing effective instructions
+
+### Files Created
+
+#### Starter Agents (`06-custom-agents/starter-agents/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `README.md` | ~180 | Selection guide, when to use each agent, workflow patterns |
+| `documentation-agent.md` | ~220 | Technical writer — auto-generate docs from code |
+| `test-coverage-agent.md` | ~280 | QA engineer — find and fill coverage gaps |
+| `security-scanner-agent.md` | ~320 | Security reviewer — OWASP Top 10 compliance |
+| `refactoring-agent.md` | ~300 | Code quality — identify smells and improve |
+
+### Book Content Included
+
+1. **GitHub's Analysis** — "Most agent files fail because they're too vague" (2,500+ repos)
+2. **Recommended Starter Agents** — Four agents from book: docs, test, security, refactor
+3. **Agent File Structure** — YAML frontmatter with tools, description, handoffs
+4. **Three-Tier Boundaries** — Always/Ask First/Never pattern
+5. **Executable Commands** — Real commands the agent can run
+6. **Specificity Over Generality** — Detailed role definitions beat generic ones
+
+### Agent Capabilities Summary
+
+| Agent | Read | Write | Run Commands | Handoffs |
+|-------|------|-------|--------------|----------|
+| Documentation | Any file | `/docs/` only | markdownlint, docs:build | → code-reviewer |
+| Test Coverage | Any file | `/tests/` only | npm test --coverage | → implementer, security |
+| Security Scanner | Any file | None | npm audit, snyk | → test-coverage, implementer |
+| Refactoring | `/src/` | `/src/` | npm test, lint | → test-coverage, code-reviewer |
+
+### README Selection Guide Features
+
+- **Quick Reference Table** — One-line summary of each agent
+- **When to Use** — Specific scenarios with trigger phrases
+- **Selection Flowchart** — ASCII decision tree
+- **Sequential Workflow** — Recommended agent order for new features
+- **Parallel Workflow** — Running multiple agents on different files
+- **Customization Guide** — How to adapt to your stack
+
+### Key Differences from `github-agents/`
+
+The `starter-agents/` folder provides:
+- More detailed instructions and examples
+- OWASP Top 10 checklist in security agent
+- Refactoring catalog with before/after code
+- Coverage analysis process in test-coverage agent
+- Handoff configurations for multi-agent workflows
+- Focus on "coverage-first" testing strategy
+
+### Book Alignment Verified
+
+- ✅ Four recommended starter agents match Chapter 10 exactly
+- ✅ Agent file format matches Appendix C specifications
+- ✅ GitHub's insight quote included in README
+- ✅ Three-tier boundaries (Always/Ask First/Never) in all agents
+- ✅ Executable commands section in all agents
+- ✅ Self-assessment protocol in test-coverage and refactoring agents
+- ✅ OWASP Top 10 (2021) checklist in security-scanner agent
+- ✅ Handoff YAML configuration in all agents
+
+### Git Commit
+`pending` - "Add starter agents collection (Task 5.3)"
+
+---
