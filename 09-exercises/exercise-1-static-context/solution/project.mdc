@@ -1,0 +1,25 @@
+---
+description: Core project standards for customer portal
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+alwaysApply: true
+---
+
+# Customer Portal Standards
+
+React 18 + Node.js 20/Express + PostgreSQL
+
+## Required Patterns
+- TypeScript strict mode
+- Functional components only (no class components)
+- React Query for server state
+- Zod for validation
+
+## Reference implementations
+- Component: src/components/UserCard/
+- API service: src/services/apiClient.ts
+- Custom hook: src/hooks/useAuth.ts
+
+## Commands
+- `npm run dev` - Start servers
+- `npm test` - Run tests
+- `npm run typecheck` - Type check
