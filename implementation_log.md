@@ -748,3 +748,53 @@ VS Code reported 100+ TypeScript errors in the React migration example files (`0
 `192 objects` pushed to `origin/main`
 
 ---
+
+## Task 5.2: Add TDD Workflow Agent Chain ✅
+**Date:** 2025-12-17  
+**Status:** Complete
+
+### Source Files
+- `chapters_verbose/chapter10/07_dev_practices.tex` (816 lines) — TDD + AI workflow
+- `appendices/appendix_c_v4.tex` (lines 1420-1650) — Multi-agent TDD exercise
+
+### Files Created
+
+#### TDD Workflow (`06-custom-agents/tdd-workflow/`)
+| File | Lines | Description |
+|------|-------|-------------|
+| `README.md` | ~180 | Workflow overview, usage options (VS Code, CLI, Claude) |
+| `tdd-red.md` | ~230 | Test Writer agent — RED phase |
+| `tdd-green.md` | ~270 | Implementer agent — GREEN phase |
+| `tdd-refactor.md` | ~290 | Refactoring agent — REFACTOR phase |
+
+### Key Content from Book Included
+
+1. **Kent Beck Quotes** — "Immutable test" problem, "unpredictable genie" metaphor
+2. **Test Modification Policy** — Critical rule preventing AI from changing tests to pass
+3. **Self-Assessment Protocol** — Escalation after 3 failed attempts
+4. **Workflow Diagrams** — Visual representation of TDD + AI cycle
+5. **Handoff Configuration** — YAML frontmatter with agent transitions
+6. **Practical Examples** — Password reset implementation from Ch. 10
+
+### Agent Features Implemented
+
+| Agent | Phase | Key Capabilities |
+|-------|-------|------------------|
+| `tdd-red` | RED | Write failing tests, TC-XXX identifiers, coverage targets |
+| `tdd-green` | GREEN | Minimal implementation, pattern following, boundary enforcement |
+| `tdd-refactor` | REFACTOR | Refactoring catalog, one-change-at-a-time, test safety net |
+
+### Book Alignment Verified
+
+- ✅ TDD + AI 7-step workflow from Chapter 10 Section 7
+- ✅ Test-writer agent format matches Appendix C exercise exactly
+- ✅ Implementer agent format matches Appendix C exercise exactly
+- ✅ Kent Beck's "immutable test" concern addressed in all agents
+- ✅ Verification checklist from Appendix C included in README
+- ✅ Three usage options documented (VS Code, CLI, Claude Code)
+- ✅ Research findings from Thoughtworks included
+
+### Git Commit
+`0208e93` - "Add TDD workflow agent chain (Task 5.2)"
+
+---
