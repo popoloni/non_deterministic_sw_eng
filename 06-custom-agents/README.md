@@ -20,8 +20,10 @@ By constraining AI to specific roles, you get more focused, reliable results.
 
 | Folder | Description | Platform |
 |--------|-------------|----------|
-| [github-agents/](./github-agents/) | Agents for GitHub Copilot | GitHub Copilot |
+| [github-agents/](./github-agents/) | Basic agents for GitHub Copilot | GitHub Copilot |
 | [claude-agents/](./claude-agents/) | Agents for Claude Code | Claude Code |
+| [starter-agents/](./starter-agents/) | **Recommended starter agents** (docs, test, security, refactor) | All platforms |
+| [tdd-workflow/](./tdd-workflow/) | **TDD Red-Green-Refactor workflow** with agent handoffs | All platforms |
 
 ---
 

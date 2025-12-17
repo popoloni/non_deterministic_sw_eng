@@ -17,6 +17,7 @@ Quick reference materials for daily use. Print these, bookmark them, or keep the
 | [70-percent-checklist.md](./70-percent-checklist.md) | The 30% that AI misses — what to always verify |
 | [vibe-vs-engineering.md](./vibe-vs-engineering.md) | Quick comparison: when each approach is appropriate |
 | [skill-transformation.md](./skill-transformation.md) | How engineering skills evolve with AI |
+| [maturity-model.md](./maturity-model.md) | **Context Engineering Maturity Model** — 5-level progression + tool maturity rings |
 
 ---
 

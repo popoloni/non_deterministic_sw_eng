@@ -22,6 +22,7 @@ Enterprise AI workflows orchestrate multiple specialized agents to handle comple
 | [execution-phase/](./execution-phase/) | Agents for implementation and testing |
 | [artifacts/](./artifacts/) | Document templates for each workflow stage |
 | [handoffs/](./handoffs/) | Configuration for agent-to-agent transitions |
+| [checklists/](./checklists/) | **Validation checklists** for human checkpoints |
 
 ---
 

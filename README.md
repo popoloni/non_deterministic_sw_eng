@@ -2,7 +2,7 @@
 
 > Companion repository for **"Non-Deterministic Software Engineering"** by Enrico Papalini
 
-[![Validate Configs](https://github.com/YOUR_USERNAME/ai-assisted-engineering-examples/actions/workflows/validate-configs.yml/badge.svg)](https://github.com/YOUR_USERNAME/ai-assisted-engineering-examples/actions)
+[![Validate Configs](https://github.com/popoloni/non_deterministic_sw_eng/actions/workflows/validate-configs.yml/badge.svg)](https://github.com/popoloni/non_deterministic_sw_eng/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
