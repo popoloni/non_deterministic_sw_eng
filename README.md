@@ -1,6 +1,12 @@
 # AI-Assisted Engineering Examples
 
-> Companion repository for **"Non-Deterministic Software Engineering"** by Enrico Papalini
+> Companion repository for **["Non-Deterministic Software Engineering"](https://www.amazon.com/dp/B0G7LPR4KB)** by Enrico Papalini
+
+<p align="center">
+  <a href="https://www.amazon.com/dp/B0G7LPR4KB">
+    <img src="https://m.media-amazon.com/images/I/71mLAazNLyL._SL1500_.jpg" alt="Non-Deterministic Software Engineering Book Cover" width="300">
+  </a>
+</p>
 
 [![Validate Configs](https://github.com/popoloni/non_deterministic_sw_eng/actions/workflows/validate-configs.yml/badge.svg)](https://github.com/popoloni/non_deterministic_sw_eng/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
