@@ -58,8 +58,7 @@ The book is organized into **5 Parts** containing **10 Chapters** plus **4 Appen
 | [06-custom-agents](./06-custom-agents/) | Custom agent definitions for AI tools | Ch. 10 (Section 6) |
 | [07-enterprise-workflow](./07-enterprise-workflow/) | Multi-agent orchestration patterns | Appendix C |
 | [08-security](./08-security/) | Security checklists and review guides | Ch. 7 (Pattern 9) |
-| [09-testing](./09-testing/) | Testing patterns and examples | Ch. 7 (Pattern 3) |
-| [10-reference](./10-reference/) | Quick reference guides and checklists | Appendix A |
+| [09-exercises](./09-exercises/) | Hands-on exercises with solutions | Appendix C |
 
 ---
 

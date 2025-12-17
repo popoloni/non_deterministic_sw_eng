@@ -16,12 +16,13 @@ Two types of context:
 
 ## Contents
 
-| Folder | Description | Tool |
-|--------|-------------|------|
+| Folder/File | Description | Tool |
+|-------------|-------------|------|
 | [agents-md/](./agents-md/) | AGENTS.md templates (3 variants) | Cross-platform |
 | [cursor-rules/](./cursor-rules/) | Cursor .mdc rule files (3 rules) | Cursor |
 | [copilot-instructions/](./copilot-instructions/) | GitHub Copilot instructions | GitHub Copilot |
 | [claude/](./claude/) | CLAUDE.md template | Claude Code |
+| [maturity-model.md](./maturity-model.md) | **Context Engineering Maturity Model** — 5 levels + tool maturity rings | Reference |
 
 ### AGENTS.md Templates
 | File | Lines | Use Case |

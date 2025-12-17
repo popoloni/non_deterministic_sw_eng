@@ -1,6 +1,10 @@
-# Exercises
+# 09 - Exercises
 
-> **Book Reference:** Chapter 10 — Practical exercises with solutions in Appendix C
+> 📖 **Book Reference:** Appendix C (Exercise Solutions)
+
+---
+
+## Overview
 
 This folder contains hands-on exercises from the book, each with problem statements, starter files, sample solutions, and evaluation rubrics.
 
