@@ -1050,3 +1050,84 @@ All Task 5.x content is now:
 `7d33d20` - "Update READMEs to integrate Task 5.x deliverables"
 
 ---
+
+## Task 6.1: Create Exercise Solutions Folder ✅
+**Date:** 2025-12-17  
+**Status:** Complete
+
+### Source Files
+- `appendices/appendix_c_v4.tex` (lines 1183-2199) — Exercise Solutions section
+
+### Files Created
+
+#### Exercises Folder Structure (`09-exercises/`)
+| Exercise | Folder | Time | Difficulty |
+|----------|--------|------|------------|
+| 1. Static Context Setup | `exercise-1-static-context/` | 30 min | ⭐ |
+| 2. MCP Integration | `exercise-2-mcp-integration/` | 1 hour | ⭐⭐ |
+| 3. TDD Workflow | `exercise-3-tdd-workflow/` | 1 hour | ⭐⭐ |
+| 4. Multi-Step Feature | `exercise-4-multi-step-feature/` | 2 hours | ⭐⭐⭐ |
+| 5. Subagents | `exercise-5-subagents/` | 1 hour | ⭐⭐⭐ |
+| 6. Background Agents | `exercise-6-background-agents/` | 1 hour | ⭐⭐⭐ |
+
+Each exercise folder contains:
+- `README.md` — Problem statement, instructions, success criteria
+- `solution/` — Reference solutions from Appendix C
+- `rubric.md` — Evaluation criteria (Bronze/Silver/Gold)
+
+### Exercise Content Summary
+
+**Exercise 1: Static Context Setup**
+- Create instruction files for Copilot, Claude Code, Cursor
+- Solution templates: copilot-instructions.md, CLAUDE.md, project.mdc
+- Validation: AI follows project conventions
+
+**Exercise 2: MCP Integration**
+- Configure Context7 and filesystem MCP servers
+- Tool-specific configurations: Claude, Cursor, Copilot
+- Auto-invoke rules for automatic MCP usage
+
+**Exercise 3: TDD Workflow**
+- Two-agent workflow: test-writer and implementer
+- Agent boundaries enforced (tests/ vs src/)
+- Handoff configuration with context preservation
+
+**Exercise 4: Multi-Step Feature**
+- Plan Mode → Structured Handoffs → Context Management
+- Tool-specific workflows for Claude Code, VS Code, Cursor
+- Background agent execution with worktree isolation
+
+**Exercise 5: Subagents**
+- Researcher agent with `infer: true`
+- Main agent with `runSubagent` tool
+- Context isolation with summary return
+
+**Exercise 6: Background Agents**
+- Parallel execution with Git worktree isolation
+- Monitoring via Agent Sessions
+- Merge workflow with conflict handling
+
+### Book Alignment Verified
+
+- ✅ All 6 exercises match Chapter 10 practical exercises
+- ✅ Solutions extracted directly from Appendix C
+- ✅ Tool-specific configurations for Copilot, Claude Code, Cursor
+- ✅ Verification checklists match book's success criteria
+- ✅ Agent frontmatter format matches book exactly
+- ✅ MCP configuration JSON matches book examples
+- ✅ Context management commands match tool documentation
+
+### Learning Path
+
+```
+BEGINNER (2.5 hours)
+Exercise 1 → Exercise 2 → Exercise 3
+
+ADVANCED (4 hours)  
+Exercise 4 → Exercise 5 → Exercise 6
+```
+
+### Git Commit
+`c0547ed` - "Add exercises folder with 6 practical exercises (Task 6.1)"
+
+---
