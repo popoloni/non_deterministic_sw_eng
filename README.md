@@ -31,8 +31,8 @@ The book is organized into **5 Parts** containing **10 Chapters** plus **4 Appen
 |------|-------|----------|
 | **Part I** | Understanding the Transformation | Ch. 1–3 |
 | **Part II** | Practical Implementation | Ch. 4–6 |
-| **Part III** | Organizational Adaptation | Ch. 8–9 |
-| **Part IV** | Patterns, Tools & Practices | Ch. 7, 10 |
+| **Part III** | Organizational Adaptation | Ch. 7-8 |
+| **Part IV** | Patterns, Tools & Practices | Ch. 9-10 |
 | **Part V** | Appendices | A–D |
 
 ### Chapter Overview
@@ -57,13 +57,13 @@ The book is organized into **5 Parts** containing **10 Chapters** plus **4 Appen
 | Folder | Description | Book Reference |
 |--------|-------------|----------------|
 | [01-fundamentals](./01-fundamentals/) | Conceptual overview | Part I (Ch. 1–3) |
-| [02-specifications](./02-specifications/) | Spec-first development templates | Ch. 7 (Pattern 1) |
-| [03-migrations](./03-migrations/) | Code migration examples | Ch. 7 (Pattern 12) |
+| [02-specifications](./02-specifications/) | Spec-first development templates | Ch. 9 (Pattern 1) |
+| [03-migrations](./03-migrations/) | Code migration examples | Ch. 9 (Pattern 12) |
 | [04-context-engineering](./04-context-engineering/) | AGENTS.md, Cursor rules, Copilot instructions | Ch. 10 (Sections 3–4) |
 | [05-mcp-servers](./05-mcp-servers/) | Model Context Protocol server examples | Ch. 10 (Section 5) |
 | [06-custom-agents](./06-custom-agents/) | Custom agent definitions for AI tools | Ch. 10 (Section 6) |
 | [07-enterprise-workflow](./07-enterprise-workflow/) | Multi-agent orchestration patterns | Appendix C |
-| [08-security](./08-security/) | Security checklists and review guides | Ch. 7 (Pattern 9) |
+| [08-security](./08-security/) | Security checklists and review guides | Ch. 9 (Pattern 9) |
 | [09-exercises](./09-exercises/) | Hands-on exercises with solutions | Appendix C |
 
 ---
