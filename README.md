@@ -45,9 +45,9 @@ The book is organized into **5 Parts** containing **10 Chapters** plus **4 Appen
 | 4 | New Workflows for the AI Era | 10 practical workflows |
 | 5 | The Quality Crisis | Multi-layer verification |
 | 6 | Measuring What Matters | Metrics framework |
-| 7 | The Pattern Catalog | 18 patterns + 8 antipatterns |
-| 8 | The Adaptation Imperative | Organizational transformation |
-| 9 | Looking Forward | Future trajectories |
+| 7 | The Adaptation Imperative | Organizational transformation |
+| 8 | Looking Forward | Future trajectories |
+| 9 | The Pattern Catalog | 18 patterns + 8 antipatterns |
 | 10 | Tools & Practices | Implementation guide |
 
 ---
