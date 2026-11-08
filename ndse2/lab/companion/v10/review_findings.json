@@ -1,0 +1,25 @@
+{
+  "kind": "SYNTHETIC_REVIEW_EXAMPLE",
+  "findings": [
+    {
+      "comment": "The replay path invokes active v2 evaluation for a stored v1 response",
+      "classification": "behavioral claim",
+      "next": "run independent replay counterexample",
+      "status": "testable"
+    },
+    {
+      "comment": "This design is overengineered",
+      "classification": "preference without criterion",
+      "next": "identify unnecessary obligation/cost or do not block on it",
+      "status": "unsubstantiated"
+    },
+    {
+      "comment": "A race might exist in the store",
+      "classification": "hypothesis",
+      "next": "inspect transaction boundary and obtain reproduction",
+      "status": "unresolved"
+    }
+  ],
+  "model_agreement_is_evidence_of_correctness": false,
+  "no_live_model_review": true
+}

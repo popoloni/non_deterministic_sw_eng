@@ -1,0 +1,30 @@
+{
+  "kind": "SYNTHETIC_IMPACT_PLAN",
+  "complete_dependency_proof": false,
+  "items": [
+    {
+      "artifact": "new Treasury boundary cases",
+      "expectation": "changed for v2",
+      "action": "update independently from INT-002 and rerun",
+      "owner": "test designer"
+    },
+    {
+      "artifact": "historical replay cases",
+      "expectation": "unchanged",
+      "action": "retain expected v1 response and rerun",
+      "owner": "test designer"
+    },
+    {
+      "artifact": "risk/cross-border/amount/duplicate-key cases",
+      "expectation": "unchanged",
+      "action": "mandatory regression",
+      "owner": "verification owner"
+    },
+    {
+      "artifact": "current memory and review decision",
+      "expectation": "may become stale",
+      "action": "refresh affected records and obtain a new scoped decision",
+      "owner": "steward/reviewer"
+    }
+  ]
+}

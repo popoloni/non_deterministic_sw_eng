@@ -1,0 +1,258 @@
+[
+  {
+    "path": "lab/companion/v10/adoption_memo.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/architecture_comparison.md",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/clarifications.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/context_package.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/control_state.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/coordination.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/cycle_trace.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/decision_rights.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/economic_extensions.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/evidence_manifest.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/exception_record.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/execution_profile.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/file_broker.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/handoff_pair.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/invalidation_matrix.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/local_cost_inputs.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/loop_variants.md",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/maintenance_ticket.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/measurement.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/measurement_events.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/measurement_schema.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/memory_dependency_review.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/memory_scope.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/mentoring_scene.md",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/migration_checklist.md",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/migration_trace.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/pattern_pilot_protocol.md",
+    "category": "UNEXECUTED_EMPIRICAL_PROTOCOL",
+    "evidence": "No participants, provider calls or field outcomes"
+  },
+  {
+    "path": "lab/companion/v10/replay_harness.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/review_capacity_policy.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/review_findings.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/review_minutes_template.md",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/review_routes.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/schema_view.py",
+    "category": "EXECUTABLE_DETERMINISTIC_MODULE",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/specification_gaps.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/test_control_state.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_coordination.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_economic_extensions.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_evidence_manifest.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_file_broker.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_intent_episode.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_measurement.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_memory_scope.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_replay_harness.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/test_schema_view.py",
+    "category": "EXECUTABLE_UNIT_TEST",
+    "evidence": "scripts/run_companion_checks_v10.py; audit/v10/companion_runs/v10_composed_regressions.log"
+  },
+  {
+    "path": "lab/companion/v10/threat_control_matrix.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/verification_access_matrix.json",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "lab/companion/v10/whole_change_cost_worksheet.csv",
+    "category": "SYNTHETIC_FIXTURE_OR_GUIDANCE",
+    "evidence": "Exercises and module tests only"
+  },
+  {
+    "path": "book:Appendix_A:Exercise_7",
+    "category": "DESIGN_PSEUDOCODE",
+    "evidence": "The lost-response discussion in Appendix A, Exercise 7 is design pseudocode, not an executed distributed simulator.",
+    "source_kind": "book_location_not_companion_file"
+  },
+  {
+    "path": "lab/companion/ch10/PREREGISTRATION_PROTOCOL.md",
+    "category": "UNEXECUTED_EMPIRICAL_PROTOCOL",
+    "evidence": "Two AI-assisted arms; Day-14 \u00b12; no participants or measured learning effect"
+  },
+  {
+    "path": "audit/pilot/real_pilot_template.csv",
+    "category": "EMPTY_PRODUCTION_TEMPLATE",
+    "evidence": "Calibration must reject missing production data"
+  },
+  {
+    "path": "lab/case_study",
+    "category": "EXECUTABLE_SYNTHETIC_SERVICE",
+    "evidence": "Local SQLite reference; no live transaction authority"
+  }
+]

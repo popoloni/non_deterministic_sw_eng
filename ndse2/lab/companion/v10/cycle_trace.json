@@ -1,0 +1,44 @@
+{
+  "kind": "SCRIPTED_TEACHING_TRACE_NOT_LIVE_AGENT",
+  "semantic_item": "Treasury v2 boundary with historical replay preserved",
+  "stages": [
+    {
+      "stage": "initialize",
+      "intent": "INT-002",
+      "candidate": "candidate-1",
+      "resources": "persisted"
+    },
+    {
+      "stage": "check",
+      "result": "REPLAY_INVARIANT_FAILED",
+      "action": "retain exact counterexample"
+    },
+    {
+      "stage": "checkpoint",
+      "contains": [
+        "intent",
+        "candidate",
+        "failure",
+        "consumed budget",
+        "permission envelope"
+      ]
+    },
+    {
+      "stage": "resume",
+      "preconditions": [
+        "intent current",
+        "budget available",
+        "permissions unchanged"
+      ]
+    },
+    {
+      "stage": "repair",
+      "scope": "named behavior only"
+    },
+    {
+      "stage": "stop",
+      "status": "READY_FOR_REVIEW_OR_ESCALATE",
+      "accepted": false
+    }
+  ]
+}

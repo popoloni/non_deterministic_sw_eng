@@ -1,0 +1,32 @@
+{
+  "schema_version": "ccs-native-intent/1.0",
+  "intent_id": "INT-001",
+  "revision": 1,
+  "authority": {
+    "role": "Policy Owner",
+    "approval": "EXAMPLE_ONLY — no actual signature",
+    "status": "ILLUSTRATIVE_AUTHORIZED_STATE"
+  },
+  "objective": "Replace a fixed-threshold demonstration rule with versioned synthetic decision routing, without authorizing money movement.",
+  "problem_boundary": "Local offline EUR approval eligibility in a synthetic brownfield transaction-processing lab.",
+  "in_scope": ["department thresholds", "low/high risk routing", "cross-border safe handling", "stable idempotency", "version provenance", "local audit evidence"],
+  "out_of_scope": ["bank integration", "actual approval or settlement", "real customer data", "production authentication", "distributed consensus"],
+  "invariants": [
+    "Unknown risk or invalid amounts cannot be automatically eligible.",
+    "High risk and cross-border transactions always require human review.",
+    "An old idempotency key must never silently pick up a later rule version.",
+    "Only explicitly configured department/currency policies can yield automatic eligibility."
+  ],
+  "acceptance": [
+    {"criterion_id": "AC-001", "text": "EUR 3000 Treasury LOW domestic is eligible under both policies."},
+    {"criterion_id": "AC-002", "text": "EUR 4000 Treasury LOW domestic is eligible in v1 but requires review in v2."},
+    {"criterion_id": "AC-003", "text": "Any HIGH risk synthetic request requires human review."},
+    {"criterion_id": "AC-004", "text": "Any cross-border synthetic request requires human review."},
+    {"criterion_id": "AC-005", "text": "Replaying a request with the same idempotency key returns the original decision and policy version."},
+    {"criterion_id": "AC-006", "text": "Changing the payload under an existing key or reusing a transaction ID under another key returns a conflict."}
+  ],
+  "evidence_oracles": ["independent unit tests", "versioned policy fixtures", "deterministic CLI outputs", "append-only demo audit records"],
+  "allowed_execution": "Sandbox/local, synthetic data, no external network, no secrets, no deployment",
+  "change_policy": "Requirements changes create a new INT-xxx delta with impact graph and re-verification; old policy decisions are retained.",
+  "evidence_warning": "Illustrative document, not proof of an actual policy-owner approval."
+}

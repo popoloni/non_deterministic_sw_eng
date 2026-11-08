@@ -1,0 +1,46 @@
+{
+  "intent_id": "INT-002",
+  "artifacts": {
+    "candidate": {
+      "path": "lab/case_study/approval_lab/policy.py",
+      "sha256": "ca0c5bd10ccdef7d8918aa504ca1642195034580fbe188d37401707505d6f6a1"
+    },
+    "intent": {
+      "path": "lab/case_study/docs/02_late_intent_delta.json",
+      "sha256": "3eb546c8835a79b78385e158427c2374c82d83e017e36656fbe7f80c2f241f89"
+    },
+    "oracle": {
+      "path": "lab/companion/ch07/independent_oracle_lab.py",
+      "sha256": "b4565b504f9713339777176563ece2be80cc5ffa841fa95f102d0754242bf8b8"
+    },
+    "environment": {
+      "path": "lab/reader_artifacts/environment_profile.json",
+      "sha256": "225b95e78805ee83cf735be7800d3d47b36c31e65ef8d9efb228210da64e6388"
+    }
+  },
+  "command": [
+    "python",
+    "lab/companion/ch07/independent_oracle_lab.py",
+    "lab/case_study"
+  ],
+  "exit_code": 0,
+  "unchecked": [
+    "real approval authority",
+    "production deployment",
+    "external validity"
+  ],
+  "created_at": 0,
+  "producer": "synthetic trusted harness",
+  "producer_authenticated": false,
+  "execution_attested": false,
+  "clock_basis": "Synthetic sequence origin; created_at=0 is not a wall-clock timestamp.",
+  "result": {
+    "passed": 21,
+    "total": 21,
+    "count_kind": "behavioral_records"
+  },
+  "verification": {
+    "status": "READY_FOR_HUMAN_REVIEW_AUTHORITY_UNVERIFIED",
+    "reason": "RECORDED_DIGESTS_MATCH"
+  }
+}

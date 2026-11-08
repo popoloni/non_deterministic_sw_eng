@@ -1,0 +1,27 @@
+% Scheda aggiuntiva del caso. Fonte dei numeri: series/CASE_LEDGER.json.
+\clearpage
+\begingroup
+\small
+\section*{La scheda del caso Treasury}\label{case:canonical-card}
+
+Un servizio didattico stabilisce se una richiesta è idonea all'approvazione automatica o richiede una revisione. Non muove fondi. La richiesta iniziale è rendere configurabili le regole per reparto. \texttt{TREASURY} identifica la Tesoreria; \texttt{OPS} identifica un secondo reparto, usato per verificare che la modifica della Tesoreria conservi le altre soglie configurate.
+
+\noindent\textbf{La sequenza delle modifiche}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}p{.25\linewidth}X@{}}\toprule
+Fase & Regola per una nuova decisione\\\midrule
+Regola ereditata & Soglia fissa di 10.000~EUR; ignora reparto, rischio e natura transfrontaliera. È il difetto da correggere.\\
+\mbox{INT-001} / v1 & Soglia della Tesoreria: 5.000~EUR. Rischio alto e operazioni transfrontaliere richiedono revisione.\\
+\mbox{INT-002} / v2 & Soglia della Tesoreria: 3.000~EUR. OPS conserva la soglia di 10.000~EUR in entrambe le versioni.\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent\textbf{Unità e confini.} Il codice usa centesimi interi di EUR: 5.000~EUR = \texttt{500000}; 3.000~EUR = \texttt{300000}; 4.000~EUR = \texttt{400000}. La soglia include il valore estremo. Rischio alto, natura transfrontaliera o reparto non configurato richiedono revisione, qualunque sia l'importo valido.
+
+\noindent\textbf{L'esempio discriminante: \mbox{AC-002}.} Una nuova richiesta della Tesoreria da 4.000~EUR, non transfrontaliera e con rischio basso (LOW), è \texttt{AUTO\_APPROVAL\_ELIGIBLE} in v1 e \texttt{REVIEW\_REQUIRED} in v2. L'idoneità determina l'instradamento, non un'approvazione effettiva.
+
+\noindent\textbf{Conservare la storia.} \texttt{T-HISTORY}, registrata con la chiave \texttt{idem-history} in v1, conserva risposta e versione della policy originali quando la stessa richiesta viene ripetuta dopo l'attivazione di v2. La ripetizione non aggiunge eventi al registro. \texttt{T-NEW}, con la chiave \texttt{idem-new}, è una nuova richiesta da 4.000~EUR in v2 e richiede revisione. Riutilizzare una chiave con contenuto diverso, oppure lo stesso identificativo di transazione con un'altra chiave, produce \texttt{ConflictError}; il record originale resta invariato.
+
+\noindent\textbf{Come leggere il contratto.} \mbox{INT-001} identifica la prima intenzione. Il contratto didattico distribuito ne riunisce i requisiti e include già il confronto v1/v2 di \mbox{AC-002}; va letto insieme alla modifica \mbox{INT-002}. Gli esercizi successivi hanno identificativi di scenario distinti e non introducono una terza policy canonica.
+\endgroup
+\clearpage

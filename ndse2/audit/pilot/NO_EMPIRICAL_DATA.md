@@ -1,0 +1,5 @@
+# No real pilot data — evidence gate intentionally blocked
+
+Audit date: 2026-10-10. The CSV in this folder is a HEADER-ONLY collection template, not observed engineering work. `model/calibrate_from_pilot.py` was executed with it and intentionally refused calibration with `NO_REAL_PILOT_DATA` (nonzero exit code). No production deployment, reviewer-minute distributions, developer-minute measurements, acceptance estimates, or empirically calibrated benefit/cost ratios have been established.
+
+To resolve PWB-009: have the sponsoring engineering organization authorize a preregistered bounded study with real participant/team assignment, independent blinded acceptance review and measurement of all assigned tasks, 30-day follow-up, risk strata, deployments and rework. Collect uncertainty at the task/team clustering level, document comparator eligibility and exclude contaminated oracle data. Only then rerun the model with completed CSV records, check the recorded observation window, and update Chapter 12 and the audit graph with properly labeled empirical estimates. No synthetic data may be silently backfilled into this template.

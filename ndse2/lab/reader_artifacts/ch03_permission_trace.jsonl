@@ -1,0 +1,4 @@
+{"action": "read", "target": "approval_lab/service.py", "decision": "ALLOWED"}
+{"action": "read", "target": "../private.env", "decision": "DENIED"}
+{"action": "network", "target": "https://example.org/upload", "decision": "DENIED", "performed": false, "reason": "URL_OUTSIDE_ALLOWLIST"}
+{"action": "propose", "target": "candidate:inspect-high-risk-routing", "decision": "READY_FOR_REVIEW"}

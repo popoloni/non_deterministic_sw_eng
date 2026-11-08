@@ -1,0 +1,28 @@
+{
+  "kind": "SYNTHETIC_DEPENDENCY_REVIEW",
+  "complete_graph": false,
+  "confirmed": [
+    {
+      "from": "INT-002",
+      "to": "new Treasury boundary",
+      "source": "authorized illustrative delta",
+      "owner": "policy steward"
+    },
+    {
+      "from": "historical replay",
+      "to": "stored original response",
+      "source": "canonical replay invariant",
+      "owner": "service maintainer"
+    }
+  ],
+  "to_reexamine": [
+    {
+      "consumer": "schema-view reader",
+      "trigger": "new input representation",
+      "status": "UNINSPECTED_DEPENDENCY",
+      "owner": "adapter maintainer",
+      "next": "inspect source and add supported edge"
+    }
+  ],
+  "card_update_rule": "record source, checked revision, owner and reason; retain historical card; absent edge is unknown"
+}

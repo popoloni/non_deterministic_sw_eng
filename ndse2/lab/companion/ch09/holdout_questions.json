@@ -1,0 +1,81 @@
+[
+  {
+    "id": "T01",
+    "question": "What is the Treasury EUR ceiling for new decisions under policy v1?",
+    "gold": [
+      "policies/v1.json"
+    ],
+    "answer": "500000"
+  },
+  {
+    "id": "T02",
+    "question": "What is the Treasury EUR ceiling for new decisions under policy v2?",
+    "gold": [
+      "policies/v2.json"
+    ],
+    "answer": "300000"
+  },
+  {
+    "id": "T03",
+    "question": "Which authorized delta changed the Treasury ceiling from 500000 to 300000?",
+    "gold": [
+      "docs/02_late_intent_delta.json"
+    ],
+    "answer": "INT-002"
+  },
+  {
+    "id": "T04",
+    "question": "Why must replay of an old idempotency key preserve the original decision and policy version?",
+    "gold": [
+      "docs/01_intent_contract.json",
+      "approval_lab/service.py"
+    ],
+    "answer": "original"
+  },
+  {
+    "id": "T05",
+    "question": "Which independent test checks high risk transactions require review?",
+    "gold": [
+      "tests/test_domain_policy.py"
+    ],
+    "answer": "test_high_risk_never_auto_eligible"
+  },
+  {
+    "id": "T06",
+    "question": "Which source documents the in-process architecture design decision?",
+    "gold": [
+      "docs/03_architecture_decisions.md"
+    ],
+    "answer": "policy"
+  },
+  {
+    "id": "T07",
+    "question": "What evidence is invalidated by the Treasury threshold late clarification?",
+    "gold": [
+      "docs/02_late_intent_delta.json"
+    ],
+    "answer": "invalidates"
+  },
+  {
+    "id": "T08",
+    "question": "Is the synthetic policy-owner approval a real production signature?",
+    "gold": [
+      "docs/01_intent_contract.json"
+    ],
+    "answer": "EXAMPLE_ONLY"
+  },
+  {
+    "id": "T09",
+    "question": "Does the local audit hash chain provide tamper-proof cryptographic authorization?",
+    "gold": [
+      "approval_lab/service.py"
+    ],
+    "answer": "NOT"
+  },
+  {
+    "id": "T10",
+    "question": "What is the verified regulator approval number for production use?",
+    "gold": [],
+    "answer": null
+  }
+]

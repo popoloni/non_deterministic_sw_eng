@@ -1,0 +1,298 @@
+{
+  "kind": "DETERMINISTIC_CASE_TRACE_WITH_EXPLICIT_FINAL_REVISION_RECHECK",
+  "source": "lab/companion/ch11/multi_agent_governance.py",
+  "source_sha256": "06f2bea229d79d209facf41f29fed3026a5fb0e24d2b65acf30dba1b78ce705d",
+  "historical_counts": {
+    "ready_for_human_review": 3,
+    "rejected": 4
+  },
+  "intent_change_event": {
+    "event_index": 3,
+    "from": "INT-001",
+    "to": "INT-002",
+    "before_proposal": "B2",
+    "effect_in_original": "Set revision to 2 and clear the old file-ownership map."
+  },
+  "final_revision": 2,
+  "final_file_ownership": {
+    "policies/v2.json": "B2",
+    "docs/02_late_intent_delta.json": "E2"
+  },
+  "rows": [
+    {
+      "candidate_order": 1,
+      "event_index": 1,
+      "proposal": {
+        "ident": "A1",
+        "actor": "agent_A",
+        "intent": "INT-001",
+        "base_revision": 1,
+        "files": [
+          "approval_lab/policy.py"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "reviewer_1",
+        "checker": "checker_1",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 1,
+      "historical_gate_result": {
+        "proposal": "A1",
+        "state": "READY_FOR_HUMAN_REVIEW",
+        "reasons": [],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "A1",
+        "state": "REJECTED",
+        "reasons": [
+          "STALE_INTENT_REVISION"
+        ],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 2,
+      "event_index": 2,
+      "proposal": {
+        "ident": "B1",
+        "actor": "agent_B",
+        "intent": "INT-001",
+        "base_revision": 1,
+        "files": [
+          "approval_lab/policy.py"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "reviewer_2",
+        "checker": "checker_2",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 1,
+      "historical_gate_result": {
+        "proposal": "B1",
+        "state": "REJECTED",
+        "reasons": [
+          "FILE_OWNERSHIP_CONFLICT:approval_lab/policy.py"
+        ],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "B1",
+        "state": "REJECTED",
+        "reasons": [
+          "STALE_INTENT_REVISION"
+        ],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 3,
+      "event_index": 4,
+      "proposal": {
+        "ident": "B2",
+        "actor": "agent_B",
+        "intent": "INT-002",
+        "base_revision": 2,
+        "files": [
+          "policies/v2.json"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "reviewer_2",
+        "checker": "checker_2",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 2,
+      "historical_gate_result": {
+        "proposal": "B2",
+        "state": "READY_FOR_HUMAN_REVIEW",
+        "reasons": [],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "B2",
+        "state": "READY_FOR_HUMAN_REVIEW",
+        "reasons": [],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 4,
+      "event_index": 5,
+      "proposal": {
+        "ident": "A2",
+        "actor": "agent_A",
+        "intent": "INT-001",
+        "base_revision": 1,
+        "files": [
+          "policies/v2.json"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "reviewer_1",
+        "checker": "checker_1",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 2,
+      "historical_gate_result": {
+        "proposal": "A2",
+        "state": "REJECTED",
+        "reasons": [
+          "STALE_INTENT_REVISION",
+          "WRONG_POLICY_REVISION",
+          "FILE_OWNERSHIP_CONFLICT:policies/v2.json"
+        ],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "A2",
+        "state": "REJECTED",
+        "reasons": [
+          "STALE_INTENT_REVISION",
+          "WRONG_POLICY_REVISION",
+          "FILE_OWNERSHIP_CONFLICT:policies/v2.json"
+        ],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 5,
+      "event_index": 6,
+      "proposal": {
+        "ident": "C2",
+        "actor": "agent_C",
+        "intent": "INT-002",
+        "base_revision": 2,
+        "files": [
+          "tests/test_domain_policy.py"
+        ],
+        "evidence": [
+          "independent_policy_tests"
+        ],
+        "reviewer": "reviewer_3",
+        "checker": "checker_3",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 2,
+      "historical_gate_result": {
+        "proposal": "C2",
+        "state": "REJECTED",
+        "reasons": [
+          "MISSING_INDEPENDENT_EVIDENCE"
+        ],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "C2",
+        "state": "REJECTED",
+        "reasons": [
+          "MISSING_INDEPENDENT_EVIDENCE"
+        ],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 6,
+      "event_index": 7,
+      "proposal": {
+        "ident": "D2",
+        "actor": "agent_D",
+        "intent": "INT-002",
+        "base_revision": 2,
+        "files": [
+          ".env"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "agent_D",
+        "checker": "agent_D",
+        "asks_release": true,
+        "approval_signature": "self-declared"
+      },
+      "active_revision_at_original_check": 2,
+      "historical_gate_result": {
+        "proposal": "D2",
+        "state": "REJECTED",
+        "reasons": [
+          "PATH_OUTSIDE_ALLOWLIST",
+          "SELF_REVIEW",
+          "NO_INDEPENDENT_CHECKER",
+          "RELEASE_NOT_AUTHORIZED_IN_LAB",
+          "UNVERIFIED_SIGNATURE_NOT_ACCEPTED"
+        ],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "D2",
+        "state": "REJECTED",
+        "reasons": [
+          "PATH_OUTSIDE_ALLOWLIST",
+          "SELF_REVIEW",
+          "NO_INDEPENDENT_CHECKER",
+          "RELEASE_NOT_AUTHORIZED_IN_LAB",
+          "UNVERIFIED_SIGNATURE_NOT_ACCEPTED"
+        ],
+        "human_approval_verified": false
+      }
+    },
+    {
+      "candidate_order": 7,
+      "event_index": 8,
+      "proposal": {
+        "ident": "E2",
+        "actor": "agent_E",
+        "intent": "INT-002",
+        "base_revision": 2,
+        "files": [
+          "docs/02_late_intent_delta.json"
+        ],
+        "evidence": [
+          "independent_policy_tests",
+          "replay_regression"
+        ],
+        "reviewer": "reviewer_4",
+        "checker": "checker_4",
+        "asks_release": false,
+        "approval_signature": null
+      },
+      "active_revision_at_original_check": 2,
+      "historical_gate_result": {
+        "proposal": "E2",
+        "state": "READY_FOR_HUMAN_REVIEW",
+        "reasons": [],
+        "human_approval_verified": false
+      },
+      "current_revision_recheck": {
+        "proposal": "E2",
+        "state": "READY_FOR_HUMAN_REVIEW",
+        "reasons": [],
+        "human_approval_verified": false
+      }
+    }
+  ],
+  "current_revision_recheck_counts": {
+    "ready_for_human_review": 2,
+    "rejected": 5
+  },
+  "scope": {
+    "en": "The seven historical results are preserved. The second column reruns the same gate for all seven proposals at revision 2 with the original final ownership map. It is a new synthetic recheck, not a queue maintained by the historical script and not an operational authorization.",
+    "it": "I sette esiti storici restano conservati. La seconda valutazione richiama lo stesso controllo sulle sette proposte con la revisione 2 e la mappa finale originale delle assegnazioni. È un nuovo ricontrollo sintetico, non una coda mantenuta dallo script storico né un'autorizzazione operativa."
+  }
+}

@@ -1,5 +1,18 @@
 # AI-Assisted Engineering Examples
 
+## Choose your edition / Scegli l’edizione
+
+| Edition / Edizione | Start here / Punto di partenza |
+|---|---|
+| Second edition · 13.7.3 | [English laboratory](ndse2/lab/README_EN.md) · [Laboratorio italiano](ndse2/lab/README_ITA.md) |
+| First edition · December 2025 | Existing chapter directories and the material below / Cartelle dei capitoli esistenti e materiali riportati di seguito |
+
+The second-edition laboratory is self-contained in [`ndse2/`](ndse2/). Its guides identify the runnable commands and separate the different test totals. The description below concerns the first-edition material.
+
+Il laboratorio della seconda edizione è autonomo nella cartella [`ndse2/`](ndse2/). Le guide riportano i comandi eseguibili e distinguono i conteggi delle diverse verifiche. La descrizione seguente riguarda i materiali della prima edizione.
+
+---
+
 > Companion repository for **["Non-Deterministic Software Engineering"](https://www.amazon.com/dp/B0G7LPR4KB)** by Enrico Papalini
 
 <p align="center">

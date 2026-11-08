@@ -1,0 +1,2882 @@
+{
+  "edition": "NDSEv2 second edition 13.7.3, R06",
+  "checked_on": "2026-11-08",
+  "scope": "111 grouped numerical/substantive claims in the main chapters; targeted documentary checks, no independent empirical replication.",
+  "claims": [
+    {
+      "id": "E01-CH01-07-C01",
+      "chapter": 1,
+      "decision": "correct",
+      "source_ids": [
+        "W170"
+      ],
+      "sources": [
+        {
+          "work_id": "W170",
+          "primary_url": "https://ink.library.smu.edu.sg/sis_research/3779/",
+          "version_consulted": "TSE 2018; final-publication institutional abstract",
+          "publication_status": "TSE 2018; final-publication institutional abstract"
+        }
+      ],
+      "inspection_scope": "published_record_and_abstract",
+      "source_locator": "SMU accepted-version record, abstract, lines 35–39; DOI 10.1109/TSE.2017.2734091",
+      "independent_replication": false,
+      "claim_label": "Program-comprehension aggregate and sample",
+      "chapter_routes": [
+        1
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C02",
+      "chapter": 1,
+      "decision": "remove",
+      "source_ids": [
+        "W170"
+      ],
+      "sources": [
+        {
+          "work_id": "W170",
+          "primary_url": "https://ink.library.smu.edu.sg/sis_research/3779/",
+          "version_consulted": "TSE 2018; final-publication institutional abstract",
+          "publication_status": "TSE 2018; final-publication institutional abstract"
+        }
+      ],
+      "inspection_scope": "unverified_version_specific_components",
+      "source_locator": "Final-publication PDF not obtained; SMU download returns a short non-PDF response. Older author PDF is not the final aggregate version.",
+      "independent_replication": false,
+      "claim_label": "Comprehension split among IDE, browser and document editor",
+      "chapter_routes": [
+        1
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C03",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W176"
+      ],
+      "sources": [
+        {
+          "work_id": "W176",
+          "primary_url": "https://www.robertominelli.com/assets/downloads/publications/Mine2015b.pdf",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_passages",
+      "source_locator": "Author PDF, abstract/introduction; §IV and Fig. 3; participant/validity descriptions",
+      "independent_replication": false,
+      "claim_label": "Observed activity in Pharo: sample and comprehension/editing proportions",
+      "chapter_routes": [
+        1
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C04",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W002"
+      ],
+      "sources": [
+        {
+          "work_id": "W002",
+          "primary_url": "https://arxiv.org/abs/2507.08149",
+          "version_consulted": "arXiv:2507.08149v2 [cs.SE] 13 Sep 2025",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_manuscript_passages_final_text_not_accessible",
+      "source_locator": "Consulted arXiv HTML: §§3.1–3.3, workflow results and limitations; CHI 2026 publication identified, DOI 10.1145/3772318.3790850",
+      "independent_replication": false,
+      "claim_label": "Copilot/OpenHands workflow comparison and study design",
+      "chapter_routes": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C05",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W012"
+      ],
+      "sources": [
+        {
+          "work_id": "W012",
+          "primary_url": "https://arxiv.org/pdf/2608.00101",
+          "version_consulted": "arXiv:2608.00101v1 [cs.AI] 30 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract_and_pertinent_introduction",
+      "source_locator": "Consulted arXiv HTML abstract and introduction, production-workload characterization",
+      "independent_replication": false,
+      "claim_label": "Production-scale Copilot trace volume and agent-loop structure",
+      "chapter_routes": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C06",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W011"
+      ],
+      "sources": [
+        {
+          "work_id": "W011",
+          "primary_url": "https://arxiv.org/abs/2605.01160v1",
+          "version_consulted": "arXiv:2605.01160v1 [cs.SE] 01 May 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_passages",
+      "source_locator": "Consulted arXiv v1 abstract and organizational illustration, setting, design, limitations",
+      "independent_replication": false,
+      "claim_label": "Farrag synthesis and illustrative before/after organizational case",
+      "chapter_routes": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C07",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W186"
+      ],
+      "sources": [
+        {
+          "work_id": "W186",
+          "primary_url": "https://www.microsoft.com/en-us/research/publication/maintaining-mental-models-a-study-of-developer-work-habits/",
+          "version_consulted": "ICSE 2006",
+          "publication_status": "ICSE 2006"
+        }
+      ],
+      "inspection_scope": "published_abstract",
+      "source_locator": "LaToza et al. ICSE 2006 author PDF abstract; Microsoft Research publication abstract",
+      "independent_replication": false,
+      "claim_label": "Developers recover implicit knowledge and design rationale",
+      "chapter_routes": [
+        1
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C08",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W003"
+      ],
+      "sources": [
+        {
+          "work_id": "W003",
+          "primary_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+          "version_consulted": "Management Science 72(11):9408–9420, 2026",
+          "publication_status": "Management Science 72(11):9408–9420, 2026"
+        }
+      ],
+      "inspection_scope": "published_record_and_abstract",
+      "source_locator": "INFORMS Management Science published record/abstract; DOI 10.1287/mnsc.2025.00535; online 27 February 2026; 72(11):9408–9420",
+      "independent_replication": false,
+      "claim_label": "Completed-task uplift in three workplace experiments",
+      "chapter_routes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C09",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W023"
+      ],
+      "sources": [
+        {
+          "work_id": "W023",
+          "primary_url": "https://arxiv.org/abs/2507.09089",
+          "version_consulted": "arXiv:2507.09089v2 [cs.AI] 25 Jul 2025",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_passages_and_book_figure",
+      "source_locator": "Consulted arXiv manuscript abstract, design and results; book Fig. 2.1 visually inspected in EN baseline PDF p32",
+      "independent_replication": false,
+      "claim_label": "Experienced maintainers: measured time versus forecasts and recollection",
+      "chapter_routes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C10",
+      "chapter": 2,
+      "decision": "verified",
+      "source_ids": [
+        "W008"
+      ],
+      "sources": [
+        {
+          "work_id": "W008",
+          "primary_url": "https://arxiv.org/abs/2410.12944",
+          "version_consulted": "arXiv:2410.12944v3 [cs.SE] 11 Nov 2024",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract_and_limits",
+      "source_locator": "Consulted arXiv manuscript abstract and study limitations",
+      "independent_replication": false,
+      "claim_label": "Google enterprise-task RCT time reduction",
+      "chapter_routes": [
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C11",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W010"
+      ],
+      "sources": [
+        {
+          "work_id": "W010",
+          "primary_url": "https://www.nber.org/papers/w35275",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "working_paper_abstract_and_introduction",
+      "source_locator": "NBER Working Paper 35275, September 2026, PDF abstract p2 and introduction",
+      "independent_replication": false,
+      "claim_label": "Coding activity gains attenuate at project and release outcomes",
+      "chapter_routes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C12",
+      "chapter": 2,
+      "decision": "verified",
+      "source_ids": [
+        "W009"
+      ],
+      "sources": [
+        {
+          "work_id": "W009",
+          "primary_url": "https://arxiv.org/abs/2205.06537",
+          "version_consulted": "arXiv:2205.06537v1 [cs.SE] 13 May 2022",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract",
+      "source_locator": "Consulted author manuscript abstract; Productivity Assessment of Neural Code Completion",
+      "independent_replication": false,
+      "claim_label": "Completion acceptance and perceived productivity differ from delivery throughput",
+      "chapter_routes": [
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C13",
+      "chapter": 1,
+      "decision": "verified",
+      "source_ids": [
+        "W175",
+        "W182"
+      ],
+      "sources": [
+        {
+          "work_id": "W175",
+          "primary_url": "https://www.microsoft.com/en-us/research/publication/code-ownership-and-software-quality-a-replication-study/",
+          "version_consulted": "MSR 2015; DOI10.1109/MSR.2015.8",
+          "publication_status": "MSR 2015; DOI10.1109/MSR.2015.8"
+        },
+        {
+          "work_id": "W182",
+          "primary_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/bird2011dtm.pdf",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "published_abstracts",
+      "source_locator": "W175 Microsoft Research and IEEE published abstracts (DOI 10.1109/MSR.2015.8); W182 author PDF abstract",
+      "independent_replication": false,
+      "claim_label": "Historical ownership measures correlate with defect/failure outcomes",
+      "chapter_routes": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C14",
+      "chapter": 5,
+      "decision": "correct",
+      "source_ids": [
+        "W001"
+      ],
+      "sources": [
+        {
+          "work_id": "W001",
+          "primary_url": "https://doi.org/10.1145/3793302.3793589",
+          "version_consulted": "arXiv:2601.13597v2 [cs.SE] 27 Jan 2026",
+          "publication_status": "MSR 2026, pp857–862; author postprint consulted"
+        }
+      ],
+      "inspection_scope": "pertinent_postprint_passages_and_book_figure",
+      "source_locator": "Author postprint arXiv v2, §§3.1–3.3 and Table 2/results; MSR 2026 DOI 10.1145/3793302.3793589; book Fig. 5.2 visually inspected EN PDF p78",
+      "independent_replication": false,
+      "claim_label": "Prior observable repository AI exposure and velocity direction",
+      "chapter_routes": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C15",
+      "chapter": 5,
+      "decision": "narrow",
+      "source_ids": [
+        "W001",
+        "W004"
+      ],
+      "sources": [
+        {
+          "work_id": "W001",
+          "primary_url": "https://doi.org/10.1145/3793302.3793589",
+          "version_consulted": "arXiv:2601.13597v2 [cs.SE] 27 Jan 2026",
+          "publication_status": "MSR 2026, pp857–862; author postprint consulted"
+        },
+        {
+          "work_id": "W004",
+          "primary_url": "https://doi.org/10.1145/3793302.3793349",
+          "version_consulted": "arXiv:2511.04427v3  [cs.SE]  26 Jan 2026",
+          "publication_status": "MSR 2026; author postprint consulted"
+        }
+      ],
+      "inspection_scope": "pertinent_postprint_passages",
+      "source_locator": "W001 Table 2 and study design; W004 author postprint PDF Table 2, §3 and Appendix B/Table 6",
+      "independent_replication": false,
+      "claim_label": "Maintainability signals after observed tool adoption",
+      "chapter_routes": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C16",
+      "chapter": 2,
+      "decision": "verified",
+      "source_ids": [
+        "W020"
+      ],
+      "sources": [
+        {
+          "work_id": "W020",
+          "primary_url": "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+          "version_consulted": "Institutional article, 11 May 2026",
+          "publication_status": "Institutional article, 11 May 2026"
+        }
+      ],
+      "inspection_scope": "pertinent_full_article_sections",
+      "source_locator": "METR official May 11, 2026 article: Summary, Methodology, Results and Data quality appendix",
+      "independent_replication": false,
+      "claim_label": "Self-reported value and speed gains among technical workers",
+      "chapter_routes": [
+        2
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C17",
+      "chapter": 3,
+      "decision": "verified",
+      "source_ids": [
+        "W191"
+      ],
+      "sources": [
+        {
+          "work_id": "W191",
+          "primary_url": "https://doi.org/10.1145/3793302.3793579",
+          "version_consulted": "arXiv:2601.15195v1 [cs.SE] 21 Jan 2026",
+          "publication_status": "MSR 2026, pp807–811"
+        }
+      ],
+      "inspection_scope": "pertinent_manuscript_passages_and_book_figure",
+      "source_locator": "Consulted author manuscript methodology, RQ1 and RQ2; MSR 2026 DOI 10.1145/3793302.3793579, pp807–811; EN book Fig. 3.3 visually inspected PDF p47",
+      "independent_replication": false,
+      "claim_label": "Task-dependent merge rates and failed-agent-PR taxonomy",
+      "chapter_routes": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C18",
+      "chapter": 3,
+      "decision": "verified",
+      "source_ids": [
+        "W034",
+        "W057"
+      ],
+      "sources": [
+        {
+          "work_id": "W034",
+          "primary_url": "https://arxiv.org/abs/2602.08915",
+          "version_consulted": "arXiv:2602.08915v2 [cs.SE] 07 May 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W057",
+          "primary_url": "https://arxiv.org/abs/2607.21832",
+          "version_consulted": "arXiv:2607.21832v1 [cs.SE] 23 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstracts",
+      "source_locator": "Consulted arXiv abstracts for task-stratified acceptance and longitudinal PR comparison",
+      "independent_replication": false,
+      "claim_label": "Agent-PR outcomes vary by task type and observation design",
+      "chapter_routes": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C19",
+      "chapter": 7,
+      "decision": "verified",
+      "source_ids": [
+        "W193"
+      ],
+      "sources": [
+        {
+          "work_id": "W193",
+          "primary_url": "https://arxiv.org/abs/2606.30182v2",
+          "version_consulted": "arXiv:2606.30182v2 [cs.AI] 17 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract_and_pertinent_methods",
+      "source_locator": "MirrorCode arXiv v2 abstract, §2.1–2.3",
+      "independent_replication": false,
+      "claim_label": "Behavioral reimplementation benchmark and hidden tests",
+      "chapter_routes": [
+        3,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C20",
+      "chapter": 3,
+      "decision": "verified",
+      "source_ids": [
+        "W229"
+      ],
+      "sources": [
+        {
+          "work_id": "W229",
+          "primary_url": "https://arxiv.org/abs/2610.36346v1",
+          "version_consulted": "arXiv:2610.36346v1 [cs.SE] 26 Oct 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract_and_pertinent_protocol",
+      "source_locator": "Your Wish Is My Commit, arXiv v1 abstract and experimental protocol",
+      "independent_replication": false,
+      "claim_label": "Repeated open-ended refactoring can continue after declared completion",
+      "chapter_routes": [
+        3
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C21",
+      "chapter": 4,
+      "decision": "verified",
+      "source_ids": [
+        "W077"
+      ],
+      "sources": [
+        {
+          "work_id": "W077",
+          "primary_url": "https://doi.org/10.1145/3832204",
+          "version_consulted": "PACMSE 3(ISSTA), Article ISSTA113, 2026",
+          "publication_status": "PACMSE 3(ISSTA), Article ISSTA113, 2026"
+        }
+      ],
+      "inspection_scope": "pertinent_published_passages",
+      "source_locator": "Published ISSTA 2026 author PDF, pp2–5/§2.2 and specification-based approach; DOI 10.1145/3832204",
+      "independent_replication": false,
+      "claim_label": "Buggy input can misguide generated tests; docstring replacement mitigation",
+      "chapter_routes": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C22",
+      "chapter": 4,
+      "decision": "verified",
+      "source_ids": [
+        "W097"
+      ],
+      "sources": [
+        {
+          "work_id": "W097",
+          "primary_url": "https://arxiv.org/abs/2607.08885",
+          "version_consulted": "arXiv:2607.08885v1 [cs.SE] 09 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "arXiv 2607.08885v1, §3.1 and §6.1",
+      "independent_replication": false,
+      "claim_label": "Assertion correctness judgments and confidence",
+      "chapter_routes": [
+        4,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C23",
+      "chapter": 3,
+      "decision": "verified",
+      "source_ids": [
+        "W111"
+      ],
+      "sources": [
+        {
+          "work_id": "W111",
+          "primary_url": "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_full_article_sections",
+      "source_locator": "METR March 10, 2026 research note: Summary, Introduction and Data and Methods",
+      "independent_replication": false,
+      "claim_label": "Passing SWE-bench tests does not imply maintainer merge acceptance",
+      "chapter_routes": [
+        3,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C24",
+      "chapter": 3,
+      "decision": "narrow",
+      "source_ids": [
+        "W101"
+      ],
+      "sources": [
+        {
+          "work_id": "W101",
+          "primary_url": "https://arxiv.org/abs/2605.21537",
+          "version_consulted": "arXiv:2605.21537v1 [cs.SE] 20 May 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_results_and_limits",
+      "source_locator": "arXiv 2605.21537v1, §3 Method, §5 and §8 Discussion and Limitations",
+      "independent_replication": false,
+      "claim_label": "Single-model self-review can endorse behavior-changing modernization",
+      "chapter_routes": [
+        3,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C25",
+      "chapter": 5,
+      "decision": "verified",
+      "source_ids": [
+        "W029"
+      ],
+      "sources": [
+        {
+          "work_id": "W029",
+          "primary_url": "https://arxiv.org/abs/2601.20109",
+          "version_consulted": "arXiv:2601.20109v1 [cs.SE] 27 Jan 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "Author MSR manuscript, abstract and §2 dataset selection/differential analysis",
+      "independent_replication": false,
+      "claim_label": "New static issues at merge in agent-authored Python bug-fix PRs",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C26",
+      "chapter": 2,
+      "decision": "narrow",
+      "source_ids": [
+        "W054"
+      ],
+      "sources": [
+        {
+          "work_id": "W054",
+          "primary_url": "https://arxiv.org/abs/2609.17598",
+          "version_consulted": "arXiv:2609.17598v1 [cs.SE] 12 Sep 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_results_and_limits",
+      "source_locator": "arXiv 2609.17598v1, abstract, §3, §4.3 and §6",
+      "independent_replication": false,
+      "claim_label": "Observed 90-day maintenance endpoints and size-normalized follow-up code churn",
+      "chapter_routes": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C27",
+      "chapter": 5,
+      "decision": "verified",
+      "source_ids": [
+        "W036"
+      ],
+      "sources": [
+        {
+          "work_id": "W036",
+          "primary_url": "https://arxiv.org/abs/2509.14745",
+          "version_consulted": "arXiv:2509.14745v3 [cs.SE] 09 Feb 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "Consulted author manuscript abstract and task-classification methodology",
+      "independent_replication": false,
+      "claim_label": "Observed acceptance/modification of Claude Code PRs",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C28",
+      "chapter": 5,
+      "decision": "verified",
+      "source_ids": [
+        "W039",
+        "W052"
+      ],
+      "sources": [
+        {
+          "work_id": "W039",
+          "primary_url": "https://arxiv.org/abs/2508.21634",
+          "version_consulted": "arXiv:2508.21634v1 [cs.SE] 29 Aug 2025",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W052",
+          "primary_url": "https://arxiv.org/abs/2609.12708",
+          "version_consulted": "arXiv:2609.12708v2 [cs.SE] 21 Sep 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstracts_and_pertinent_results",
+      "source_locator": "W039 ISSRE author manuscript abstract; W052 arXiv manuscript abstract and comparative results",
+      "independent_replication": false,
+      "claim_label": "Function-level quality comparison: structural simplicity does not establish security",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C29",
+      "chapter": 5,
+      "decision": "narrow",
+      "source_ids": [
+        "W031"
+      ],
+      "sources": [
+        {
+          "work_id": "W031",
+          "primary_url": "https://arxiv.org/abs/2601.21276v1",
+          "version_consulted": "arXiv:2601.21276v1 [cs.SE] 29 Jan 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "Author MSR manuscript §2.1–2.2, results and abstract; DOI 10.1145/3793302.3793622",
+      "independent_replication": false,
+      "claim_label": "Semantic reuse and reviewer sentiment are different constructs",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C30",
+      "chapter": 5,
+      "decision": "remove",
+      "source_ids": [
+        "W044"
+      ],
+      "sources": [
+        {
+          "work_id": "W044",
+          "primary_url": "https://doi.org/10.1145/3729397",
+          "version_consulted": "PACMSE 2(FSE):2874–2896, 2025",
+          "publication_status": "PACMSE 2(FSE):2874–2896, 2025"
+        }
+      ],
+      "inspection_scope": "published_record_and_abstract",
+      "source_locator": "Published FSE 2025 conference/author-institution abstract; DOI 10.1145/3729397",
+      "independent_replication": false,
+      "claim_label": "Commercial code generators have been studied for code cloning",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C31",
+      "chapter": 5,
+      "decision": "narrow",
+      "source_ids": [
+        "W059"
+      ],
+      "sources": [
+        {
+          "work_id": "W059",
+          "primary_url": "https://arxiv.org/abs/2605.02741",
+          "version_consulted": "arXiv:2605.02741v1 [cs.SE] 04 May 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_results_and_limits",
+      "source_locator": "arXiv 2605.02741v1, §3.1–3.2, §4.3.1–4.3.2 and §5",
+      "independent_replication": false,
+      "claim_label": "Structural smell accumulation in tested generated Python systems",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C32",
+      "chapter": 2,
+      "decision": "narrow",
+      "source_ids": [
+        "W029",
+        "W054",
+        "W192",
+        "W068",
+        "W071"
+      ],
+      "sources": [
+        {
+          "work_id": "W029",
+          "primary_url": "https://arxiv.org/abs/2601.20109",
+          "version_consulted": "arXiv:2601.20109v1 [cs.SE] 27 Jan 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W054",
+          "primary_url": "https://arxiv.org/abs/2609.17598",
+          "version_consulted": "arXiv:2609.17598v1 [cs.SE] 12 Sep 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W192",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W068",
+          "primary_url": "https://espace2.etsmtl.ca/id/eprint/34495/",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W071",
+          "primary_url": "https://arxiv.org/abs/2605.22534v1",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "dataset_provenance",
+      "source_locator": "Dataset descriptions in W029/W054 and AIDev-derived papers; source relationships, not overlap reanalysis",
+      "independent_replication": false,
+      "claim_label": "Shared AIDev provenance limits independence claims",
+      "chapter_routes": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C33",
+      "chapter": 6,
+      "decision": "correct",
+      "source_ids": [
+        "W053"
+      ],
+      "sources": [
+        {
+          "work_id": "W053",
+          "primary_url": "https://arxiv.org/abs/2609.07360",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results_reused",
+      "source_locator": "arXiv 2609.07360v3 (25 September 2026), §§4.1–4.2/Table 1; prior primary audit cache",
+      "independent_replication": false,
+      "claim_label": "Configuration exposure rates use setup-specific denominators",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C34",
+      "chapter": 3,
+      "decision": "narrow",
+      "source_ids": [
+        "W060"
+      ],
+      "sources": [
+        {
+          "work_id": "W060",
+          "primary_url": "https://arxiv.org/abs/2509.22040",
+          "version_consulted": "arXiv:2509.22040v2 [cs.CR] 28 Apr 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_results_and_limits",
+      "source_locator": "Consulted Your AI, My Shell manuscript §§V-A, V-C, VI-C",
+      "independent_replication": false,
+      "claim_label": "Prompt-injection payload experiment and maximum command-execution success",
+      "chapter_routes": [
+        3,
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C35",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W045"
+      ],
+      "sources": [
+        {
+          "work_id": "W045",
+          "primary_url": "https://proceedings.mlr.press/v306/zhao26ax.html",
+          "version_consulted": "ICML 2026, PMLR306:162269–162292",
+          "publication_status": "ICML 2026, PMLR306:162269–162292"
+        }
+      ],
+      "inspection_scope": "pertinent_published_passages_reused",
+      "source_locator": "Published ICML 2026/PMLR 306:162269–162292, PDF pp1–3 and6–7, §4.1/Table3; prior published audit",
+      "independent_replication": false,
+      "claim_label": "SusVibes benchmark dimensions and SWE-agent/Claude 4 Sonnet result",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C36",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W206"
+      ],
+      "sources": [
+        {
+          "work_id": "W206",
+          "primary_url": "https://arxiv.org/abs/2610.24545v1",
+          "version_consulted": "arXiv:2610.24545v1 [cs.SE] 17 Oct 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_results_and_limits",
+      "source_locator": "arXiv 2610.24545v1, abstract, §3.4, §4.3, §6",
+      "independent_replication": false,
+      "claim_label": "Presence of call-site checks versus contract adequacy",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C37",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W041"
+      ],
+      "sources": [
+        {
+          "work_id": "W041",
+          "primary_url": "https://arxiv.org/abs/2510.26103",
+          "version_consulted": "arXiv:2510.26103v1 [cs.CR] 30 Oct 2025",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_limits",
+      "source_locator": "Schreiber author manuscript abstract, filtering/CodeQL methods and §5.3",
+      "independent_replication": false,
+      "claim_label": "File scanning and static security findings use a filtered execution-code population",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C38",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W046"
+      ],
+      "sources": [
+        {
+          "work_id": "W046",
+          "primary_url": "https://doi.org/10.1145/3576915.3623157",
+          "version_consulted": "CCS 2023, pp2785–2799",
+          "publication_status": "CCS 2023, pp2785–2799"
+        }
+      ],
+      "inspection_scope": "published_abstract_and_manuscript_context",
+      "source_locator": "Published CCS 2023 abstract, DOI 10.1145/3576915.3623157, pp2785–2799; consulted open author manuscript identifies codex-davinci-002",
+      "independent_replication": false,
+      "claim_label": "User study: assistant group wrote less secure code and reported higher security confidence",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C39",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W038"
+      ],
+      "sources": [
+        {
+          "work_id": "W038",
+          "primary_url": "https://arxiv.org/abs/2506.23034",
+          "version_consulted": "arXiv:2506.23034v2 [cs.SE] 04 Sep 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_case_results_and_limits",
+      "source_locator": "arXiv 2506.23034v2 (4 September 2026), §5.3/repair feedback case and §6.1",
+      "independent_replication": false,
+      "claim_label": "Explained repair feedback and localized path-containment example",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C40",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W043"
+      ],
+      "sources": [
+        {
+          "work_id": "W043",
+          "primary_url": "https://www.usenix.org/conference/usenixsecurity25/presentation/spracklen",
+          "version_consulted": "USENIX Security 2025, pp3687–3706",
+          "publication_status": "USENIX Security 2025, pp3687–3706"
+        }
+      ],
+      "inspection_scope": "published_abstract_and_pertinent_methods",
+      "source_locator": "Published USENIX Security 2025 PDF abstract and methodology; pp3687–3706",
+      "independent_replication": false,
+      "claim_label": "Package hallucinations as a supply-chain risk mechanism",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C41",
+      "chapter": 6,
+      "decision": "narrow",
+      "source_ids": [
+        "W030",
+        "W104"
+      ],
+      "sources": [
+        {
+          "work_id": "W030",
+          "primary_url": "https://arxiv.org/abs/2608.14876",
+          "version_consulted": "arXiv:2608.14876v1 [cs.CR] 14 Aug 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W104",
+          "primary_url": "https://arxiv.org/abs/2606.05647v3",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract_plus_delegated_pertinent_passages",
+      "source_locator": "W030 CAMLIS-accepted arXiv v1 abstract; W104 v3 §§3,4.1–4.3 and AppendixB read by sibling auditor",
+      "independent_replication": false,
+      "claim_label": "Workspace topology and induced sabotage concern the execution/oversight environment",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C42",
+      "chapter": 6,
+      "decision": "verified",
+      "source_ids": [
+        "W228"
+      ],
+      "sources": [
+        {
+          "work_id": "W228",
+          "primary_url": "https://arxiv.org/abs/2610.11647v2",
+          "version_consulted": "arXiv:2610.11647v2 [cs.SE] 13 Oct 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "arXiv 2610.11647v2, §3.9 and §4.2, task completion versus fidelity",
+      "independent_replication": false,
+      "claim_label": "Co-installed similar skills can preserve task completion but reduce intended-skill fidelity",
+      "chapter_routes": [
+        6
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C43",
+      "chapter": 7,
+      "decision": "verified",
+      "source_ids": [
+        "W202"
+      ],
+      "sources": [
+        {
+          "work_id": "W202",
+          "primary_url": "https://arxiv.org/abs/2610.13563v1",
+          "version_consulted": "arXiv:2610.13563v1 [cs.SE] 09 Oct 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "pertinent_methods_and_results",
+      "source_locator": "arXiv 2610.13563v1 abstract, F2P methodology and Table4",
+      "independent_replication": false,
+      "claim_label": "Functionally correct benchmark patches can differ in measured execution cost",
+      "chapter_routes": [
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C44",
+      "chapter": 3,
+      "decision": "verified",
+      "source_ids": [
+        "W079"
+      ],
+      "sources": [
+        {
+          "work_id": "W079",
+          "primary_url": "https://proceedings.mlr.press/v267/kim25e.html",
+          "version_consulted": "arXiv:2506.07962v1 [cs.CL] 09 Jun 2025",
+          "publication_status": "ICML 2025, PMLR267:30038–30066"
+        }
+      ],
+      "inspection_scope": "pertinent_published_passages_and_book_figure",
+      "source_locator": "Published ICML 2025/PMLR267 PDF §3.1–3.2; book Fig7.1 visually inspected EN PDF p106",
+      "independent_replication": false,
+      "claim_label": "Conditional wrong-answer agreement on HELM",
+      "chapter_routes": [
+        3,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C45",
+      "chapter": 7,
+      "decision": "verified",
+      "source_ids": [
+        "W082"
+      ],
+      "sources": [
+        {
+          "work_id": "W082",
+          "primary_url": "https://arxiv.org/abs/2404.13076",
+          "version_consulted": "arXiv:2404.13076v1 [cs.CL] 15 Apr 2024",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstract",
+      "source_locator": "Consulted author manuscript abstract; ICML publication metadata to be verified before bibliography finalization",
+      "independent_replication": false,
+      "claim_label": "LLM evaluator self-preference in broader text judgments",
+      "chapter_routes": [
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C46",
+      "chapter": 3,
+      "decision": "narrow",
+      "source_ids": [
+        "W095",
+        "W080"
+      ],
+      "sources": [
+        {
+          "work_id": "W095",
+          "primary_url": "https://arxiv.org/html/2609.04681",
+          "version_consulted": "arXiv:2609.04681v1 [cs.SE] 04 Sep 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W080",
+          "primary_url": "https://arxiv.org/html/2502.09801",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "conceptual_use_only",
+      "source_locator": "W095 framework source; W080 merely complementary citation in current paragraph",
+      "independent_replication": false,
+      "claim_label": "Verification-cost framing is not validation of the book’s evidence ladder",
+      "chapter_routes": [
+        3
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C47",
+      "chapter": 1,
+      "decision": "narrow",
+      "source_ids": [
+        "W148",
+        "W151",
+        "W152",
+        "W153",
+        "W099"
+      ],
+      "sources": [
+        {
+          "work_id": "W148",
+          "primary_url": "https://ieeexplore.ieee.org/document/11029771/",
+          "version_consulted": "See source_locator and inspection_scope",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W151",
+          "primary_url": "https://arxiv.org/html/2508.02721v2",
+          "version_consulted": "arXiv:2508.02721v2 [cs.SE] 16 Jun 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W152",
+          "primary_url": "https://arxiv.org/html/2509.06216",
+          "version_consulted": "arXiv:2509.06216v4 [cs.SE] 02 Nov 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W153",
+          "primary_url": "https://arxiv.org/html/2510.19692",
+          "version_consulted": "arXiv:2510.19692v2 [cs.SE] 17 Feb 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W099",
+          "primary_url": "https://arxiv.org/html/2607.29516v1",
+          "version_consulted": "arXiv:2607.29516v1 [cs.SE] 31 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "conceptual_and_cross_domain_analogy",
+      "source_locator": "Conceptual framing in the manuscript; blueprint source’s TravelPlanner context; roadmap/vision abstracts",
+      "independent_replication": false,
+      "claim_label": "Process/blueprint/roadmap papers motivate proposals without validating the Treasury controls",
+      "chapter_routes": [
+        1,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C48",
+      "chapter": 5,
+      "decision": "narrow",
+      "source_ids": [
+        "W055",
+        "W058",
+        "W189"
+      ],
+      "sources": [
+        {
+          "work_id": "W055",
+          "primary_url": "https://arxiv.org/abs/2603.28592v3",
+          "version_consulted": "arXiv:2603.28592v3 [cs.SE] 13 Oct 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W058",
+          "primary_url": "https://arxiv.org/abs/2607.01810",
+          "version_consulted": "arXiv:2607.01810v1 [cs.SE] 02 Jul 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        },
+        {
+          "work_id": "W189",
+          "primary_url": "https://arxiv.org/html/2606.20882",
+          "version_consulted": "arXiv:2606.20882v1 [cs.SE] 18 Jun 2026",
+          "publication_status": "Consulted source status; no additional publication claim inferred from arXiv alone"
+        }
+      ],
+      "inspection_scope": "abstracts_and_conceptual_framing",
+      "source_locator": "W055/W058 abstracts and W189 conceptual diagnosis",
+      "independent_replication": false,
+      "claim_label": "Maintenance/participation and authorship proxies do not establish stewardship",
+      "chapter_routes": [
+        5
+      ]
+    },
+    {
+      "id": "E01-CH01-07-C49",
+      "chapter": 3,
+      "decision": "narrow",
+      "source_ids": [
+        "W013"
+      ],
+      "sources": [
+        {
+          "work_id": "W013",
+          "primary_url": "https://slolab.github.io/agentic-expectation-realisation-gap/",
+          "version_consulted": "Author-hosted manuscript, 26 February 2026",
+          "publication_status": "Author-hosted manuscript, 26 February 2026"
+        }
+      ],
+      "inspection_scope": "author_abstract_and_synthesis_scope",
+      "source_locator": "Author-hosted manuscript https://slolab.github.io/agentic-expectation-realisation-gap/ (26 February 2026)",
+      "independent_replication": false,
+      "claim_label": "Expectation-realization synthesis as caution, not validation of Intent-First Development",
+      "chapter_routes": [
+        3
+      ]
+    },
+    {
+      "id": "C08-01",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W069"
+      ],
+      "sources": [
+        {
+          "work_id": "W069",
+          "primary_url": "https://arxiv.org/html/2606.26505v2",
+          "version_consulted": "arXiv:2606.26505v2, 30 August 2026",
+          "publication_status": "ASE 2026, DOI 10.1145/3832783.3834423; consulted author manuscript, not inaccessible publisher PDF",
+          "inspected_sections": "Abstract, experimental setup, gaze measures and findings",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "An LLM provenance label increases review time without measured improvement in thoroughness.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-02",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W073"
+      ],
+      "sources": [
+        {
+          "work_id": "W073",
+          "primary_url": "https://search.usi.ch/en/publications/70485",
+          "version_consulted": "Published FSE 2026 institutional abstract",
+          "publication_status": "PACMSE 3 (FSE), article FSE158; DOI 10.1145/3808165",
+          "inspected_sections": "Institutional abstract reporting 385-participant randomized experiment",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Task complexity affects evaluation of AI-suggested code.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-03",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W065"
+      ],
+      "sources": [
+        {
+          "work_id": "W065",
+          "primary_url": "https://arxiv.org/html/2605.02273v1",
+          "version_consulted": "arXiv:2605.02273v1, May 2026",
+          "publication_status": "EASE 2026 short-paper programme verified; numeric proof from manuscript",
+          "inspected_sections": "Abstract; Table 1; same-repository comparison table; observable-review definitions",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Recorded review channels in33,596 agent pull requests.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-04",
+      "chapter": 8,
+      "decision": "narrow",
+      "source_ids": [
+        "W065"
+      ],
+      "sources": [
+        {
+          "work_id": "W065",
+          "primary_url": "https://arxiv.org/html/2605.02273v1",
+          "version_consulted": "arXiv:2605.02273v1, May 2026",
+          "publication_status": "EASE 2026 short-paper programme verified; numeric proof from manuscript",
+          "inspected_sections": "Abstract; Table 1; same-repository comparison table; observable-review definitions",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "The same-repository comparison does not support simply treating the full-corpus84% as an AI-versus-human difference.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-05",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W074"
+      ],
+      "sources": [
+        {
+          "work_id": "W074",
+          "primary_url": "https://arxiv.org/html/2601.01129v2",
+          "version_consulted": "arXiv:2601.01129v2, 20 January 2026",
+          "publication_status": "ICSE 2026 SEIP, DOI 10.1145/3786583.3786851; author manuscript inspected",
+          "inspected_sections": "Section 4, RQ1/RQ2; observational cycle-time comparison and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "RovoDev comments followed by code changes in the industrial evaluation.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-06",
+      "chapter": 8,
+      "decision": "correct",
+      "source_ids": [
+        "W074"
+      ],
+      "sources": [
+        {
+          "work_id": "W074",
+          "primary_url": "https://arxiv.org/html/2601.01129v2",
+          "version_consulted": "arXiv:2601.01129v2, 20 January 2026",
+          "publication_status": "ICSE 2026 SEIP, DOI 10.1145/3786583.3786851; author manuscript inspected",
+          "inspected_sections": "Section 4, RQ1/RQ2; observational cycle-time comparison and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "RovoDev-assisted PR cycle time lower by30.8%.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-07",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W074"
+      ],
+      "sources": [
+        {
+          "work_id": "W074",
+          "primary_url": "https://arxiv.org/html/2601.01129v2",
+          "version_consulted": "arXiv:2601.01129v2, 20 January 2026",
+          "publication_status": "ICSE 2026 SEIP, DOI 10.1145/3786583.3786851; author manuscript inspected",
+          "inspected_sections": "Section 4, RQ1/RQ2; observational cycle-time comparison and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "35.6% fewer human comments in the RovoDev comparison.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-08",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W076"
+      ],
+      "sources": [
+        {
+          "work_id": "W076",
+          "primary_url": "https://arxiv.org/html/2509.01494v2",
+          "version_consulted": "arXiv:2509.01494v2, 5 June 2026",
+          "publication_status": "FSE 2026 official programme verified; author manuscript inspected",
+          "inspected_sections": "Abstract, benchmark construction and issue-coverage scoring",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "SWRBench benchmarks issue coverage on1,000 manually verified PRs with project context.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-09",
+      "chapter": 8,
+      "decision": "narrow",
+      "source_ids": [
+        "W064",
+        "W098",
+        "W096"
+      ],
+      "sources": [
+        {
+          "work_id": "W064",
+          "primary_url": "https://arxiv.org/abs/2602.11925",
+          "version_consulted": "arXiv:2602.11925 abstract retrieved 8 November 2026",
+          "inspected_sections": "Primary abstract only",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W098",
+          "primary_url": "https://arxiv.org/abs/2607.03316",
+          "version_consulted": "arXiv:2607.03316 abstract retrieved 8 November 2026",
+          "inspected_sections": "Primary abstract only",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W096",
+          "primary_url": "https://arxiv.org/abs/2607.21997",
+          "version_consulted": "arXiv:2607.21997 abstract retrieved 8 November 2026",
+          "inspected_sections": "Primary abstract only",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "AI-generated review usefulness varies with issue relevance, false positives and actionable detail.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-10",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W102"
+      ],
+      "sources": [
+        {
+          "work_id": "W102",
+          "primary_url": "https://arxiv.org/html/2607.21656v1",
+          "version_consulted": "arXiv:2607.21656v1, 22 July 2026",
+          "publication_status": "AgenticSE workshop at KDD 2026 indicated by primary author faculty listing",
+          "inspected_sections": "Experimental design, Tables 2–4, complete-case selection and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Model-pair review is directional: OA improves weak writer O; AO degrades strong writer A in116 complete cases.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-11",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W102"
+      ],
+      "sources": [
+        {
+          "work_id": "W102",
+          "primary_url": "https://arxiv.org/html/2607.21656v1",
+          "version_consulted": "arXiv:2607.21656v1, 22 July 2026",
+          "publication_status": "AgenticSE workshop at KDD 2026 indicated by primary author faculty listing",
+          "inspected_sections": "Experimental design, Tables 2–4, complete-case selection and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Extra review has measured token cost and can both repair and break solutions.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-12",
+      "chapter": 8,
+      "decision": "correct",
+      "source_ids": [
+        "W109"
+      ],
+      "sources": [
+        {
+          "work_id": "W109",
+          "primary_url": "https://arxiv.org/abs/2407.00215",
+          "version_consulted": "arXiv:2407.00215, 2024",
+          "inspected_sections": "Primary abstract describing trained code critics and human evaluation",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "LLM Critics Help Catch LLM Bugs is described as a self-review study.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-13",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W079"
+      ],
+      "sources": [
+        {
+          "work_id": "W079",
+          "primary_url": "https://proceedings.mlr.press/v267/kim25e.html",
+          "version_consulted": "Published ICML2025/PMLR267:30038–30066",
+          "inspected_sections": "Section3.2; conditional error agreement and 1/3 baseline",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Model errors can be correlated, so agreement alone does not establish correctness.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-14",
+      "chapter": 8,
+      "decision": "narrow",
+      "source_ids": [
+        "W083",
+        "W088",
+        "W091"
+      ],
+      "sources": [
+        {
+          "work_id": "W083",
+          "primary_url": "https://arxiv.org/abs/2405.16081",
+          "version_consulted": "arXiv:2405.16081, 2024",
+          "inspected_sections": "Primary abstract, study scope and participants",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W088",
+          "primary_url": "https://web.eecs.umich.edu/~weimerw/p/weimer-esem2020.pdf",
+          "version_consulted": "ESEM 2020 public author manuscript",
+          "publication_status": "ESEM 2020 author manuscript",
+          "inspected_sections": "Abstract and study design: ten participants, automated-patch provenance and eye tracking",
+          "inspection_level": "relevant_sections"
+        },
+        {
+          "work_id": "W091",
+          "primary_url": "https://pubmed.ncbi.nlm.nih.gov/27516495/",
+          "version_consulted": "Published 2017 systematic review; PubMed/PMC abstract",
+          "inspected_sections": "Systematic-review abstract, 40 studies and non-software domains",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Three sources are grouped as evidence on trusting AI review recommendations.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-15",
+      "chapter": 8,
+      "decision": "narrow",
+      "source_ids": [
+        "W104"
+      ],
+      "sources": [
+        {
+          "work_id": "W104",
+          "primary_url": "https://arxiv.org/html/2606.05647v3",
+          "version_consulted": "arXiv:2606.05647v3, 4 November 2026",
+          "publication_status": "Authors report NeurIPS 2026 acceptance; consulted v3 manuscript",
+          "inspected_sections": "Sections 3, 4.1–4.3; limitation appendix B",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Ye and colleagues provide general review-quality context.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-16",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W107",
+        "W111"
+      ],
+      "sources": [
+        {
+          "work_id": "W107",
+          "primary_url": "https://arxiv.org/abs/2603.15911v3",
+          "version_consulted": "arXiv:2603.15911v3",
+          "inspected_sections": "Primary abstract on reviewer feedback and integration outcomes",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W111",
+          "primary_url": "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/",
+          "version_consulted": "Primary paper inspected by /root/review373_primary_evidence",
+          "inspected_sections": "Abstract and method;4 maintainers,3repositories,296agentPR,95issues",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Patch correctness on a benchmark differs from review acceptance and integration.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C08-17",
+      "chapter": 8,
+      "decision": "verified",
+      "source_ids": [
+        "W010"
+      ],
+      "sources": [
+        {
+          "work_id": "W010",
+          "primary_url": "https://www.nber.org/papers/w35275",
+          "version_consulted": "NBER Working Paper35275, primary PDF",
+          "inspected_sections": "Abstract PDFp2; activity, project and release measures",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Coding activity growth and delivered change are distinct outcomes.",
+      "chapter_routes": [
+        8
+      ]
+    },
+    {
+      "id": "C09-01",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W186"
+      ],
+      "sources": [
+        {
+          "work_id": "W186",
+          "primary_url": "https://www.microsoft.com/en-us/research/publication/maintaining-mental-models-a-study-of-developer-work-habits/",
+          "version_consulted": "ICSE 2006 primary Microsoft publication abstract",
+          "inspected_sections": "Two surveys and eleven interviews; maintaining mental models",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Developer mental models include implicit knowledge not captured by reading code alone.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-02",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W182"
+      ],
+      "sources": [
+        {
+          "work_id": "W182",
+          "primary_url": "https://www.microsoft.com/en-us/research/publication/dont-touch-my-code-examining-the-effects-of-ownership-on-software-quality/",
+          "version_consulted": "ESEC/FSE 2011 primary Microsoft publication abstract",
+          "inspected_sections": "Ownership, pre-release faults and post-release failures in Windows Vista/7",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Ownership measures have observational relationships with faults/failures.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-03",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W155",
+        "W158"
+      ],
+      "sources": [
+        {
+          "work_id": "W155",
+          "primary_url": "https://arxiv.org/html/2605.10702v2",
+          "version_consulted": "arXiv:2605.10702v2, 12 August 2026",
+          "inspected_sections": "Sections 3.3–3.4, system sketches, interviews and code-change evaluation",
+          "inspection_level": "relevant_sections"
+        },
+        {
+          "work_id": "W158",
+          "primary_url": "https://arxiv.org/abs/2411.09916",
+          "version_consulted": "arXiv:2411.09916, 2024",
+          "inspected_sections": "Primary abstract; 26 participants and contextual shortcomings",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Context availability and a coherent mental model are separate concerns in work on unfamiliar code.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-04",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W157"
+      ],
+      "sources": [
+        {
+          "work_id": "W157",
+          "primary_url": "https://binds.ch/papers/clawvm2026.pdf",
+          "version_consulted": "EuroMLSys 2026 author PDF",
+          "publication_status": "M. Rafique and L. Bindschaedler; EuroMLSys 2026, 27–30 April, Edinburgh; DOI 10.1145/3805621.3807648; 12 pages, not verified proceedings page range",
+          "inspected_sections": "First-page citation; abstract; typed pages, minimum-fidelity constraints and lifecycle writeback",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "ClawVM proposes typed memory pages, minimum-fidelity constraints and validated writeback.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-05",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W157"
+      ],
+      "sources": [
+        {
+          "work_id": "W157",
+          "primary_url": "https://binds.ch/papers/clawvm2026.pdf",
+          "version_consulted": "EuroMLSys 2026 author PDF",
+          "publication_status": "M. Rafique and L. Bindschaedler; EuroMLSys 2026, 27–30 April, Edinburgh; DOI 10.1145/3805621.3807648; 12 pages, not verified proceedings page range",
+          "inspected_sections": "First-page citation; abstract; typed pages, minimum-fidelity constraints and lifecycle writeback",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "ClawVM evaluation covers synthetic workloads,12 real-session traces and adversarial tests.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-06",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W160"
+      ],
+      "sources": [
+        {
+          "work_id": "W160",
+          "primary_url": "https://www.ijcai.org/proceedings/2025/0002.pdf",
+          "version_consulted": "IJCAI 2025 proceedings paper, pp.12–20",
+          "publication_status": "DOI 10.24963/ijcai.2025/2",
+          "inspected_sections": "Published abstract and representation/evaluation-domain description",
+          "inspection_level": "abstract_and_targeted_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "AriGraph represents semantic/episodic memory and is evaluated in interactive text games, with other reasoning tasks.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C09-07",
+      "chapter": 9,
+      "decision": "verified",
+      "source_ids": [
+        "W185",
+        "W173"
+      ],
+      "sources": [
+        {
+          "work_id": "W185",
+          "primary_url": "https://mockus.org/papers/succession.pdf",
+          "version_consulted": "Public author manuscript, developer succession study",
+          "inspected_sections": "Abstract and study design: succession interviews and developer-pair repository analysis",
+          "inspection_level": "relevant_sections"
+        },
+        {
+          "work_id": "W173",
+          "primary_url": "https://users.encs.concordia.ca/~pcr/paper/Rigby2016ICSE.pdf",
+          "version_consulted": "ICSE 2016 author manuscript",
+          "inspected_sections": "Abstract and knowledge-loss/file-abandonment study design",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Turnover and developer succession motivate preserving knowledge beyond individual authors.",
+      "chapter_routes": [
+        9
+      ]
+    },
+    {
+      "id": "C10-01",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W118"
+      ],
+      "sources": [
+        {
+          "work_id": "W118",
+          "primary_url": "https://arxiv.org/html/2601.20245v2",
+          "version_consulted": "arXiv:2601.20245v2, 1 February 2026",
+          "inspected_sections": "Sections 4.2–4.3, 5.2.2; randomization, quiz, task timing and exploratory interaction patterns",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "AI assistance reduced immediate unaided quiz performance in the randomized Trio study.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-02",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W118"
+      ],
+      "sources": [
+        {
+          "work_id": "W118",
+          "primary_url": "https://arxiv.org/html/2601.20245v2",
+          "version_consulted": "arXiv:2601.20245v2, 1 February 2026",
+          "inspected_sections": "Sections 4.2–4.3, 5.2.2; randomization, quiz, task timing and exploratory interaction patterns",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Average task-time improvement was not statistically significant.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-03",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W118"
+      ],
+      "sources": [
+        {
+          "work_id": "W118",
+          "primary_url": "https://arxiv.org/html/2601.20245v2",
+          "version_consulted": "arXiv:2601.20245v2, 1 February 2026",
+          "inspected_sections": "Sections 4.2–4.3, 5.2.2; randomization, quiz, task timing and exploratory interaction patterns",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Six interaction patterns are exploratory observations, not six randomized teaching methods.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-04",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W154"
+      ],
+      "sources": [
+        {
+          "work_id": "W154",
+          "primary_url": "https://arxiv.org/html/2604.13277v1",
+          "version_consulted": "arXiv:2604.13277v1, 14 April 2026",
+          "publication_status": "Muhammad Ovais Ahmad, sole author; LEARNER workshop at EASE 2026 programme verified; no publisher DOI verified",
+          "inspected_sections": "Abstract and diary-study design/themes",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Qualitative diary study describes comprehension debt and helpful scaffolding.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-05",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W155"
+      ],
+      "sources": [
+        {
+          "work_id": "W155",
+          "primary_url": "https://arxiv.org/html/2605.10702v2",
+          "version_consulted": "arXiv:2605.10702v2, 12 August 2026",
+          "inspected_sections": "Sections 3.3–3.4, system sketches, interviews and code-change evaluation",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "System sketches and explanations can reveal differences not captured by task completion alone.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-06",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W113"
+      ],
+      "sources": [
+        {
+          "work_id": "W113",
+          "primary_url": "https://arxiv.org/html/2504.19037v1",
+          "version_consulted": "arXiv:2504.19037v1, 26 April 2025",
+          "publication_status": "FSE Companion 2025; DOI 10.1145/3696630.3731663 in manuscript",
+          "inspected_sections": "Abstract, participant/task design and comprehension outcome",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Novices achieved32.5% success on code-comprehension tasks.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-07",
+      "chapter": 10,
+      "decision": "narrow",
+      "source_ids": [
+        "W112",
+        "W067"
+      ],
+      "sources": [
+        {
+          "work_id": "W112",
+          "primary_url": "https://arxiv.org/html/2602.23905v1",
+          "version_consulted": "arXiv:2602.23905v1, 27 February 2026",
+          "publication_status": "MSR 2026, DOI 10.1145/3793302.3793597; official programme verified, author manuscript inspected",
+          "inspected_sections": "Method, prior-commit experience grouping, outcomes and limitations",
+          "inspection_level": "relevant_sections"
+        },
+        {
+          "work_id": "W067",
+          "primary_url": "https://arxiv.org/html/2609.21020v1",
+          "version_consulted": "arXiv:2609.21020v1, 17 September 2026",
+          "inspected_sections": "Abstract, Sections III-A/III-E/IV-B; security-assessment tasks",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Novice contribution and security-attention studies justify broad claims about learning.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-08",
+      "chapter": 10,
+      "decision": "remove",
+      "source_ids": [
+        "W116",
+        "W117",
+        "W121"
+      ],
+      "sources": [
+        {
+          "work_id": "W116",
+          "primary_url": "https://arxiv.org/abs/2606.20598",
+          "version_consulted": "arXiv:2606.20598 primary abstract retrieved 8 November 2026",
+          "inspected_sections": "Abstract and domain/design classification",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W117",
+          "primary_url": "https://arxiv.org/abs/2604.03501",
+          "version_consulted": "arXiv:2604.03501 primary abstract retrieved 8 November 2026",
+          "inspected_sections": "Abstract and domain/design classification",
+          "inspection_level": "abstract"
+        },
+        {
+          "work_id": "W121",
+          "primary_url": "https://arxiv.org/abs/2506.08872",
+          "version_consulted": "arXiv:2506.08872 primary abstract retrieved 8 November 2026",
+          "inspected_sections": "Abstract and domain/design classification",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Physiology/offloading/essay-writing sources are presented through an unfinished physiological-effect audit.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-09",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W156"
+      ],
+      "sources": [
+        {
+          "work_id": "W156",
+          "primary_url": "https://arxiv.org/html/2603.25391v1",
+          "version_consulted": "arXiv:2603.25391v1, 26 March 2026",
+          "publication_status": "FSE 2026 industry programme abstract verified; author manuscript inspected",
+          "inspected_sections": "Participant section; Section 5 design and Section 6.2 immediate quiz outcomes",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "LACY expert-curated tours scored83% versus57% on immediate quizzes.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-10",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W163"
+      ],
+      "sources": [
+        {
+          "work_id": "W163",
+          "primary_url": "https://homepages.dcc.ufmg.br/~figueiredo/disciplinas/papers/icse2021ju.pdf",
+          "version_consulted": "ICSE 2021 primary author PDF",
+          "publication_status": "DOI 10.1109/ICSE43902.2021.00063",
+          "inspected_sections": "Abstract and exploratory interview/survey study design",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Exploratory onboarding study identifies social/procedural support needs.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-11",
+      "chapter": 10,
+      "decision": "remove",
+      "source_ids": [],
+      "sources": [],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Historical fluency/ramp-up/distribution studies are used as an unspecified staged-onboarding evidence bundle, followed by an open-check note.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C10-12",
+      "chapter": 10,
+      "decision": "verified",
+      "source_ids": [
+        "W162",
+        "W162Corrigendum2026"
+      ],
+      "sources": [
+        {
+          "work_id": "W162",
+          "primary_url": "https://research.vu.nl/ws/portalfiles/portal/361250595/40_Years_of_Designing_Code_Comprehension_Experiments_A_Systematic_Mapping_Study.pdf",
+          "version_consulted": "ACM CSUR 56(4), 2024, article106; publisher PDF in VU repository",
+          "publication_status": "DOI 10.1145/3626522; 42 pages",
+          "inspected_sections": "Publisher-version abstract, bibliographic front matter and experiment mapping scope",
+          "inspection_level": "abstract_and_metadata"
+        },
+        {
+          "work_id": "W162Corrigendum2026",
+          "primary_url": "https://doi.org/10.1145/3838282",
+          "version_consulted": "ACM CSUR corrigendum, 2 September 2026",
+          "publication_status": "ACM CSUR 58(14), article C3; DOI 10.1145/3838282",
+          "inspected_sections": "Primary institutional record and correction description",
+          "inspection_level": "abstract_and_metadata"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "The systematic mapping covers95 comprehension experiments from1979–2019; corrigendum repairs study identifiers.",
+      "chapter_routes": [
+        10
+      ]
+    },
+    {
+      "id": "C11-01",
+      "chapter": 11,
+      "decision": "correct",
+      "source_ids": [
+        "W094"
+      ],
+      "sources": [
+        {
+          "work_id": "W094",
+          "primary_url": "https://arxiv.org/html/2607.04003v1",
+          "version_consulted": "arXiv:2607.04003v1, 4 July 2026",
+          "inspected_sections": "Sections III-C/III-D and Table II; intervention proxy, aggregate-volume and merge-ratio estimates",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Estimated aggregate additional PR arrivals are519.86/week across294sampled repositories.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-02",
+      "chapter": 11,
+      "decision": "narrow",
+      "source_ids": [
+        "W094"
+      ],
+      "sources": [
+        {
+          "work_id": "W094",
+          "primary_url": "https://arxiv.org/html/2607.04003v1",
+          "version_consulted": "arXiv:2607.04003v1, 4 July 2026",
+          "inspected_sections": "Sections III-C/III-D and Table II; intervention proxy, aggregate-volume and merge-ratio estimates",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Aggregate and one-time-contributor merge ratios decline by1.06% and18.18%.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-03",
+      "chapter": 11,
+      "decision": "verified",
+      "source_ids": [
+        "W147"
+      ],
+      "sources": [
+        {
+          "work_id": "W147",
+          "primary_url": "https://arxiv.org/html/2603.26487v2",
+          "version_consulted": "arXiv:2603.26487v2, 30 July 2026",
+          "publication_status": "ASE 2026 DOI 10.1145/3832783.3837448; exact numbers checked in v2, not inaccessible ACM PDF",
+          "inspected_sections": "Sections 3.1–3.4, 5.1 and Figure 2; purposeful sampling and coding reliability",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "67purposefully selected governance cases comprise14prohibitionist,40boundary/accountability,13quality-first.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-04",
+      "chapter": 11,
+      "decision": "verified",
+      "source_ids": [
+        "W147"
+      ],
+      "sources": [
+        {
+          "work_id": "W147",
+          "primary_url": "https://arxiv.org/html/2603.26487v2",
+          "version_consulted": "arXiv:2603.26487v2, 30 July 2026",
+          "publication_status": "ASE 2026 DOI 10.1145/3832783.3837448; exact numbers checked in v2, not inaccessible ACM PDF",
+          "inspected_sections": "Sections 3.1–3.4, 5.1 and Figure 2; purposeful sampling and coding reliability",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Inter-rater reliability κ=.742,macro concern κ=.745,strategy κ=.840.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-05",
+      "chapter": 11,
+      "decision": "correct",
+      "source_ids": [
+        "W150"
+      ],
+      "sources": [
+        {
+          "work_id": "W150",
+          "primary_url": "https://arxiv.org/html/2609.07542v1",
+          "version_consulted": "arXiv:2609.07542v1, September 2026",
+          "publication_status": "Preprint; journal publication not verified",
+          "inspected_sections": "Sampling; Table 1; Sections 3.1–3.3; exact policy intersections and communication channels",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Human-involvement and disclosure policy counts are compared as if they had different denominators.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-06",
+      "chapter": 11,
+      "decision": "correct",
+      "source_ids": [
+        "W150"
+      ],
+      "sources": [
+        {
+          "work_id": "W150",
+          "primary_url": "https://arxiv.org/html/2609.07542v1",
+          "version_consulted": "arXiv:2609.07542v1, September 2026",
+          "publication_status": "Preprint; journal publication not verified",
+          "inspected_sections": "Sampling; Table 1; Sections 3.1–3.3; exact policy intersections and communication channels",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Figure11.1 and body call exact policy-combination counts overlapping non-additive subsets.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-07",
+      "chapter": 11,
+      "decision": "verified",
+      "source_ids": [
+        "W150"
+      ],
+      "sources": [
+        {
+          "work_id": "W150",
+          "primary_url": "https://arxiv.org/html/2609.07542v1",
+          "version_consulted": "arXiv:2609.07542v1, September 2026",
+          "publication_status": "Preprint; journal publication not verified",
+          "inspected_sections": "Sampling; Table 1; Sections 3.1–3.3; exact policy intersections and communication channels",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Policy-permission and missing-guidance channel shares in Figure11.2.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-08",
+      "chapter": 11,
+      "decision": "narrow",
+      "source_ids": [
+        "W149"
+      ],
+      "sources": [
+        {
+          "work_id": "W149",
+          "primary_url": "https://arxiv.org/html/2608.03329v1",
+          "version_consulted": "arXiv:2608.03329v1, 4 August 2026",
+          "inspected_sections": "Sections III-A, IV and V; sampling, treatment eligibility, AI labelling, matching and sensitivity windows",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Policy-adoption study has385adopters among29,624repositories, observational labels and differing stated windows.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-09",
+      "chapter": 11,
+      "decision": "narrow",
+      "source_ids": [
+        "W112"
+      ],
+      "sources": [
+        {
+          "work_id": "W112",
+          "primary_url": "https://arxiv.org/html/2602.23905v1",
+          "version_consulted": "arXiv:2602.23905v1, 27 February 2026",
+          "publication_status": "MSR 2026, DOI 10.1145/3793302.3793597; official programme verified, author manuscript inspected",
+          "inspected_sections": "Method, prior-commit experience grouping, outcomes and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "“Novice developers” impose a general substantial review overhead.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C11-10",
+      "chapter": 11,
+      "decision": "verified",
+      "source_ids": [
+        "W058"
+      ],
+      "sources": [
+        {
+          "work_id": "W058",
+          "primary_url": "https://arxiv.org/abs/2607.01810",
+          "version_consulted": "arXiv:2607.01810 primary abstract retrieved 8 November 2026",
+          "inspected_sections": "Abstract and observational design/conclusion",
+          "inspection_level": "abstract"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Adoption-associated complexity and newcomer participation do not mechanically move together.",
+      "chapter_routes": [
+        11
+      ]
+    },
+    {
+      "id": "C12-01",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "F033"
+      ],
+      "sources": [
+        {
+          "work_id": "F033",
+          "primary_url": "https://martinfowler.com/articles/are-harnesses-worth-the-cost.html",
+          "version_consulted": "Original author article, consulted 8 November 2026",
+          "inspected_sections": "Experiment design, paired runs, cost boundaries and limitations",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Harness experiment compares machine-execution costs in a small greenfield implementation task.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-02",
+      "chapter": 12,
+      "decision": "correct",
+      "source_ids": [
+        "W001"
+      ],
+      "sources": [
+        {
+          "work_id": "W001",
+          "primary_url": "https://arxiv.org/html/2601.13597",
+          "version_consulted": "Author manuscript inspected by /root/review373_primary_evidence",
+          "inspected_sections": "Table2; repository-based IDE groups and methods",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Complexity increases34.85% and42.87% refer to two IDE-defined cohorts.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-03",
+      "chapter": 12,
+      "decision": "correct",
+      "source_ids": [
+        "W004"
+      ],
+      "sources": [
+        {
+          "work_id": "W004",
+          "primary_url": "https://www.cs.cmu.edu/~ckaestne/pdf/msr26.pdf",
+          "version_consulted": "Published MSR2026 author PDF inspected by /root/review373_primary_evidence",
+          "inspected_sections": "Table2, AppendixB/Table6 and 806-repository population",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "806Cursor adopters show preferred-estimator quality changes, with alternate-estimator disagreement.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-04",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W020"
+      ],
+      "sources": [
+        {
+          "work_id": "W020",
+          "primary_url": "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+          "version_consulted": "METR survey article, 11 May2026",
+          "inspected_sections": "Official article, retained sample, wording variants and recruitment",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "METR convenience survey reports median value around1.4–2× versus perceived task speed around3×.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-05",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W028"
+      ],
+      "sources": [
+        {
+          "work_id": "W028",
+          "primary_url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-ai-revolution-in-software-development",
+          "version_consulted": "McKinsey book excerpt, 1 April 2026",
+          "inspected_sections": "Bank vignette, four capability levels and twentyfold potential",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "McKinsey presents twentyfold agent-factory potential.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-06",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W125"
+      ],
+      "sources": [
+        {
+          "work_id": "W125",
+          "primary_url": "https://digitaleconomy.stanford.edu/app/uploads/2026/08/Canaries_August2026.pdf",
+          "version_consulted": "12 August 2026 paper, observations through June 2026",
+          "inspected_sections": "Abstract; introductory qualifications; Section 4; education/pre-trend and firm-time discussions",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "August2026Stanford paper reports≈19%relative employment gap for22–25year-olds in exposed occupations.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-07",
+      "chapter": 12,
+      "decision": "correct",
+      "source_ids": [
+        "W125"
+      ],
+      "sources": [
+        {
+          "work_id": "W125",
+          "primary_url": "https://digitaleconomy.stanford.edu/app/uploads/2026/08/Canaries_August2026.pdf",
+          "version_consulted": "12 August 2026 paper, observations through June 2026",
+          "inspected_sections": "Abstract; introductory qualifications; Section 4; education/pre-trend and firm-time discussions",
+          "inspection_level": "relevant_sections"
+        },
+        {
+          "work_id": "W125_timing",
+          "primary_url": "https://digitaleconomy.stanford.edu/news/canaries-interest-rates-and-timinga-more-on-recent-drivers-of-employment-changes-for-young-workers/",
+          "version_consulted": "9 February 2026 author follow-up on November 2025 paper",
+          "inspected_sections": "Date, linked paper version and timing/firm-time discussion",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "The 2024 onset qualification is presented beside the19%estimate without identifying its older follow-up window.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-08",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W129"
+      ],
+      "sources": [
+        {
+          "work_id": "W129",
+          "primary_url": "https://pub.etla.fi/ETLA-Working-Papers-135.pdf",
+          "version_consulted": "ETLA Working Paper135, 27 January 2026; data through September 2025",
+          "inspected_sections": "Abstract, data Section2 and employment/wage findings",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Finnish data show no persistent AI-exposure divergence in youth employment.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-09",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W129"
+      ],
+      "sources": [
+        {
+          "work_id": "W129",
+          "primary_url": "https://pub.etla.fi/ETLA-Working-Papers-135.pdf",
+          "version_consulted": "ETLA Working Paper135, 27 January 2026; data through September 2025",
+          "inspected_sections": "Abstract, data Section2 and employment/wage findings",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Finnish data show no persistent exposure-based wage gap.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-10",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W131"
+      ],
+      "sources": [
+        {
+          "work_id": "W131",
+          "primary_url": "https://cep.lse.ac.uk/pubs/download/dp2193.pdf",
+          "version_consulted": "CEP Discussion Paper2193, 10 June 2026",
+          "inspected_sections": "Abstract, exposure-gradient specification discussion and exposure-parallel-trends assumption",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Separate GenAI/WFH exposure gradients predict lower junior hiring and low-experience vacancy shares.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-11",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W131"
+      ],
+      "sources": [
+        {
+          "work_id": "W131",
+          "primary_url": "https://cep.lse.ac.uk/pubs/download/dp2193.pdf",
+          "version_consulted": "CEP Discussion Paper2193, 10 June 2026",
+          "inspected_sections": "Abstract, exposure-gradient specification discussion and exposure-parallel-trends assumption",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "WFH remains predictive under joint adjustment while AI coefficient attenuates/often loses significance.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-12",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W119"
+      ],
+      "sources": [
+        {
+          "work_id": "W119",
+          "primary_url": "https://cepr.org/publications/dp20634",
+          "version_consulted": "CEPR DP20634, published 10 September 2025, revised 2 March 2026",
+          "inspected_sections": "Primary CEPR abstract and version/title metadata",
+          "inspection_level": "abstract_and_metadata"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Career/apprenticeship viability is a theoretical conditional result, not a measured team training budget threshold.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-13",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W120"
+      ],
+      "sources": [
+        {
+          "work_id": "W120",
+          "primary_url": "https://arxiv.org/pdf/2507.16078v9",
+          "version_consulted": "arXiv:2507.16078v9, June 2026",
+          "inspected_sections": "Abstract; theoretical setup; Section4.1, equation(6) and Figure1, printed pp.15–16",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Automation can reduce novice–expert collaboration/tacit knowledge, while countervailing scale effects remain possible.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-14",
+      "chapter": 12,
+      "decision": "correct",
+      "source_ids": [
+        "W120"
+      ],
+      "sources": [
+        {
+          "work_id": "W120",
+          "primary_url": "https://arxiv.org/pdf/2507.16078v9",
+          "version_consulted": "arXiv:2507.16078v9, June 2026",
+          "inspected_sections": "Abstract; theoretical setup; Section4.1, equation(6) and Figure1, printed pp.15–16",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Figure12.2 presents a next-cohort density that is positive below the active-expert threshold a_t.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-15",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W136"
+      ],
+      "sources": [
+        {
+          "work_id": "W136",
+          "primary_url": "https://www.rfberlin.com/wp-content/uploads/2026/03/26078.pdf",
+          "version_consulted": "RFBerlin Discussion Paper078/26, 13 March 2026",
+          "inspected_sections": "Abstract, sample/design, short-run outcome discussion; prior source audit distinguishes pooled and dynamic precision bounds",
+          "inspection_level": "relevant_sections"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Danish linked survey/admin study estimates small precise short-run wage/hours effects and changing tasks.",
+      "chapter_routes": [
+        12
+      ]
+    },
+    {
+      "id": "C12-16",
+      "chapter": 12,
+      "decision": "verified",
+      "source_ids": [
+        "W003",
+        "W010"
+      ],
+      "sources": [
+        {
+          "work_id": "W003",
+          "primary_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+          "version_consulted": "Management Science version of record; online27 February2026,72(11):9408–9420",
+          "inspected_sections": "Publisher abstract; 4867 developers,26.08%,SE10.3%",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        },
+        {
+          "work_id": "W010",
+          "primary_url": "https://www.nber.org/papers/w35275",
+          "version_consulted": "NBER Working Paper35275, primary PDF",
+          "inspected_sections": "Abstract PDFp2; activity, project and release measures",
+          "inspection_level": "verified_by_collaborating_primary_investigator"
+        }
+      ],
+      "inspection_scope": null,
+      "source_locator": null,
+      "independent_replication": false,
+      "claim_label": "Field task/coding activity results motivate measuring distinct economic endpoints.",
+      "chapter_routes": [
+        12
+      ]
+    }
+  ],
+  "provenance": "Primary-source checks retained from the bounded R05 review; R06 changes editorial presentation and laboratory examples. No new independent empirical replication is claimed."
+}

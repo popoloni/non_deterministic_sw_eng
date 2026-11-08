@@ -1,0 +1,200 @@
+{
+  "schema_version": "ndse-reader-status-key/1.0",
+  "source": "series/STATE_REGISTRY.json",
+  "source_sha256": "1a31d58935ecbb02dd3ce2fde93c1a8cd8a5b235a1e531c08cf2fa7a6d96428d",
+  "row_count": 8,
+  "rows": [
+    {
+      "namespace": "approval.decision",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Application decision",
+        "it": "Decisione applicativa"
+      },
+      "values": [
+        "AUTO_APPROVAL_ELIGIBLE",
+        "REVIEW_REQUIRED"
+      ],
+      "producer": {
+        "en": "Policy.evaluate, for a validated transaction",
+        "it": "Policy.evaluate, per una transazione validata"
+      },
+      "permitted_next_action": {
+        "en": "Persist or return eligibility/review routing. Neither value moves funds.",
+        "it": "Memorizzare o restituire l'idoneità o l'invio a revisione. Nessun valore muove fondi."
+      },
+      "source": {
+        "path": "lab/case_study/approval_lab/policy.py",
+        "sha256": "ca0c5bd10ccdef7d8918aa504ca1642195034580fbe188d37401707505d6f6a1"
+      }
+    },
+    {
+      "namespace": "intent.gate.structure",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Chapter 4 structural check",
+        "it": "Controllo strutturale del capitolo 4"
+      },
+      "values": [
+        "PASS",
+        "FAIL"
+      ],
+      "producer": {
+        "en": "ccs_native_gate.py",
+        "it": "ccs_native_gate.py"
+      },
+      "permitted_next_action": {
+        "en": "PASS permits structural review to proceed; FAIL requires repair. Authority and acceptance remain separate.",
+        "it": "PASS consente di proseguire la revisione strutturale; FAIL richiede una correzione. Autorità e accettazione restano separate."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      }
+    },
+    {
+      "namespace": "intent.gate.authority",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Chapter 4 authority check",
+        "it": "Verifica dell'autorità nel capitolo 4"
+      },
+      "values": [
+        "HUMAN_APPROVAL_UNVERIFIED"
+      ],
+      "producer": {
+        "en": "The demonstrator reports the absence of authentication",
+        "it": "Il dimostratore segnala l'assenza di autenticazione"
+      },
+      "permitted_next_action": {
+        "en": "Obtain a separate authority decision; the script does not verify signatures.",
+        "it": "Ottenere una decisione distinta dell'autorità; lo script non verifica firme."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      }
+    },
+    {
+      "namespace": "intent.gate.acceptance",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Chapter 4 acceptance",
+        "it": "Accettazione nel capitolo 4"
+      },
+      "values": [
+        "NOT_ACCEPTED"
+      ],
+      "producer": {
+        "en": "Accountable human owner, outside this checker",
+        "it": "Responsabile umano, esterno a questo controllo"
+      },
+      "permitted_next_action": {
+        "en": "No implementation acceptance or release follows from the structural result.",
+        "it": "Il risultato strutturale non determina accettazione dell'implementazione o rilascio."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      }
+    },
+    {
+      "namespace": "candidate.oracle",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Candidate checked by chapter 7 oracles",
+        "it": "Candidato controllato dagli oracoli del capitolo 7"
+      },
+      "values": [
+        "READY_FOR_REVIEW",
+        "REJECTED"
+      ],
+      "producer": {
+        "en": "independent_oracle_lab.py",
+        "it": "independent_oracle_lab.py"
+      },
+      "permitted_next_action": {
+        "en": "A passing candidate can be reviewed. Any failing check rejects this candidate.",
+        "it": "Un candidato che supera i controlli può essere revisionato. Un controllo fallito respinge questo candidato."
+      },
+      "source": {
+        "path": "lab/companion/ch07/independent_oracle_lab.py",
+        "sha256": "b4565b504f9713339777176563ece2be80cc5ffa841fa95f102d0754242bf8b8"
+      }
+    },
+    {
+      "namespace": "candidate.oracle.acceptance",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "Chapter 7 acceptance",
+        "it": "Accettazione nel capitolo 7"
+      },
+      "values": [
+        "NOT_AUTHORIZED"
+      ],
+      "producer": {
+        "en": "Accountable human owner, outside this script",
+        "it": "Responsabile umano, esterno a questo script"
+      },
+      "permitted_next_action": {
+        "en": "Passing the oracles does not grant real approval.",
+        "it": "Superare gli oracoli non conferisce un'approvazione reale."
+      },
+      "source": {
+        "path": "lab/companion/ch07/independent_oracle_lab.py",
+        "sha256": "b4565b504f9713339777176563ece2be80cc5ffa841fa95f102d0754242bf8b8"
+      }
+    },
+    {
+      "namespace": "candidate.governance",
+      "kind": "executable_or_declared_status",
+      "entity": {
+        "en": "One chapter 11 proposal evaluation",
+        "it": "Una valutazione della proposta nel capitolo 11"
+      },
+      "values": [
+        "READY_FOR_HUMAN_REVIEW",
+        "REJECTED"
+      ],
+      "producer": {
+        "en": "Deterministic gate with current revision and file ownership",
+        "it": "Controllo deterministico con revisione corrente e assegnazione dei file"
+      },
+      "permitted_next_action": {
+        "en": "READY_FOR_HUMAN_REVIEW admits review at that event. REJECTED requires repair or new evidence. Both leave human_approval_verified false.",
+        "it": "READY_FOR_HUMAN_REVIEW ammette alla revisione in quell'evento. REJECTED richiede correzioni o nuove prove. Entrambi mantengono human_approval_verified falso."
+      },
+      "source": {
+        "path": "lab/companion/ch11/multi_agent_governance.py",
+        "sha256": "06f2bea229d79d209facf41f29fed3026a5fb0e24d2b65acf30dba1b78ce705d"
+      }
+    },
+    {
+      "namespace": "publication.paper_example",
+      "kind": "prose_alias_not_runtime_enum",
+      "entity": {
+        "en": "Publication proposal (paper example)",
+        "it": "Proposta di pubblicazione (esempio su carta)"
+      },
+      "values": [
+        "READY_FOR_PUBLICATION_REVIEW"
+      ],
+      "producer": {
+        "en": "Named human reviewer",
+        "it": "Revisore umano indicato"
+      },
+      "permitted_next_action": {
+        "en": "Review the proposed publication; a separate owner must authorize release.",
+        "it": "Esaminare la pubblicazione proposta; il responsabile deve autorizzare separatamente l’uscita."
+      },
+      "source": {
+        "en": "didactics/worked13.tex",
+        "it": "didactics/worked13.tex"
+      }
+    }
+  ],
+  "rule": {
+    "en": "A label is interpreted with its entity and producer. Review readiness, authority and acceptance are separate decisions.",
+    "it": "Ogni valore si interpreta insieme all'entità e a chi lo produce. Disponibilità alla revisione, autorità e accettazione sono decisioni separate."
+  }
+}

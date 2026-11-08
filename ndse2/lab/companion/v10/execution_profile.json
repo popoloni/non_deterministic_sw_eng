@@ -1,0 +1,54 @@
+{
+  "kind": "SYNTHETIC_TASK_PROFILE_NOT_PRODUCTION_AUTHORIZATION",
+  "task": "INT-002",
+  "identity": "demo-maker",
+  "identity_authenticated": false,
+  "roles": [
+    {
+      "control": "risk/replay acceptance cases",
+      "owner": "verification owner",
+      "role": "verifying"
+    },
+    {
+      "control": "restricted broker operations",
+      "owner": "platform owner",
+      "role": "preventive"
+    },
+    {
+      "control": "manifest/injection/secret inspection",
+      "owner": "security/dependency reviewer",
+      "role": "diagnostic"
+    },
+    {
+      "control": "release decision",
+      "owner": "release owner",
+      "role": "authorization"
+    }
+  ],
+  "allowed_data": [
+    "synthetic repository files"
+  ],
+  "allowed_writes": [
+    "candidate/policy_patch.txt"
+  ],
+  "protected_paths": [
+    "authority/intent.json",
+    "oracle/expected.json",
+    "audit/"
+  ],
+  "allowed_operations": [
+    "read_data",
+    "write_candidate"
+  ],
+  "egress": false,
+  "shell": false,
+  "lease_deadline": 900,
+  "revocable": true,
+  "logging": "operation, principal, target, reason, time; no content",
+  "production_requirements": [
+    "authenticated identity",
+    "OS/process isolation",
+    "trusted clock",
+    "tamper-resistant policy and logs"
+  ]
+}

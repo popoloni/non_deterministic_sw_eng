@@ -1,0 +1,11 @@
+component,quantity,unit,epistemic_status,source,allocation_rule
+clarification/specification,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,event ledger,Count once; same scope/window; do not fill unknown with zero
+implementation,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,event ledger,Count once; same scope/window; do not fill unknown with zero
+verification/review,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,event ledger,Count once; same scope/window; do not fill unknown with zero
+rework,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,event ledger,Count once; same scope/window; do not fill unknown with zero
+queue_delay,,elapsed-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,event ledger; separate opportunity model,Count once; same scope/window; do not fill unknown with zero
+model_tools,,currency-units,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,invoices or explicit scenario,Count once; same scope/window; do not fill unknown with zero
+infrastructure,,currency-units,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,measured energy/allocation or scenario,Count once; same scope/window; do not fill unknown with zero
+maintenance_followup,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,not yet observed,Count once; same scope/window; do not fill unknown with zero
+learning_investment,,person-minutes,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,not yet observed,Count once; same scope/window; do not fill unknown with zero
+expected_loss,,currency-units,UNKNOWN_UNTIL_MEASURED_OR_EXPLICITLY_ASSUMED,explicit risk scenario; not an observed cost,Count once; same scope/window; do not fill unknown with zero

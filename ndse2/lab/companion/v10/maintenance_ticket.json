@@ -1,0 +1,18 @@
+{
+  "id": "MAINT-VIEW-001",
+  "kind": "SYNTHETIC_INVESTIGATION_NOT_OBSERVED_PRODUCTION_INCIDENT",
+  "status": "PROPOSED",
+  "signal": "suspected consumer still reads old schema shape",
+  "source": "schema-view exercise",
+  "owner": "illustrative adapter maintainer",
+  "risk": "inconsistent interpretation of policy input",
+  "first_action": "reproduce on disposable fixture and identify affected consumer",
+  "alternatives": [
+    "repair faulty adapter",
+    "label intentionally historical example",
+    "close false positive with reason"
+  ],
+  "verification": "full decision equivalence plus historical replay regression",
+  "rollback": "remove new view reader; retain original canonical fixtures and store",
+  "merge_authority_granted": false
+}

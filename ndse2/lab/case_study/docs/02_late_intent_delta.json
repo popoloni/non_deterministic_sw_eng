@@ -1,0 +1,20 @@
+{
+  "schema_version": "ccs-native-intent-delta/1.0",
+  "delta_id": "INT-002",
+  "base_intent": "INT-001",
+  "authority": "Policy Owner — example change request; no real signature",
+  "reason": "Late clarification discovered after a v1 reference implementation and tests existed.",
+  "changed_rule": {
+    "path": "departments.TREASURY",
+    "old_ceiling_minor": 500000,
+    "new_ceiling_minor": 300000,
+    "currency": "EUR"
+  },
+  "unchanged_invariants": ["HIGH risk requires review", "cross-border requires review", "unknown departments fail closed", "old decisions preserve policy version"],
+  "invalidates": ["v1 assumptions about Treasury boundary", "prior Treasury-specific test expectations for new decisions", "policy JSON hash", "any manuscript example quoting Treasury threshold without a version"],
+  "does_not_automatically_invalidate": ["historical decisions with stable idempotency keys", "OPS department thresholds", "money value validation"],
+  "new_acceptance": "A synthetic EUR 4000 Treasury domestic LOW transaction now requires review under policy v2.",
+  "linked_test": "tests/test_domain_policy.py::test_late_intent_delta_changes_threshold",
+  "resolution": "Version policy to v2, retest impacted cases, retain old v1 decisions for replay, obtain independent review before acceptance.",
+  "example_status": "IMPLEMENTED_IN_DEMO__NOT_PRODUCTION_ACCEPTED"
+}

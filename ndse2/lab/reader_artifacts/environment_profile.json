@@ -1,0 +1,7 @@
+{
+  "python": "3.12.14",
+  "implementation": "CPython",
+  "platform": "Linux",
+  "execution": "local synthetic offline laboratory",
+  "dependencies": "Python standard library"
+}

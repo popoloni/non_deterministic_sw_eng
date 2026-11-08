@@ -1,0 +1,19 @@
+{
+  "memory_id": "MEM-APPROVAL-001",
+  "topic": "Synthetic approval threshold policy",
+  "source": ["docs/01_intent_contract.json", "docs/02_late_intent_delta.json", "policies/v1.json", "policies/v2.json"],
+  "authority": "Only versioned intent and authorized deltas, never agent speculation",
+  "facts": [
+    "v1 Treasury EUR ceiling = 500000 minor units",
+    "v2 Treasury EUR ceiling = 300000 minor units",
+    "High risk and cross-border always route to human review",
+    "Previous idempotency decisions retain their original policy version"
+  ],
+  "confidence": "FULLY_VERIFIABLE_WITH_LOCAL_TESTS_ONLY",
+  "scope": "synthetic case study, not a real company policy",
+  "valid_from": "baseline-v1.0",
+  "invalidated_by": ["new authorized policy delta", "failed regression test", "disagreement between implementation and authoritative intent"],
+  "expires": "upon new edition or documented review",
+  "human_owner_role": "Policy Owner",
+  "do_not_infer": "Any real transaction-approval authorization or industry regulatory compliance"
+}

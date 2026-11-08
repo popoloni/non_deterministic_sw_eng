@@ -1,0 +1,27 @@
+% Additive case card. Source of numerical facts: series/CASE_LEDGER.json.
+\clearpage
+\begingroup
+\small
+\section*{The Treasury case at a glance}\label{case:canonical-card}
+
+A synthetic service decides whether a request is eligible for automatic approval or requires review. It moves no funds. The initial request is to make departmental rules configurable. \texttt{TREASURY} identifies Treasury; \texttt{OPS} identifies a second department, used to check that the Treasury change preserves other configured limits.
+
+\noindent\textbf{The sequence of changes}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}p{.25\linewidth}X@{}}\toprule
+Phase & Rule for a new decision\\\midrule
+Legacy behavior & Fixed EUR~10,000 ceiling; ignores department, risk and cross-border status. This is the defect to correct.\\
+\mbox{INT-001} / v1 & Treasury ceiling: EUR~5,000. High-risk and cross-border requests require review.\\
+\mbox{INT-002} / v2 & Treasury ceiling: EUR~3,000. OPS remains at EUR~10,000 in both versions.\\\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent\textbf{Units and boundaries.} The code uses integer EUR cents: EUR~5,000 = \texttt{500000}; EUR~3,000 = \texttt{300000}; EUR~4,000 = \texttt{400000}. A ceiling includes its endpoint. High risk, cross-border status or an unconfigured department requires review, regardless of the valid amount.
+
+\noindent\textbf{The distinguishing example: \mbox{AC-002}.} A new domestic Treasury request for EUR~4,000 with low risk (LOW) is \texttt{AUTO\_APPROVAL\_ELIGIBLE} under v1 and \texttt{REVIEW\_REQUIRED} under v2. Eligibility is a routing decision, not an actual approval.
+
+\noindent\textbf{Preserving history.} \texttt{T-HISTORY}, stored under key \texttt{idem-history} in v1, keeps its original response and policy version when the same request is repeated after v2 becomes active. The repetition adds no audit event. \texttt{T-NEW}, with key \texttt{idem-new}, is a new EUR~4,000 request under v2 and requires review. Reusing an existing key with changed content, or the same transaction identifier with another key, raises \texttt{ConflictError}; the original record remains unchanged.
+
+\noindent\textbf{Reading the contract.} \mbox{INT-001} names the first intention. Its distributed teaching contract brings together the requirements and already includes the v1/v2 comparison in \mbox{AC-002}; read it with the \mbox{INT-002} delta. Later exercises use separate scenario identifiers and do not introduce a third canonical policy.
+\endgroup
+\clearpage

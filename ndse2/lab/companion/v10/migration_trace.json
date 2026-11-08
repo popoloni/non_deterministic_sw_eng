@@ -1,0 +1,13 @@
+{
+  "kind": "SYNTHETIC_SCHEMA_MIGRATION_TEST_TRACE",
+  "test_command": "python -m unittest discover -s lab/companion/v10 -p test_schema_view.py -v",
+  "exit_code": 0,
+  "cases_per_policy": 18,
+  "policy_versions": [
+    "approval-eur-v1",
+    "approval-eur-v2"
+  ],
+  "history_check": "v1 response remains exact after reopening with translated v2",
+  "performance_measured": false,
+  "rollback": "remove view adapter; use unchanged canonical fixture; do not rewrite stored responses"
+}

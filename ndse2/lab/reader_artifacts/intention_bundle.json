@@ -1,0 +1,28 @@
+{
+  "authority_status": "SYNTHETIC_EXAMPLE_NOT_PRODUCTION_AUTHORIZATION",
+  "scope": {
+    "currency": "EUR",
+    "department": "TREASURY",
+    "risk": "LOW",
+    "cross_border": false,
+    "decision_kind": "fresh"
+  },
+  "versions": [
+    {
+      "intent_id": "INT-001",
+      "policy_version": "approval-eur-v1",
+      "ceiling_minor": 500000,
+      "policy_fixture": "lab/case_study/policies/v1.json",
+      "intent_record": "lab/case_study/docs/01_intent_contract.json"
+    },
+    {
+      "intent_id": "INT-002",
+      "policy_version": "approval-eur-v2",
+      "ceiling_minor": 300000,
+      "policy_fixture": "lab/case_study/policies/v2.json",
+      "intent_record": "lab/case_study/docs/02_late_intent_delta.json"
+    }
+  ],
+  "historical_replay_preserved": true,
+  "historical_replay_adds_audit_row": false
+}

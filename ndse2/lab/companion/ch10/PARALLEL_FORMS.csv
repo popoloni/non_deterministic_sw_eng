@@ -1,0 +1,11 @@
+form,item_id,question,primary_evidence_paths
+A,A1,"Policy v1 Treasury LOW domestic EUR 4,000 and v2 EUR 4,000: predict both outcomes and explain the change.",policies/v1.json;policies/v2.json;docs/02_late_intent_delta.json
+A,A2,Explain why an old idempotency key retains the v1 result when policy v2 is current.,approval_lab/service.py;tests/test_service.py
+A,A3,Find an independently authorized test for HIGH-risk routing and propose one counterexample.,docs/01_intent_contract.json;tests/test_domain_policy.py
+A,A4,Is the example policy owner approval evidence of real production authorization? Explain.,docs/01_intent_contract.json
+A,A5,"Which tests and knowledge records become stale when INT-002 lowers the Treasury threshold, and which stay valid?",docs/02_late_intent_delta.json;tests/test_domain_policy.py
+B,B1,"A new authorized jurisdiction-specific exception is proposed. Predict outcomes for a new HIGH-risk and LOW-risk cross-border transaction, stating what remains unresolved.",docs/01_intent_contract.json;approval_lab/policy.py
+B,B2,A suggested patch recomputes a committed request with the latest policy during replay. Explain the defect and affected state.,approval_lab/service.py;tests/test_service.py
+B,B3,A generated test asserts that a HIGH-risk EUR 1 request is automatically eligible. Evaluate the oracle and supply a contract-derived replacement.,docs/01_intent_contract.json;tests/test_domain_policy.py
+B,B4,An agent claims that passing all local tests authorizes production deployment. What additional authority and evidence are required?,docs/01_intent_contract.json;docs/05_verification_and_review.md
+B,B5,"Map the likely impact of adding a new jurisdiction rule on policy fixtures, tests, documentation and old decisions. Which evidence should remain valid?",docs/02_late_intent_delta.json;policies/v2.json;tests/test_service.py

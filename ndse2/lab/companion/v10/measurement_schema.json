@@ -1,0 +1,41 @@
+{
+  "schema_version": "measurement-ledger/1",
+  "event_fields": [
+    "event_id",
+    "task_id",
+    "candidate_revision",
+    "actor",
+    "category",
+    "start",
+    "end",
+    "duration",
+    "unit",
+    "observation_window",
+    "source",
+    "status"
+  ],
+  "categories": [
+    "clarification",
+    "development",
+    "verification",
+    "review",
+    "rework",
+    "waiting",
+    "release_observation"
+  ],
+  "statuses": [
+    "OBSERVED",
+    "SYNTHETIC",
+    "ABANDONED",
+    "MISSING"
+  ],
+  "accounting_rules": [
+    "Deduplicate event_id.",
+    "Count each actor's active work once; reconcile overlapping same-actor intervals.",
+    "Elapsed time is not the sum of parallel work.",
+    "Waiting is not automatically charged as labor.",
+    "Retain assigned tasks even without a completed candidate.",
+    "Missing follow-up is not zero rework."
+  ],
+  "data_in_this_release": "No production or participant events"
+}

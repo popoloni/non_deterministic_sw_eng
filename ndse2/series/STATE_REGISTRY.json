@@ -1,0 +1,1254 @@
+{
+  "schema_version": "ndse-state-registry/2.0",
+  "prepared_date": "2026-11-08",
+  "scope": {
+    "en": "Typed values relevant to the recovered Treasury case and its teaching controllers. Each namespace identifies a different entity. Return codes, reasons, authority declarations and persistent states are explicitly distinguished.",
+    "it": "Valori tipizzati pertinenti al caso Treasury recuperato e ai suoi controllori didattici. Ogni spazio di nomi identifica un'entità diversa. Codici di ritorno, motivi, dichiarazioni di autorità e stati persistenti sono distinti esplicitamente."
+  },
+  "families": [
+    {
+      "namespace": "case.authority",
+      "entity": {
+        "en": "Teaching case",
+        "it": "Caso didattico"
+      },
+      "field_or_return": "authority_status",
+      "value_role": "scope_declaration",
+      "transition_or_computation_owner": {
+        "en": "Case author",
+        "it": "Autore del caso"
+      },
+      "permitted_next_decision": {
+        "en": "Study the illustrative rules; no real authorization follows.",
+        "it": "Studiare le regole illustrative; non ne deriva un'autorizzazione reale."
+      },
+      "source": {
+        "path": "series/CASE_LEDGER.json",
+        "sha256": "ed90b63b44f81dea1776cdc13ebf91bd2dd56532555ada48d8bb926361c3a7eb"
+      },
+      "values": [
+        {
+          "value": "ILLUSTRATIVE_ONLY_NO_SIGNATURE",
+          "meaning": {
+            "en": "The case contains no actual approval signature.",
+            "it": "Il caso non contiene una firma reale di approvazione."
+          },
+          "source_lines": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "intent.document.authority",
+      "entity": {
+        "en": "Consolidated teaching contract",
+        "it": "Contratto didattico consolidato"
+      },
+      "field_or_return": "authority.status",
+      "value_role": "scope_declaration",
+      "transition_or_computation_owner": {
+        "en": "Illustrative Policy Owner role",
+        "it": "Ruolo illustrativo del responsabile delle regole"
+      },
+      "permitted_next_decision": {
+        "en": "Use the contract as the declared teaching requirement.",
+        "it": "Usare il contratto come requisito dichiarato dell'esercizio."
+      },
+      "source": {
+        "path": "lab/case_study/docs/01_intent_contract.json",
+        "sha256": "bd7aa555e0ed7246ea68176525e1a4fcd79ac6be47ef84f4e8b930728a58657b"
+      },
+      "values": [
+        {
+          "value": "ILLUSTRATIVE_AUTHORIZED_STATE",
+          "meaning": {
+            "en": "Authority is represented within the example, not authenticated.",
+            "it": "L'autorità è rappresentata nell'esempio, non autenticata."
+          },
+          "source_lines": [
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "intent.delta.example",
+      "entity": {
+        "en": "Teaching delta",
+        "it": "Modifica didattica"
+      },
+      "field_or_return": "example_status",
+      "value_role": "scope_declaration",
+      "transition_or_computation_owner": {
+        "en": "Case author",
+        "it": "Autore del caso"
+      },
+      "permitted_next_decision": {
+        "en": "Compare the implemented demo with its declared requirement.",
+        "it": "Confrontare il dimostratore implementato con il requisito dichiarato."
+      },
+      "source": {
+        "path": "lab/case_study/docs/02_late_intent_delta.json",
+        "sha256": "3eb546c8835a79b78385e158427c2374c82d83e017e36656fbe7f80c2f241f89"
+      },
+      "values": [
+        {
+          "value": "IMPLEMENTED_IN_DEMO__NOT_PRODUCTION_ACCEPTED",
+          "meaning": {
+            "en": "Implemented in the demonstration; no production acceptance.",
+            "it": "Implementata nel dimostratore; nessuna accettazione in produzione."
+          },
+          "source_lines": [
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "approval.decision",
+      "entity": {
+        "en": "Application decision",
+        "it": "Decisione applicativa"
+      },
+      "field_or_return": "Decision.status",
+      "value_role": "decision_status",
+      "transition_or_computation_owner": {
+        "en": "Policy.evaluate, for a validated transaction",
+        "it": "Policy.evaluate, per una transazione validata"
+      },
+      "permitted_next_decision": {
+        "en": "Persist or return eligibility/review routing. Neither value moves funds.",
+        "it": "Memorizzare o restituire l'idoneità o l'invio a revisione. Nessun valore muove fondi."
+      },
+      "source": {
+        "path": "lab/case_study/approval_lab/policy.py",
+        "sha256": "ca0c5bd10ccdef7d8918aa504ca1642195034580fbe188d37401707505d6f6a1"
+      },
+      "values": [
+        {
+          "value": "AUTO_APPROVAL_ELIGIBLE",
+          "meaning": {
+            "en": "Eligible under the selected policy; this is not an executed approval.",
+            "it": "Idonea secondo la policy selezionata; non è un'approvazione eseguita."
+          },
+          "source_lines": [
+            89
+          ]
+        },
+        {
+          "value": "REVIEW_REQUIRED",
+          "meaning": {
+            "en": "The request requires human review.",
+            "it": "La richiesta richiede una revisione umana."
+          },
+          "source_lines": [
+            27,
+            54,
+            63,
+            72,
+            81
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "approval.decision.reason",
+      "entity": {
+        "en": "Application decision reason",
+        "it": "Motivo della decisione applicativa"
+      },
+      "field_or_return": "Decision.reason",
+      "value_role": "reason",
+      "transition_or_computation_owner": {
+        "en": "Policy.evaluate",
+        "it": "Policy.evaluate"
+      },
+      "permitted_next_decision": {
+        "en": "Explain the routing; reason codes are not additional lifecycle states.",
+        "it": "Spiegare l'instradamento; i motivi non sono ulteriori stati del ciclo di vita."
+      },
+      "source": {
+        "path": "lab/case_study/approval_lab/policy.py",
+        "sha256": "ca0c5bd10ccdef7d8918aa504ca1642195034580fbe188d37401707505d6f6a1"
+      },
+      "values": [
+        {
+          "value": "HIGH_RISK",
+          "meaning": {
+            "en": "Validated request has HIGH risk.",
+            "it": "La richiesta validata ha rischio HIGH."
+          },
+          "source_lines": [
+            55
+          ]
+        },
+        {
+          "value": "CROSS_BORDER",
+          "meaning": {
+            "en": "The request is cross-border.",
+            "it": "La richiesta è transfrontaliera."
+          },
+          "source_lines": [
+            64
+          ]
+        },
+        {
+          "value": "UNRECOGNIZED_DEPARTMENT",
+          "meaning": {
+            "en": "No threshold is configured for the department.",
+            "it": "Il reparto non ha una soglia configurata."
+          },
+          "source_lines": [
+            73
+          ]
+        },
+        {
+          "value": "THRESHOLD_EXCEEDED",
+          "meaning": {
+            "en": "The amount exceeds the selected inclusive ceiling.",
+            "it": "L'importo supera la soglia inclusiva selezionata."
+          },
+          "source_lines": [
+            82
+          ]
+        },
+        {
+          "value": "WITHIN_THRESHOLD",
+          "meaning": {
+            "en": "Other constraints pass and the amount is within the ceiling.",
+            "it": "Gli altri vincoli sono soddisfatti e l'importo rientra nella soglia."
+          },
+          "source_lines": [
+            90
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "approval.input.error",
+      "entity": {
+        "en": "Rejected input or conflicting request",
+        "it": "Input non valido o richiesta in conflitto"
+      },
+      "field_or_return": "exception class",
+      "value_role": "exception",
+      "transition_or_computation_owner": {
+        "en": "Domain validation and ApprovalService",
+        "it": "Validazione del dominio e ApprovalService"
+      },
+      "permitted_next_decision": {
+        "en": "Correct the input or resolve the identity conflict; do not overwrite the original decision.",
+        "it": "Correggere l'input o risolvere il conflitto d'identità; conservare la decisione originale."
+      },
+      "source": {
+        "path": "lab/case_study/approval_lab/domain.py",
+        "sha256": "4ac736f9d6e72f60420d8b043423a512e644149a47e8a77103926d0b30cda093"
+      },
+      "values": [
+        {
+          "value": "ValidationError",
+          "meaning": {
+            "en": "Invalid request or policy representation.",
+            "it": "Rappresentazione della richiesta o della policy non valida."
+          },
+          "source_lines": [
+            9,
+            31,
+            35,
+            37,
+            39,
+            43
+          ]
+        },
+        {
+          "value": "ConflictError",
+          "meaning": {
+            "en": "An existing identity is reused inconsistently.",
+            "it": "Un'identità già esistente viene riutilizzata in modo incoerente."
+          },
+          "source_lines": [
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "intent.gate.structure",
+      "entity": {
+        "en": "Chapter 4 structural check",
+        "it": "Controllo strutturale del capitolo 4"
+      },
+      "field_or_return": "structural_status",
+      "value_role": "gate_status",
+      "transition_or_computation_owner": {
+        "en": "ccs_native_gate.py",
+        "it": "ccs_native_gate.py"
+      },
+      "permitted_next_decision": {
+        "en": "PASS permits structural review to proceed; FAIL requires repair. Authority and acceptance remain separate.",
+        "it": "PASS consente di proseguire la revisione strutturale; FAIL richiede una correzione. Autorità e accettazione restano separate."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      },
+      "values": [
+        {
+          "value": "PASS",
+          "meaning": {
+            "en": "All eight structural checks pass.",
+            "it": "Gli otto controlli strutturali sono superati."
+          },
+          "source_lines": [
+            38
+          ]
+        },
+        {
+          "value": "FAIL",
+          "meaning": {
+            "en": "At least one structural check fails.",
+            "it": "Almeno un controllo strutturale fallisce."
+          },
+          "source_lines": [
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "intent.gate.authority",
+      "entity": {
+        "en": "Chapter 4 authority check",
+        "it": "Verifica dell'autorità nel capitolo 4"
+      },
+      "field_or_return": "authority_status",
+      "value_role": "authority_status",
+      "transition_or_computation_owner": {
+        "en": "The demonstrator reports the absence of authentication",
+        "it": "Il dimostratore segnala l'assenza di autenticazione"
+      },
+      "permitted_next_decision": {
+        "en": "Obtain a separate authority decision; the script does not verify signatures.",
+        "it": "Ottenere una decisione distinta dell'autorità; lo script non verifica firme."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      },
+      "values": [
+        {
+          "value": "HUMAN_APPROVAL_UNVERIFIED",
+          "meaning": {
+            "en": "Human approval has not been authenticated by this check.",
+            "it": "L'approvazione umana non è stata autenticata da questo controllo."
+          },
+          "source_lines": [
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "intent.gate.acceptance",
+      "entity": {
+        "en": "Chapter 4 acceptance",
+        "it": "Accettazione nel capitolo 4"
+      },
+      "field_or_return": "acceptance_status",
+      "value_role": "acceptance_status",
+      "transition_or_computation_owner": {
+        "en": "Accountable human owner, outside this checker",
+        "it": "Responsabile umano, esterno a questo controllo"
+      },
+      "permitted_next_decision": {
+        "en": "No implementation acceptance or release follows from the structural result.",
+        "it": "Il risultato strutturale non determina accettazione dell'implementazione o rilascio."
+      },
+      "source": {
+        "path": "lab/companion/ch04/ccs_native_gate.py",
+        "sha256": "7166cc27897bca112d055adb58881bebee9867351e3611edfa10d4c2266a747a"
+      },
+      "values": [
+        {
+          "value": "NOT_ACCEPTED",
+          "meaning": {
+            "en": "The checker has not accepted the change.",
+            "it": "Il controllo non ha accettato la modifica."
+          },
+          "source_lines": [
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "run.admission",
+      "entity": {
+        "en": "Next action in the bounded loop",
+        "it": "Azione successiva nel ciclo controllato"
+      },
+      "field_or_return": "admit() return[0]",
+      "value_role": "admission_result",
+      "transition_or_computation_owner": {
+        "en": "Trusted controller supplying intent, digest, clock and counters",
+        "it": "Controllore attendibile che fornisce intenzione, impronta, tempo e contatori"
+      },
+      "permitted_next_decision": {
+        "en": "Only ACTION_ADMITTED_NOT_ACCEPTED admits the next bounded action. STOP results block it; ESCALATE requires investigation.",
+        "it": "Solo ACTION_ADMITTED_NOT_ACCEPTED ammette l'azione successiva entro i limiti. Gli esiti STOP la bloccano; ESCALATE richiede un'indagine."
+      },
+      "source": {
+        "path": "lab/companion/v10/control_state.py",
+        "sha256": "ba55d38dc30f80f97e4f55a7f2cfdd2c0a79eb303d9360f3ee42df3967ffd3f7"
+      },
+      "values": [
+        {
+          "value": "ACTION_ADMITTED_NOT_ACCEPTED",
+          "meaning": {
+            "en": "The next action fits the current controls; the software is not accepted.",
+            "it": "L'azione successiva rispetta i controlli correnti; il software non è accettato."
+          },
+          "source_lines": [
+            96
+          ]
+        },
+        {
+          "value": "STOP_REVOKED",
+          "meaning": {
+            "en": "The controller has been revoked.",
+            "it": "Il controllore è stato revocato."
+          },
+          "source_lines": [
+            76
+          ]
+        },
+        {
+          "value": "STOP_STALE_INTENT",
+          "meaning": {
+            "en": "Intent identity or contract digest differs from the current context.",
+            "it": "L'identità dell'intenzione o l'impronta del contratto differisce dal contesto corrente."
+          },
+          "source_lines": [
+            81
+          ]
+        },
+        {
+          "value": "STOP_DEADLINE",
+          "meaning": {
+            "en": "The deadline has been reached.",
+            "it": "La scadenza è stata raggiunta."
+          },
+          "source_lines": [
+            83
+          ]
+        },
+        {
+          "value": "ESCALATE_REPEATED_DIAGNOSTIC",
+          "meaning": {
+            "en": "The diagnostic repetition limit has been reached.",
+            "it": "È stato raggiunto il limite delle diagnosi ripetute."
+          },
+          "source_lines": [
+            85
+          ]
+        },
+        {
+          "value": "STOP_UNBOUNDED_COST",
+          "meaning": {
+            "en": "The next action lacks an upper cost bound.",
+            "it": "L'azione successiva non ha un limite superiore di costo."
+          },
+          "source_lines": [
+            87
+          ]
+        },
+        {
+          "value": "STOP_BUDGET",
+          "meaning": {
+            "en": "Call or cost allowance would be exceeded.",
+            "it": "Verrebbe superato il limite di chiamate o di costo."
+          },
+          "source_lines": [
+            93
+          ]
+        },
+        {
+          "value": "STOP_ATTEMPTS",
+          "meaning": {
+            "en": "No additional candidate attempt is available.",
+            "it": "Non sono disponibili ulteriori tentativi per un nuovo candidato."
+          },
+          "source_lines": [
+            95
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "tool.file_operation",
+      "entity": {
+        "en": "One file-broker operation",
+        "it": "Una singola operazione del mediatore di accesso ai file"
+      },
+      "field_or_return": "invoke().status",
+      "value_role": "operation_result",
+      "transition_or_computation_owner": {
+        "en": "FileBroker under the supplied test principal and clock",
+        "it": "FileBroker con l'identità e il tempo forniti dal test"
+      },
+      "permitted_next_decision": {
+        "en": "An admitted operation performs the specific read/write; DENIED performs neither. This is not an OS sandbox.",
+        "it": "Un'operazione ammessa esegue la lettura o scrittura specifica; DENIED non esegue nessuna delle due. Non è un isolamento del sistema operativo."
+      },
+      "source": {
+        "path": "lab/companion/v10/file_broker.py",
+        "sha256": "470b00742c47168437352a2c2274299e1b5378a5bd9fd02ae3bf0326450db443"
+      },
+      "values": [
+        {
+          "value": "DENIED",
+          "meaning": {
+            "en": "This file operation is refused.",
+            "it": "Questa operazione sui file è rifiutata."
+          },
+          "source_lines": [
+            67
+          ]
+        },
+        {
+          "value": "OPERATION_ADMITTED_NOT_ACCEPTED",
+          "meaning": {
+            "en": "This operation is allowed; the candidate is not accepted.",
+            "it": "Questa operazione è consentita; il candidato non è accettato."
+          },
+          "source_lines": [
+            67
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "candidate.oracle",
+      "entity": {
+        "en": "Candidate checked by chapter 7 oracles",
+        "it": "Candidato controllato dagli oracoli del capitolo 7"
+      },
+      "field_or_return": "candidate_state",
+      "value_role": "candidate_gate_result",
+      "transition_or_computation_owner": {
+        "en": "independent_oracle_lab.py",
+        "it": "independent_oracle_lab.py"
+      },
+      "permitted_next_decision": {
+        "en": "A passing candidate can be reviewed. Any failing check rejects this candidate.",
+        "it": "Un candidato che supera i controlli può essere revisionato. Un controllo fallito respinge questo candidato."
+      },
+      "source": {
+        "path": "lab/companion/ch07/independent_oracle_lab.py",
+        "sha256": "b4565b504f9713339777176563ece2be80cc5ffa841fa95f102d0754242bf8b8"
+      },
+      "values": [
+        {
+          "value": "READY_FOR_REVIEW",
+          "meaning": {
+            "en": "Every behavioral record in this completed run passes.",
+            "it": "Tutti i controlli comportamentali di questa esecuzione completata sono superati."
+          },
+          "source_lines": [
+            163
+          ]
+        },
+        {
+          "value": "REJECTED",
+          "meaning": {
+            "en": "One or more checks fail.",
+            "it": "Uno o più controlli falliscono."
+          },
+          "source_lines": [
+            163
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "candidate.oracle.acceptance",
+      "entity": {
+        "en": "Chapter 7 acceptance",
+        "it": "Accettazione nel capitolo 7"
+      },
+      "field_or_return": "acceptance",
+      "value_role": "authority_status",
+      "transition_or_computation_owner": {
+        "en": "Accountable human owner, outside this script",
+        "it": "Responsabile umano, esterno a questo script"
+      },
+      "permitted_next_decision": {
+        "en": "Passing the oracles does not grant real approval.",
+        "it": "Superare gli oracoli non conferisce un'approvazione reale."
+      },
+      "source": {
+        "path": "lab/companion/ch07/independent_oracle_lab.py",
+        "sha256": "b4565b504f9713339777176563ece2be80cc5ffa841fa95f102d0754242bf8b8"
+      },
+      "values": [
+        {
+          "value": "NOT_AUTHORIZED",
+          "meaning": {
+            "en": "The script grants no approval authority.",
+            "it": "Lo script non attribuisce autorità di approvazione."
+          },
+          "source_lines": [
+            164
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "candidate.governance",
+      "entity": {
+        "en": "One chapter 11 proposal evaluation",
+        "it": "Una valutazione della proposta nel capitolo 11"
+      },
+      "field_or_return": "gate().state",
+      "value_role": "event_gate_result",
+      "transition_or_computation_owner": {
+        "en": "Deterministic gate with current revision and file ownership",
+        "it": "Controllo deterministico con revisione corrente e assegnazione dei file"
+      },
+      "permitted_next_decision": {
+        "en": "READY_FOR_HUMAN_REVIEW admits review at that event. REJECTED requires repair or new evidence. Both leave human_approval_verified false.",
+        "it": "READY_FOR_HUMAN_REVIEW ammette alla revisione in quell'evento. REJECTED richiede correzioni o nuove prove. Entrambi mantengono human_approval_verified falso."
+      },
+      "source": {
+        "path": "lab/companion/ch11/multi_agent_governance.py",
+        "sha256": "06f2bea229d79d209facf41f29fed3026a5fb0e24d2b65acf30dba1b78ce705d"
+      },
+      "values": [
+        {
+          "value": "READY_FOR_HUMAN_REVIEW",
+          "meaning": {
+            "en": "The proposal satisfies this event's gate; a later intent change can invalidate that result.",
+            "it": "La proposta soddisfa il controllo di questo evento; una successiva modifica dell'intenzione può invalidare l'esito."
+          },
+          "source_lines": [
+            60,
+            149,
+            154,
+            157,
+            160,
+            170
+          ]
+        },
+        {
+          "value": "REJECTED",
+          "meaning": {
+            "en": "At least one gate obligation fails at this event.",
+            "it": "Almeno un obbligo del controllo non è soddisfatto in questo evento."
+          },
+          "source_lines": [
+            60,
+            155,
+            156,
+            158,
+            159,
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "candidate.governance.reason",
+      "entity": {
+        "en": "Proposal rejection reason",
+        "it": "Motivo del rifiuto della proposta"
+      },
+      "field_or_return": "gate().reasons[]",
+      "value_role": "reason_or_reason_prefix",
+      "transition_or_computation_owner": {
+        "en": "Chapter 11 deterministic gate",
+        "it": "Controllo deterministico del capitolo 11"
+      },
+      "permitted_next_decision": {
+        "en": "Identify which obligation needs repair or authority clarification.",
+        "it": "Identificare l'obbligo da correggere o il chiarimento di autorità necessario."
+      },
+      "source": {
+        "path": "lab/companion/ch11/multi_agent_governance.py",
+        "sha256": "06f2bea229d79d209facf41f29fed3026a5fb0e24d2b65acf30dba1b78ce705d"
+      },
+      "values": [
+        {
+          "value": "UNKNOWN_INTENT",
+          "meaning": {
+            "en": "The intent is outside the synthetic authority map.",
+            "it": "L'intenzione è fuori dalla mappa sintetica dell'autorità."
+          },
+          "source_lines": [
+            38
+          ]
+        },
+        {
+          "value": "STALE_INTENT_REVISION",
+          "meaning": {
+            "en": "The proposal revision disagrees with the current revision or its declared intent.",
+            "it": "La revisione della proposta non coincide con quella corrente o con l'intenzione dichiarata."
+          },
+          "source_lines": [
+            40,
+            164
+          ]
+        },
+        {
+          "value": "PATH_OUTSIDE_ALLOWLIST",
+          "meaning": {
+            "en": "A requested path is outside the allowed set.",
+            "it": "Un percorso richiesto è fuori dall'insieme consentito."
+          },
+          "source_lines": [
+            42
+          ]
+        },
+        {
+          "value": "WRONG_POLICY_REVISION",
+          "meaning": {
+            "en": "The v2 policy is targeted under an intent other than INT-002.",
+            "it": "La policy v2 viene modificata sotto un'intenzione diversa da INT-002."
+          },
+          "source_lines": [
+            44
+          ]
+        },
+        {
+          "value": "SELF_REVIEW",
+          "meaning": {
+            "en": "Maker and reviewer identities coincide.",
+            "it": "Le identità dell'autore e del revisore coincidono."
+          },
+          "source_lines": [
+            46
+          ]
+        },
+        {
+          "value": "NO_INDEPENDENT_CHECKER",
+          "meaning": {
+            "en": "The checker identity is not separate from maker and reviewer.",
+            "it": "L'identità del verificatore non è distinta da autore e revisore."
+          },
+          "source_lines": [
+            48
+          ]
+        },
+        {
+          "value": "MISSING_INDEPENDENT_EVIDENCE",
+          "meaning": {
+            "en": "Required named evidence is absent.",
+            "it": "Manca una prova richiesta identificata per nome."
+          },
+          "source_lines": [
+            50
+          ]
+        },
+        {
+          "value": "FILE_OWNERSHIP_CONFLICT:",
+          "meaning": {
+            "en": "A path suffix names a file assigned to another proposal.",
+            "it": "Il suffisso del percorso identifica un file assegnato a un'altra proposta."
+          },
+          "source_lines": [
+            53
+          ]
+        },
+        {
+          "value": "RELEASE_NOT_AUTHORIZED_IN_LAB",
+          "meaning": {
+            "en": "The proposal requests an unavailable release action.",
+            "it": "La proposta richiede un'azione di rilascio indisponibile."
+          },
+          "source_lines": [
+            55
+          ]
+        },
+        {
+          "value": "UNVERIFIED_SIGNATURE_NOT_ACCEPTED",
+          "meaning": {
+            "en": "A supplied signature string is not authenticated.",
+            "it": "Una stringa fornita come firma non è autenticata."
+          },
+          "source_lines": [
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "coordination.lease",
+      "entity": {
+        "en": "Temporary target lease",
+        "it": "Lease (assegnazione temporanea con scadenza)"
+      },
+      "field_or_return": "grant() return[0]",
+      "value_role": "lease_result",
+      "transition_or_computation_owner": {
+        "en": "Sequential Coordinator",
+        "it": "Coordinator sequenziale"
+      },
+      "permitted_next_decision": {
+        "en": "A grant supplies a generation for later queue admission; it does not enforce writes or merge authority.",
+        "it": "Un'assegnazione temporanea fornisce una generazione per la successiva ammissione alla coda; non controlla direttamente le scritture né l'autorità di integrazione."
+      },
+      "source": {
+        "path": "lab/companion/v10/coordination.py",
+        "sha256": "0538bf8964306058bcbe5b9367ce29cff2f53719c12ae2b5d24649d2346730f7"
+      },
+      "values": [
+        {
+          "value": "HOLD_TARGET_ALREADY_LEASED",
+          "meaning": {
+            "en": "An unexpired lease already exists for the target.",
+            "it": "Esiste già una assegnazione temporanea non scaduta per l'oggetto."
+          },
+          "source_lines": [
+            39
+          ]
+        },
+        {
+          "value": "LEASE_GRANTED_NOT_MERGE_AUTHORITY",
+          "meaning": {
+            "en": "A temporary lease and generation were issued.",
+            "it": "Sono state emesse una assegnazione temporanea temporanea e la relativa generazione."
+          },
+          "source_lines": [
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "coordination.submission",
+      "entity": {
+        "en": "Queue submission",
+        "it": "Invio alla coda"
+      },
+      "field_or_return": "submit() return value",
+      "value_role": "submission_result",
+      "transition_or_computation_owner": {
+        "en": "Sequential Coordinator",
+        "it": "Coordinator sequenziale"
+      },
+      "permitted_next_decision": {
+        "en": "Only ADMITTED_TO_REVIEW_QUEUE_NOT_ACCEPTED adds a new pending item. Duplicate returns add none; HOLD returns refuse this submission.",
+        "it": "Solo ADMITTED_TO_REVIEW_QUEUE_NOT_ACCEPTED aggiunge una nuova voce in attesa. I duplicati non ne aggiungono; gli esiti HOLD rifiutano questo invio."
+      },
+      "source": {
+        "path": "lab/companion/v10/coordination.py",
+        "sha256": "0538bf8964306058bcbe5b9367ce29cff2f53719c12ae2b5d24649d2346730f7"
+      },
+      "values": [
+        {
+          "value": "ADMITTED_TO_REVIEW_QUEUE_NOT_ACCEPTED",
+          "meaning": {
+            "en": "The event is added to the local review queue.",
+            "it": "L'evento viene aggiunto alla coda locale di revisione."
+          },
+          "source_lines": [
+            79
+          ]
+        },
+        {
+          "value": "DUPLICATE_NO_NEW_SUBMISSION",
+          "meaning": {
+            "en": "The same event and payload were already recorded.",
+            "it": "Lo stesso evento con lo stesso contenuto è già registrato."
+          },
+          "source_lines": [
+            59
+          ]
+        },
+        {
+          "value": "HOLD_EVENT_ID_CONFLICT",
+          "meaning": {
+            "en": "An event identifier is reused for different content.",
+            "it": "Un identificativo di evento viene riutilizzato per un contenuto diverso."
+          },
+          "source_lines": [
+            61
+          ]
+        },
+        {
+          "value": "HOLD_STALE_INTENT",
+          "meaning": {
+            "en": "The submitted intent differs from the current one.",
+            "it": "L'intenzione dell'invio differisce da quella corrente."
+          },
+          "source_lines": [
+            64
+          ]
+        },
+        {
+          "value": "HOLD_WRONG_LEASE",
+          "meaning": {
+            "en": "Owner, target generation or intent does not match the current lease.",
+            "it": "Responsabile, generazione dell'oggetto o intenzione non coincide con la assegnazione temporanea corrente."
+          },
+          "source_lines": [
+            72
+          ]
+        },
+        {
+          "value": "HOLD_EXPIRED_LEASE",
+          "meaning": {
+            "en": "The lease has expired at submission time.",
+            "it": "La assegnazione temporanea è scaduta al momento dell'invio."
+          },
+          "source_lines": [
+            74
+          ]
+        },
+        {
+          "value": "HOLD_REVIEW_CAPACITY",
+          "meaning": {
+            "en": "The local pending-item limit has been reached.",
+            "it": "È stato raggiunto il limite locale delle voci in attesa."
+          },
+          "source_lines": [
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "evidence.manifest",
+      "entity": {
+        "en": "Evidence consistency check",
+        "it": "Controllo di coerenza delle prove"
+      },
+      "field_or_return": "verify_manifest().status",
+      "value_role": "evidence_gate_result",
+      "transition_or_computation_owner": {
+        "en": "Digest and intent consistency checker",
+        "it": "Verificatore di coerenza delle impronte e dell'intenzione"
+      },
+      "permitted_next_decision": {
+        "en": "Matching metadata permits human review; it does not attest execution, sign an approval or accept software.",
+        "it": "Metadati coerenti consentono la revisione umana; non attestano l'esecuzione, non firmano un'approvazione e non accettano software."
+      },
+      "source": {
+        "path": "lab/companion/v10/evidence_manifest.py",
+        "sha256": "d8c95db9b9bb7aa0377296170abad92184f1dc2d5401834f4f62a8df6a9eed5e"
+      },
+      "values": [
+        {
+          "value": "HOLD",
+          "meaning": {
+            "en": "A required context or evidence condition is missing or inconsistent.",
+            "it": "Manca una condizione richiesta del contesto o delle prove, oppure è incoerente."
+          },
+          "source_lines": [
+            46,
+            48,
+            51,
+            58,
+            60,
+            62
+          ]
+        },
+        {
+          "value": "READY_FOR_HUMAN_REVIEW_AUTHORITY_UNVERIFIED",
+          "meaning": {
+            "en": "Recorded digests and result metadata pass the local consistency checks.",
+            "it": "Le impronte registrate e i metadati dell'esito superano i controlli locali di coerenza."
+          },
+          "source_lines": [
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "memory.card",
+      "entity": {
+        "en": "Threshold memory card",
+        "it": "Scheda di memoria della soglia"
+      },
+      "field_or_return": "card.state",
+      "value_role": "memory_validity_status",
+      "transition_or_computation_owner": {
+        "en": "Named card owner; the checker verifies consistency rather than writing the state",
+        "it": "Responsabile indicato nella scheda; il controllo verifica la coerenza senza scrivere lo stato"
+      },
+      "permitted_next_decision": {
+        "en": "CURRENT is necessary but insufficient for a new decision. A superseded card may support an explicitly historical explanation.",
+        "it": "CURRENT è necessario ma non sufficiente per una nuova decisione. Una scheda superata può sostenere una spiegazione esplicitamente storica."
+      },
+      "source": {
+        "path": "lab/companion/v10/memory_scope.py",
+        "sha256": "4ecee764e8fd49f1b537acc0774c34d1ba616da0befdb0a3a8965d4516dfa6c6"
+      },
+      "values": [
+        {
+          "value": "CURRENT",
+          "meaning": {
+            "en": "The card declares current scope, still subject to source and version checks.",
+            "it": "La scheda dichiara un ambito corrente, ancora soggetto ai controlli di fonte e versione."
+          },
+          "source_lines": [
+            21,
+            40,
+            42
+          ]
+        },
+        {
+          "value": "SUPERSEDED",
+          "meaning": {
+            "en": "The card is retained for a superseded policy version.",
+            "it": "La scheda è conservata per una versione superata della policy."
+          },
+          "source_lines": [
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "namespace": "memory.check",
+      "entity": {
+        "en": "Threshold-card check",
+        "it": "Controllo della scheda della soglia"
+      },
+      "field_or_return": "check_threshold_card() return value",
+      "value_role": "memory_check_result",
+      "transition_or_computation_owner": {
+        "en": "Source/version/purpose checker for this one schema",
+        "it": "Verificatore di fonte, versione e finalità per questo solo schema"
+      },
+      "permitted_next_decision": {
+        "en": "A matching result permits the stated use of this supported fact; it never supplies policy authorization. HOLD results require correction or investigation.",
+        "it": "Un esito coerente consente l'uso dichiarato del fatto supportato; non conferisce autorità sulla policy. Gli esiti HOLD richiedono correzione o indagine."
+      },
+      "source": {
+        "path": "lab/companion/v10/memory_scope.py",
+        "sha256": "4ecee764e8fd49f1b537acc0774c34d1ba616da0befdb0a3a8965d4516dfa6c6"
+      },
+      "values": [
+        {
+          "value": "HOLD_MISSING_PROVENANCE",
+          "meaning": {
+            "en": "Required provenance fields or owner are missing.",
+            "it": "Mancano campi di provenienza richiesti o il responsabile."
+          },
+          "source_lines": [
+            20
+          ]
+        },
+        {
+          "value": "HOLD_UNRESOLVED_STATE",
+          "meaning": {
+            "en": "The card state is outside CURRENT/SUPERSEDED.",
+            "it": "Lo stato della scheda è diverso da CURRENT/SUPERSEDED."
+          },
+          "source_lines": [
+            22
+          ]
+        },
+        {
+          "value": "HOLD_UNKNOWN_PURPOSE",
+          "meaning": {
+            "en": "The requested use is not new-decision or historical explanation.",
+            "it": "L'uso richiesto non è una nuova decisione né una spiegazione storica."
+          },
+          "source_lines": [
+            24
+          ]
+        },
+        {
+          "value": "HOLD_SOURCE_CHANGED",
+          "meaning": {
+            "en": "Source bytes differ from the stored hash.",
+            "it": "I byte della fonte differiscono dall'impronta registrata."
+          },
+          "source_lines": [
+            29
+          ]
+        },
+        {
+          "value": "HOLD_VERSION_MISMATCH",
+          "meaning": {
+            "en": "The cited source and card name different policy versions.",
+            "it": "La fonte citata e la scheda indicano versioni diverse della policy."
+          },
+          "source_lines": [
+            31
+          ]
+        },
+        {
+          "value": "HOLD_UNSUPPORTED_VALUE",
+          "meaning": {
+            "en": "The claimed threshold is absent from or disagrees with its source.",
+            "it": "La soglia dichiarata manca nella fonte o non coincide con essa."
+          },
+          "source_lines": [
+            36
+          ]
+        },
+        {
+          "value": "HOLD_UNREADABLE_SOURCE",
+          "meaning": {
+            "en": "The source cannot be read or interpreted as required.",
+            "it": "La fonte non può essere letta o interpretata nel modo richiesto."
+          },
+          "source_lines": [
+            38
+          ]
+        },
+        {
+          "value": "HOLD_STALE_FOR_NEW",
+          "meaning": {
+            "en": "The card is not valid for new decisions under the active policy.",
+            "it": "La scheda non è valida per nuove decisioni secondo la policy attiva."
+          },
+          "source_lines": [
+            41
+          ]
+        },
+        {
+          "value": "CURRENT_SOURCE_MATCH_NOT_AUTHORIZATION",
+          "meaning": {
+            "en": "The card matches the active source for new decisions.",
+            "it": "La scheda coincide con la fonte attiva per le nuove decisioni."
+          },
+          "source_lines": [
+            42
+          ]
+        },
+        {
+          "value": "HISTORICAL_SOURCE_MATCH_NOT_AUTHORIZATION",
+          "meaning": {
+            "en": "The card matches its source for a historical explanation.",
+            "it": "La scheda coincide con la propria fonte per una spiegazione storica."
+          },
+          "source_lines": [
+            43
+          ]
+        }
+      ]
+    }
+  ],
+  "non_enum_entities": [
+    {
+      "entity": "intent chronology",
+      "implemented_fields": [
+        "intent_id",
+        "revision",
+        "delta_id",
+        "base_intent"
+      ],
+      "note": {
+        "en": "No general DRAFT/APPROVED lifecycle is implemented. INT-001 and INT-002 identify episodes; document authority is a separate illustrative declaration.",
+        "it": "Non è implementato un ciclo generale DRAFT/APPROVED. INT-001 e INT-002 identificano episodi; l'autorità del documento è una dichiarazione illustrativa separata."
+      }
+    },
+    {
+      "entity": "LoopState",
+      "implemented_fields": [
+        "intent",
+        "contract_digest",
+        "used_minor",
+        "cap_minor",
+        "calls_used",
+        "max_calls",
+        "attempts_used",
+        "max_attempts",
+        "deadline",
+        "revoked",
+        "last_signature",
+        "repeated_signature"
+      ],
+      "note": {
+        "en": "Persistent counters and controller observations feed the next-action gate; its return code is not a general run lifecycle state.",
+        "it": "Contatori persistenti e osservazioni del controllore alimentano il controllo dell'azione successiva; il suo codice di ritorno non è uno stato generale dell'esecuzione."
+      }
+    },
+    {
+      "entity": "Lease",
+      "implemented_fields": [
+        "owner",
+        "intent",
+        "expiry",
+        "generation"
+      ],
+      "note": {
+        "en": "Expiry and generation are checked at queue admission. No file-writing sink or distributed lease service is implemented by this coordinator.",
+        "it": "Scadenza e generazione sono controllate all'ammissione alla coda. Il coordinatore non implementa la scrittura dei file né un servizio distribuito di lease."
+      }
+    }
+  ],
+  "prose_aliases_requiring_context": [
+    {
+      "old": "STRUCTURAL_PASS_HUMAN_AUTHORITY_UNVERIFIED",
+      "kind": "book_summary_not_validator_output",
+      "replacement": {
+        "structural_status": "PASS",
+        "authority_status": "HUMAN_APPROVAL_UNVERIFIED",
+        "acceptance_status": "NOT_ACCEPTED"
+      },
+      "EN_locator": "chapters/chapter04.tex",
+      "ITA_locator": "chapters/chapter04.tex"
+    },
+    {
+      "old": "READY_FOR_REVIEW",
+      "kind": "reused_textual_label",
+      "rule": {
+        "en": "Name the candidate and checker; do not replace this globally with another namespace's acceptance or authority value.",
+        "it": "Nominare il candidato e il controllo; non sostituire globalmente questo valore con l'accettazione o l'autorità di un altro spazio di nomi."
+      }
+    },
+    {
+      "old": "READY_FOR_PUBLICATION_REVIEW",
+      "kind": "editorial_publication_example_not_lab_state",
+      "EN_locator": "didactics/worked13.tex",
+      "ITA_locator": "didactics/worked13.tex",
+      "entity": {
+        "en": "Publication proposal (paper example)",
+        "it": "Proposta di pubblicazione (esempio su carta)"
+      },
+      "producer": {
+        "en": "Named human reviewer",
+        "it": "Revisore umano indicato"
+      },
+      "permitted_next_decision": {
+        "en": "Review the proposed publication; a separate owner must authorize release.",
+        "it": "Esaminare la pubblicazione proposta; il responsabile deve autorizzare separatamente l’uscita."
+      }
+    },
+    {
+      "old": "ESCALATE_FOR_AUTHORITY",
+      "kind": "paper_review_decision_not_lab_output",
+      "EN_locator": "didactics/worked08.tex",
+      "ITA_locator": "didactics/worked08.tex"
+    }
+  ],
+  "no_global_replacement": true,
+  "release_authority_implemented": false,
+  "source_basis": {
+    "version": "R06 reader projection from recovered case",
+    "upstream_registry_sha256": "ee1211ae8b1d8344438216b8641e4766a4b0a544b696b88aefce9ffb7e5cc17d",
+    "upstream_case_ledger_sha256": "e1e4e6fe7f6f6c2b5fd1c625b966f3a83944f81f6c935ee5f73ac299533a8164",
+    "projection_rules": "PUBLIC_PROJECTION.json",
+    "note": "Family source hashes and line locators identify the current distributed reader files. Upstream hashes preserve documentary lineage; editorial originals are retained outside this reader distribution."
+  },
+  "run_count_source": {
+    "path": "audit/v10/companion_runs/ch07.json",
+    "generated_by": "python scripts/run_lab_checks.py",
+    "fields": [
+      "passed",
+      "total",
+      "count_kind"
+    ],
+    "reference_run": {
+      "passed": 21,
+      "total": 21,
+      "count_kind": "behavioral_records"
+    }
+  }
+}

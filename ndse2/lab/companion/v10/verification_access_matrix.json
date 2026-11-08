@@ -1,0 +1,47 @@
+{
+  "kind": "PROPOSED_RESPONSIBILITY_MATRIX",
+  "maker": {
+    "write": [
+      "candidate"
+    ],
+    "read": [
+      "scoped task data"
+    ],
+    "forbidden": [
+      "intent",
+      "protected oracle",
+      "acceptance"
+    ]
+  },
+  "checker": {
+    "read": [
+      "candidate",
+      "authorized criteria"
+    ],
+    "produce": [
+      "separate findings"
+    ],
+    "forbidden": [
+      "candidate edits",
+      "intent edits",
+      "oracle edits"
+    ]
+  },
+  "coordinator": {
+    "produce": [
+      "assignment",
+      "bounded repair request",
+      "clarification request"
+    ],
+    "forbidden": [
+      "approve own business exception"
+    ]
+  },
+  "owner": {
+    "produce": [
+      "authorized scope decision"
+    ],
+    "cannot_substitute_for": "missing empirical or test evidence"
+  },
+  "runtime_enforcement": "file_broker.py tests only the local file subset; human role/authority not authenticated"
+}

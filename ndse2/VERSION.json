@@ -1,0 +1,43 @@
+{
+  "edition": "NDSEv2 second edition",
+  "version": "13.7.3",
+  "correction_checkpoint": "R06",
+  "python_required": "3.10+",
+  "verified_environment": "Linux, Python 3.12.14",
+  "entry_point": "python scripts/run_lab_checks.py",
+  "expected_summary": {
+    "passed": true,
+    "phases_passed": 3,
+    "phases_total": 3
+  },
+  "chapter7_counts": {
+    "behavioral_records": {
+      "passed": 21,
+      "total": 21
+    },
+    "mutants": {
+      "mutants": 12,
+      "killed": 12,
+      "survived": 0,
+      "infrastructure_error": 0
+    },
+    "metamorphic_sampled_pairs": {
+      "passed": 2184,
+      "total": 2184
+    },
+    "differential_sampled_cases": {
+      "passed": 168,
+      "total": 168
+    },
+    "relation_identity_controls": {
+      "passed": 3,
+      "total": 3
+    }
+  },
+  "guides": {
+    "en": "lab/README_EN.md",
+    "it": "lab/README_ITA.md"
+  },
+  "scope": "Synthetic local software exercises; finite samples and introduced faults, not an empirical estimate of model reliability.",
+  "issues": "https://github.com/popoloni/non_deterministic_sw_eng/issues"
+}

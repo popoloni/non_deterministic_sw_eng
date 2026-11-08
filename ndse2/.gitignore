@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+**/out*/
+audit/current_run/
+*.db
+*.sqlite
+*.sqlite3
