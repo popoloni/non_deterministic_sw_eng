@@ -1,0 +1,30 @@
+{
+  "kind": "SYNTHETIC_SPECIFICATION_REVIEW",
+  "records": [
+    {
+      "id": "G-CONTRADICTION",
+      "source": "draft sentence: always use the current ceiling",
+      "impact": "would change historical replay",
+      "owner": "illustrative policy owner",
+      "response": "restrict current policy to new evaluations",
+      "status": "RESOLVED_IN_WORKED_EXAMPLE"
+    },
+    {
+      "id": "G-INTERFACE",
+      "source": "draft scenario checks status but omits policy_version",
+      "impact": "cannot establish historical provenance",
+      "owner": "independent test designer",
+      "response": "assert stored original policy version on replay",
+      "status": "RESOLVED_IN_WORKED_EXAMPLE"
+    },
+    {
+      "id": "G-QUESTION",
+      "source": "Q-HISTORY in clarifications.json",
+      "impact": "blocks replay-dependent work",
+      "owner": "illustrative policy owner",
+      "response": "preserve committed response",
+      "status": "ILLUSTRATIVE_ANSWER_RECORDED"
+    }
+  ],
+  "limits": "Observed legacy behavior is not approved requirement; composite scoring has no authority."
+}

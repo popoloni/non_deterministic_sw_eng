@@ -1,0 +1,106 @@
+{
+  "schema_version": "ndse-scenario-id-map/2.0",
+  "prepared_date": "2026-11-08",
+  "canonical_intents": [
+    "INT-001",
+    "INT-002"
+  ],
+  "rule": {
+    "en": "SCN identifiers name isolated teaching scenarios or opaque test tokens. None adds a canonical policy version or changes v1/v2.",
+    "it": "Gli identificativi SCN nominano scenari didattici isolati o riferimenti opachi usati dai test. Nessuno aggiunge una versione canonica della policy o modifica v1/v2."
+  },
+  "mappings": [
+    {
+      "old_label": "INT-003",
+      "context": "generic next change",
+      "new_label": null,
+      "replacement": {
+        "en": "the next authorized revision",
+        "it": "la successiva revisione autorizzata"
+      },
+      "book_paths": [
+        "chapters/chapter05.tex"
+      ],
+      "kind": "general_question_not_scenario"
+    },
+    {
+      "old_label": "INT-003",
+      "context": "change to the effective date",
+      "new_label": "SCN-DATE",
+      "meaning": {
+        "en": "A separate hypothetical exercise changes the effective date for newly opened cases.",
+        "it": "Un esercizio ipotetico distinto modifica la data di efficacia per i nuovi casi."
+      },
+      "book_paths": [
+        "didactics/worked11.tex"
+      ],
+      "kind": "paper_example",
+      "implemented_effective_date_policy": false
+    },
+    {
+      "old_label": "INT-003 / INT-003-EXERCISE-ONLY",
+      "context": "stale coordination submission",
+      "new_label": "SCN-COORD",
+      "meaning": {
+        "en": "An isolated controller test changes its current intent token and rejects an old-intent submission.",
+        "it": "Un test isolato del controllore cambia il riferimento all'intenzione corrente e rifiuta un invio riferito all'intenzione precedente."
+      },
+      "book_paths": [
+        "chapters/chapter11.tex",
+        "appendices/solutions.tex"
+      ],
+      "code_path": "lab/companion/v10/test_coordination.py",
+      "code_line": 49,
+      "kind": "executable_test_token",
+      "code_sha256": "0d5585dea6e274feea3d8dd3f630f50cbea64ea26e5ea2dbf4a0371803238861"
+    },
+    {
+      "old_label": "INT-003",
+      "context": "stale evidence manifest",
+      "new_label": "SCN-EVIDENCE",
+      "meaning": {
+        "en": "An isolated evidence test supplies a different current-intent token to make the stale-intent condition observable.",
+        "it": "Un test isolato delle prove fornisce un diverso riferimento all'intenzione corrente per rendere osservabile la condizione di intenzione obsoleta."
+      },
+      "code_path": "lab/companion/v10/test_evidence_manifest.py",
+      "code_line": 47,
+      "kind": "executable_test_token",
+      "code_sha256": "bd1639015c39c4d905090870e1979809b6fca54a1dcf011db9037dceb8f3e14a"
+    }
+  ],
+  "supporting_updates": [
+    {
+      "path": "lab/companion/v10/README.md",
+      "line": 5,
+      "action": "Replace the ambiguous INT-003 sentence with definitions of the distinct isolated scenarios."
+    }
+  ],
+  "applied_code_changes": [
+    {
+      "path": "lab/companion/v10/test_coordination.py",
+      "kind": "clarify isolated scenario identifiers",
+      "before_sha256": "25796ee50dac4a48d44978d143b9fb0b2eac64367956d22238e16ba25160ff99",
+      "historical_after_sha256": "1df401c827e8dd06610bde861d02ccf35618bf0ce823e7a500f487b0da047d12",
+      "current_sha256": "0d5585dea6e274feea3d8dd3f630f50cbea64ea26e5ea2dbf4a0371803238861"
+    },
+    {
+      "path": "lab/companion/v10/test_evidence_manifest.py",
+      "kind": "clarify isolated scenario identifiers",
+      "before_sha256": "75c172341aa392932b568a424efaa097331891f7b24e1bbfbf20e2e83273336d",
+      "historical_after_sha256": "0867c62fe37c02ef5ae17148a0541a0f0edffaa731dce1a49700b742a5e5c130",
+      "current_sha256": "bd1639015c39c4d905090870e1979809b6fca54a1dcf011db9037dceb8f3e14a"
+    },
+    {
+      "path": "lab/companion/v10/README.md",
+      "kind": "clarify isolated scenario identifiers",
+      "before_sha256": "ec5959f089e38f7bc022a131ab757633ff441849a02ba0b1461bd1c6e46e0627",
+      "historical_after_sha256": "3a05b3964895f97505100c91ff046ed06b510d359ce158c51a2a046e3f2abffa",
+      "current_sha256": "3a05b3964895f97505100c91ff046ed06b510d359ce158c51a2a046e3f2abffa"
+    }
+  ],
+  "public_registry_field": {
+    "path": "series/CASE_LEDGER.json",
+    "field": "isolated_scenarios",
+    "meaning": "The reader ledger names the three independent scenarios explicitly."
+  }
+}

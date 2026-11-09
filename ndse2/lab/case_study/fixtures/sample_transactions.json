@@ -1,0 +1,5 @@
+[
+  {"transaction_id":"DEMO-1","amount_minor":400000,"currency":"EUR","department":"TREASURY","risk":"LOW","requester":"test-person","cross_border":false},
+  {"transaction_id":"DEMO-2","amount_minor":100,"currency":"EUR","department":"OPS","risk":"HIGH","requester":"test-person","cross_border":false},
+  {"transaction_id":"DEMO-3","amount_minor":100,"currency":"EUR","department":"OPS","risk":"LOW","requester":"test-person","cross_border":true}
+]

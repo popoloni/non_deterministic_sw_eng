@@ -1,0 +1,1 @@
+task_id,mode,assigned_at,accepted,released,developer_minutes,reviewer_minutes,verification_minutes,model_cost_eur,compute_cost_eur,followup_minutes,incident_loss_eur,deployment_outcome,observation_days,risk_class

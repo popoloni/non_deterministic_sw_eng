@@ -1,0 +1,96 @@
+{
+  "warning": "Original synthetic teaching-case evidence graph; not the SE@PoliMi research annotations",
+  "nodes": [
+    {
+      "id": "INT-001",
+      "kind": "intention",
+      "status": "illustrative_authority"
+    },
+    {
+      "id": "INT-002",
+      "kind": "intention_delta",
+      "status": "illustrative_authority"
+    },
+    {
+      "id": "POLICY-v1",
+      "kind": "policy",
+      "source": "policies/v1.json",
+      "valid": "historic_and_for_v1"
+    },
+    {
+      "id": "POLICY-v2",
+      "kind": "policy",
+      "source": "policies/v2.json",
+      "valid": "new_requests_after_int002"
+    },
+    {
+      "id": "DECISION-old",
+      "kind": "decision",
+      "version": "approval-eur-v1",
+      "amount_minor": 400000
+    },
+    {
+      "id": "DECISION-new",
+      "kind": "decision",
+      "version": "approval-eur-v2",
+      "amount_minor": 400000
+    },
+    {
+      "id": "REPLAY",
+      "kind": "invariant",
+      "value": "old key exact payload returns stored decision"
+    },
+    {
+      "id": "TEST-BND",
+      "kind": "oracle",
+      "source": "answer_keys/oracle_solution.py"
+    },
+    {
+      "id": "TEST-REPLAY",
+      "kind": "oracle",
+      "source": "tests/test_service.py"
+    }
+  ],
+  "edges": [
+    {
+      "from": "INT-002",
+      "relation": "supersedes",
+      "to": "INT-001"
+    },
+    {
+      "from": "POLICY-v1",
+      "relation": "authorized-by",
+      "to": "INT-001"
+    },
+    {
+      "from": "POLICY-v2",
+      "relation": "authorized-by",
+      "to": "INT-002"
+    },
+    {
+      "from": "DECISION-old",
+      "relation": "evaluated-under",
+      "to": "POLICY-v1"
+    },
+    {
+      "from": "DECISION-new",
+      "relation": "evaluated-under",
+      "to": "POLICY-v2"
+    },
+    {
+      "from": "INT-002",
+      "relation": "invalidates-current-threshold-summary-of",
+      "to": "POLICY-v1"
+    },
+    {
+      "from": "REPLAY",
+      "relation": "checked-by",
+      "to": "TEST-REPLAY"
+    },
+    {
+      "from": "POLICY-v2",
+      "relation": "checked-by",
+      "to": "TEST-BND"
+    }
+  ]
+}

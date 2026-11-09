@@ -1,0 +1,9 @@
+{
+  "policy_version": "approval-eur-v2",
+  "currency": "EUR",
+  "departments": {
+    "OPS": 1000000,
+    "TREASURY": 300000
+  },
+  "cross_border_behavior": "REVIEW_REQUIRED"
+}

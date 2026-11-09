@@ -1,0 +1,40 @@
+{
+  "kind": "UNEXECUTED_DECISION_TEMPLATE",
+  "case": "synthetic approval routing; no movement of funds",
+  "decision": "retain human-led acceptance; propose measurement before any expansion",
+  "alternatives": [
+    "human-led",
+    "interactive assistance",
+    "bounded candidate generation",
+    "bounded generation with independent checking",
+    "reduce or decline additional autonomy"
+  ],
+  "owners": {
+    "adoption": "Engineering Director (role placeholder)",
+    "intention": "Policy Owner",
+    "verification": "independent verification owner",
+    "release": "Release Owner"
+  },
+  "next_observation": "role-specific active review time and follow-up rework on eligible comparable changes, retaining failures",
+  "hard_stop": [
+    "unauthorized action",
+    "unresolved high-severity finding",
+    "missing authority",
+    "stale or mismatched evidence"
+  ],
+  "economic_reassessment": [
+    "unfavorable accepted-change cost",
+    "review capacity exceeded",
+    "new evidence changes the ranking"
+  ],
+  "reopen_on": [
+    "material task-mix change",
+    "policy change",
+    "model/tool version change",
+    "unexpected maintenance burden"
+  ],
+  "people_obligation": "preserve mentoring and test retained independent judgment; no hiring inference from toy cost arithmetic",
+  "production_data": null,
+  "pilot_executed": false,
+  "approval": null
+}

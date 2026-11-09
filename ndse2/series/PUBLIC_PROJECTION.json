@@ -1,0 +1,42 @@
+{
+  "schema_version": "ndse-public-projection/1.0",
+  "scope": {
+    "en": "Operational teaching case and executable status vocabulary; editorial production history is excluded.",
+    "it": "Caso didattico operativo e vocabolario degli esiti eseguibili; la storia della lavorazione editoriale è esclusa."
+  },
+  "registry_family_count": 20,
+  "removed": {
+    "registry_namespaces": [
+      "editorial.historical_episode"
+    ],
+    "ledger_fields": [
+      "episodes",
+      "scenario_INT_003"
+    ],
+    "public_provenance_directory": "Replaced by historical digests, not unresolved file references."
+  },
+  "preserved": [
+    "canonical policy/intent bytes",
+    "operational identities",
+    "obligations",
+    "chronology",
+    "routing and governance traces"
+  ],
+  "schema_rename": {
+    "reason": "Consistent lease vocabulary in the unpublished candidate.",
+    "tokens": {
+      "HOLD_WRONG_CONCESSION": "HOLD_WRONG_LEASE",
+      "HOLD_EXPIRED_CONCESSION": "HOLD_EXPIRED_LEASE"
+    },
+    "namespace": {
+      "coordination.concession": "coordination.lease"
+    },
+    "compatibility": "This unpublished schema rename changes labels only; owner, expiry, generation and admission behavior are unchanged."
+  },
+  "upstream_digests": {
+    "STATE_REGISTRY.json": "ee1211ae8b1d8344438216b8641e4766a4b0a544b696b88aefce9ffb7e5cc17d",
+    "CASE_LEDGER.json": "e1e4e6fe7f6f6c2b5fd1c625b966f3a83944f81f6c935ee5f73ac299533a8164",
+    "SCENARIO_ID_MAP.json": "1ed942fd7a3640873b8a4d42acb5b8c548b0db91c28dfe8e9180a2cccafe6f1f"
+  },
+  "reference_resolution": "All public paths are resolved from the companion root unless explicitly local to series; generated audit paths are created by the documented commands."
+}

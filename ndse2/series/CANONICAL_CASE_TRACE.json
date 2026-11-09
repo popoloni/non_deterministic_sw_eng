@@ -1,0 +1,288 @@
+{
+  "kind": "CURRENT_SYNTHETIC_ROUTING_AND_REPLAY_TRACE",
+  "currency": "EUR",
+  "minor_unit": "cent",
+  "decisions": [
+    {
+      "scenario": "treasury_3000",
+      "transaction": {
+        "transaction_id": "treasury_3000",
+        "amount_minor": 300000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "treasury_3000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 500000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "treasury_3000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 300000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "treasury_4000",
+      "transaction": {
+        "transaction_id": "treasury_4000",
+        "amount_minor": 400000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "treasury_4000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 500000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "treasury_4000",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "THRESHOLD_EXCEEDED",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 300000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "treasury_5000",
+      "transaction": {
+        "transaction_id": "treasury_5000",
+        "amount_minor": 500000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "treasury_5000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 500000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "treasury_5000",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "THRESHOLD_EXCEEDED",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 300000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "treasury_3000_plus_cent",
+      "transaction": {
+        "transaction_id": "treasury_3000_plus_cent",
+        "amount_minor": 300001,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "treasury_3000_plus_cent",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 500000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "treasury_3000_plus_cent",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "THRESHOLD_EXCEEDED",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "TREASURY",
+        "policy_amount_minor": 300000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "high_risk",
+      "transaction": {
+        "transaction_id": "high_risk",
+        "amount_minor": 10000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "HIGH",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "high_risk",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "HIGH_RISK",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "risk",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "high_risk",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "HIGH_RISK",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "risk",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "cross_border",
+      "transaction": {
+        "transaction_id": "cross_border",
+        "amount_minor": 10000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": true
+      },
+      "v1": {
+        "transaction_id": "cross_border",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "CROSS_BORDER",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "cross_border",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "cross_border",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "CROSS_BORDER",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "cross_border",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "unknown_department",
+      "transaction": {
+        "transaction_id": "unknown_department",
+        "amount_minor": 10000,
+        "currency": "EUR",
+        "department": "UNKNOWN",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "unknown_department",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "UNRECOGNIZED_DEPARTMENT",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "department",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "unknown_department",
+        "status": "REVIEW_REQUIRED",
+        "reason_code": "UNRECOGNIZED_DEPARTMENT",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "department",
+        "policy_amount_minor": null,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    },
+    {
+      "scenario": "ops_10000",
+      "transaction": {
+        "transaction_id": "ops_10000",
+        "amount_minor": 1000000,
+        "currency": "EUR",
+        "department": "OPS",
+        "risk": "LOW",
+        "requester": "case-reader",
+        "cross_border": false
+      },
+      "v1": {
+        "transaction_id": "ops_10000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v1",
+        "policy_rule": "OPS",
+        "policy_amount_minor": 1000000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      },
+      "v2": {
+        "transaction_id": "ops_10000",
+        "status": "AUTO_APPROVAL_ELIGIBLE",
+        "reason_code": "WITHIN_THRESHOLD",
+        "policy_version": "approval-eur-v2",
+        "policy_rule": "OPS",
+        "policy_amount_minor": 1000000,
+        "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+      }
+    }
+  ],
+  "replay": {
+    "historical_id": "T-HISTORY",
+    "historical_key": "idem-history",
+    "original": {
+      "transaction_id": "T-HISTORY",
+      "status": "AUTO_APPROVAL_ELIGIBLE",
+      "reason_code": "WITHIN_THRESHOLD",
+      "policy_version": "approval-eur-v1",
+      "policy_rule": "TREASURY",
+      "policy_amount_minor": 500000,
+      "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+    },
+    "repeated_after_v2": {
+      "transaction_id": "T-HISTORY",
+      "status": "AUTO_APPROVAL_ELIGIBLE",
+      "reason_code": "WITHIN_THRESHOLD",
+      "policy_version": "approval-eur-v1",
+      "policy_rule": "TREASURY",
+      "policy_amount_minor": 500000,
+      "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+    },
+    "new_id": "T-NEW",
+    "new_key": "idem-new",
+    "new_decision": {
+      "transaction_id": "T-NEW",
+      "status": "REVIEW_REQUIRED",
+      "reason_code": "THRESHOLD_EXCEEDED",
+      "policy_version": "approval-eur-v2",
+      "policy_rule": "TREASURY",
+      "policy_amount_minor": 300000,
+      "evidence_kind": "SYNTHETIC_DETERMINISTIC_RULE"
+    },
+    "conflicts": {
+      "same_key_changed_payload": "ConflictError",
+      "same_transaction_new_key": "ConflictError"
+    },
+    "historical_record_unchanged_after_conflicts": true,
+    "audit_event_count": 2,
+    "audit_is_contiguous": true
+  },
+  "scope": "Local synthetic decisions only; no funds movement, authenticated policy approval or production transaction."
+}

@@ -1,0 +1,13 @@
+chapter,artifact,teaching_objective
+C01,legacy.py + 01_intent_contract.json,Work is more than generated code
+C02,07_measurement_plan.md,Separate changes from value
+C03,README.md + bounded CLI,Recognize agent capability and safe containment
+C04,01_intent_contract.json + 02_late_intent_delta.json,Determine authoritative intention before choosing design
+C05,03_architecture_decisions.md + policy.py,Inspect architecture and maintainability
+C06,04_security_and_threats.md,Understand product and agent execution threats
+C07,tests/ + 05_verification_and_review.md,Check independently against external oracles
+C08,05_verification_and_review.md,Separate ready-for-review from acceptance
+C09,06_case_memory_card.json,Preserve provenance and expiry
+C10,08_mentoring_exercise.md,Protect learning and comprehension
+C11,02_late_intent_delta.json + methodology gates,Allocate ownership for clarification and acceptance
+C12,07_measurement_plan.md + cost_inputs.csv,Evaluate economics using real measured inputs

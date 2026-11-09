@@ -1,0 +1,20 @@
+{
+  "kind": "PROPOSED_DECISION_RIGHTS_NOT_ORG_CHART",
+  "responsibilities": {
+    "intention": "policy owner",
+    "design": "system steward",
+    "access": "platform/operator owner",
+    "verification": "verification owner",
+    "acceptance": "maintainer/reviewer",
+    "release_and_recovery": "release/operations owner"
+  },
+  "records": [
+    "intent/delta",
+    "ADR/dependencies",
+    "permission/lifetime/revocation",
+    "oracle/evidence",
+    "acceptance/risk",
+    "release/restore"
+  ],
+  "limits": "One person may hold several roles; model mode labels do not grant authority; no identities authenticated in demo."
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "ILLUSTRATIVE_POLICY_NOT_OPTIMIZED",
+  "reference_capacity_reviews_per_week": 8,
+  "chosen_max_outstanding_candidates": 8,
+  "batch": "one semantic change",
+  "when_full": "hold before new generation",
+  "priority": "consequence and unresolved obligation; owner may reorder",
+  "accounting": "active person-time distinct from elapsed queue duration",
+  "budget": "waiting/restart does not reset task limits",
+  "authorization": "capacity admission does not grant acceptance"
+}

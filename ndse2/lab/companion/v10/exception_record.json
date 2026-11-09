@@ -1,0 +1,21 @@
+{
+  "kind": "SYNTHETIC_EXCEPTION_DESIGN",
+  "action": "restore canonical reader/remove schema-view adapter",
+  "owner": "designated incident owner under established organizational policy",
+  "authorization": "illustrative only; no actual approval",
+  "obligations_retained": [
+    "historical replay",
+    "scope protection",
+    "independent regression",
+    "traceable decision"
+  ],
+  "artifact_deferred": "long explanatory migration note",
+  "compensating_evidence": [
+    "recorded narrow diff",
+    "known-good fixture",
+    "replay and boundary results"
+  ],
+  "expiry": "end of explicitly authorized incident window",
+  "followup": "owner completes explanation at next scheduled review",
+  "when_authority_missing": "HOLD; no agent self-approval"
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "SYNTHETIC_CLARIFICATION_RECORDS",
+  "not_real_authorization": true,
+  "canonical_contract": "lab/case_study/docs/01_intent_contract.json",
+  "canonical_delta": "lab/case_study/docs/02_late_intent_delta.json",
+  "views": {
+    "capability": "Versioned approval routing; no money movement",
+    "constraints": "Existing safety invariants and exclusions",
+    "scenarios": "Existing independently stated acceptance cases"
+  },
+  "questions": [
+    {
+      "id": "Q-HISTORY",
+      "question": "Does the new ceiling re-evaluate prior committed requests?",
+      "owner": "illustrative policy owner",
+      "blocks": [
+        "replay-dependent implementation and acceptance"
+      ],
+      "decision_due": "before replay-dependent edits",
+      "answer": "No; replay preserves original policy and outcome.",
+      "authority_status": "ILLUSTRATIVE_AUTHORIZED_STATE",
+      "applies_to": "INT-002"
+    },
+    {
+      "id": "Q-HELP",
+      "question": "Which wording should the non-authoritative help heading use?",
+      "owner": "illustrative documentation maintainer",
+      "blocks": [
+        "help-heading publication only"
+      ],
+      "decision_due": "before documentation publication",
+      "answer": null,
+      "authority_status": "QUESTION_OPEN",
+      "applies_to": "separate documentation task"
+    }
+  ]
+}

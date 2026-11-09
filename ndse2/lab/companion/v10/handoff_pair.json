@@ -1,0 +1,27 @@
+{
+  "kind": "SYNTHETIC_HANDOFF_PAIR",
+  "before": {
+    "intent": "INT-001",
+    "policy": "approval-eur-v1",
+    "ceiling_minor": 500000,
+    "source": "lab/case_study/policies/v1.json",
+    "next": "clarify scope of proposed new ceiling",
+    "open_question": "Q-HISTORY before answer"
+  },
+  "after": {
+    "intent": "INT-002",
+    "policy": "approval-eur-v2",
+    "ceiling_minor": 300000,
+    "source": "lab/case_study/policies/v2.json",
+    "superseded": "v1 ceiling for new decisions only",
+    "preserved": "original v1 stored replay",
+    "failed_attempt": "reevaluate_mutant changes history",
+    "next": "run independent replay and current boundary checks",
+    "remaining_budget_source": "controller checkpoint, never summary"
+  },
+  "both": {
+    "adr": "architecture_comparison.md",
+    "original_contract": "lab/case_study/docs/01_intent_contract.json",
+    "uncertainty": "unseen consumers and real authorization remain outside demo"
+  }
+}

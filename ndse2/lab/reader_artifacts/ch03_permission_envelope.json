@@ -1,0 +1,16 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "events": 4,
+  "denials": 2,
+  "network_requests_performed": 0,
+  "envelope": {
+    "allowed_files": [
+      "approval_lab/domain.py",
+      "approval_lab/service.py",
+      "tests/test_domain_policy.py",
+      "tests/test_service.py"
+    ],
+    "network_allowlist": []
+  },
+  "trace": "ch03_permission_trace.jsonl"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "SYNTHETIC_MINIMUM_CONTEXT",
+  "responsibilities": {
+    "instructions": "bounded edit procedure; cannot override permission envelope",
+    "retrieved_evidence": [
+      "policy fixtures",
+      "API/module/ADR locators; source version required"
+    ],
+    "task_state": "candidate identity, last failure, remaining budget, next permitted step",
+    "authority": [
+      "canonical intent contract",
+      "authorized delta (illustrative approval only)"
+    ]
+  },
+  "omissions": [
+    "production identity",
+    "unobserved external consumers",
+    "unexecuted operational release"
+  ],
+  "conflict_rule": "owner resolves authority/applicability conflict; newest retrieval is not highest authority"
+}

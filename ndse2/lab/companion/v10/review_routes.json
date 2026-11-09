@@ -1,0 +1,28 @@
+{
+  "kind": "PROPOSED_REVIEW_ROUTES",
+  "routes": [
+    {
+      "scope": "non-authoritative help heading only",
+      "evidence": [
+        "scoped diff",
+        "no executable/policy changes",
+        "render check"
+      ],
+      "owner": "documentation maintainer",
+      "residual": "unseen documentation consumers",
+      "state": "awaiting scoped decision"
+    },
+    {
+      "scope": "INT-002 Treasury threshold",
+      "evidence": [
+        "authorized intent delta",
+        "current independent boundary/replay/risk checks",
+        "domain diff review"
+      ],
+      "owner": "policy owner and domain maintainer",
+      "residual": "production identity/security/operations unverified",
+      "state": "ready for review only"
+    }
+  ],
+  "rule": "a change outside the selected scope requires rerouting, not silent downgrade"
+}

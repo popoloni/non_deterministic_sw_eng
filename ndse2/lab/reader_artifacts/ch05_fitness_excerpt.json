@@ -1,0 +1,27 @@
+{
+  "source": "lab/companion/ch05/architecture_fitness_v2.py",
+  "full_run_passed": 19,
+  "full_run_total": 19,
+  "checks": [
+    {
+      "check": "A_v2_boundary_is_detected_as_defect",
+      "passed": true,
+      "kind": "negative-control"
+    },
+    {
+      "check": "B_v2_boundary",
+      "passed": true,
+      "kind": "fitness"
+    },
+    {
+      "check": "replay_preserves_v1_provenance",
+      "passed": true,
+      "kind": "fitness"
+    },
+    {
+      "check": "service_has_no_treasury_literal",
+      "passed": true,
+      "kind": "fitness"
+    }
+  ]
+}

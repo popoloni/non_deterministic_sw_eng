@@ -1,0 +1,16 @@
+{
+  "kind": "INPUT_TEMPLATE_NO_TELEMETRY",
+  "period": null,
+  "accounting_basis": "choose incremental or allocated consistently",
+  "active_watts": null,
+  "active_hours": null,
+  "idle_watts": null,
+  "idle_hours": null,
+  "price_per_kwh": null,
+  "allocated_hardware_cost": null,
+  "support_cost": null,
+  "accepted_changes": null,
+  "assumptions": "active/idle hours disjoint; common period; allocation method explicit; zero accepted -> undefined per-outcome cost",
+  "cloud_comparison": "same service, verification, human effort and observation window",
+  "security_eligibility": "execution_profile.json; not a compliance certificate"
+}

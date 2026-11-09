@@ -1,0 +1,192 @@
+{
+  "case_id": "APPROVAL_ROUTING_SYNTHETIC",
+  "authority_status": "ILLUSTRATIVE_ONLY_NO_SIGNATURE",
+  "funds_movement": false,
+  "minor_unit": "EUR cent",
+  "intent_versions": [
+    "INT-001",
+    "INT-002"
+  ],
+  "treasury_ceilings": {
+    "approval-eur-v1": 500000,
+    "approval-eur-v2": 300000
+  },
+  "discriminating_amount_minor": 400000,
+  "ops_ceiling_minor": 1000000,
+  "canonical_records": [
+    "lab/case_study/docs/01_intent_contract.json",
+    "lab/case_study/docs/02_late_intent_delta.json"
+  ],
+  "identities": {
+    "historical_request": {
+      "transaction_id": "T-HISTORY",
+      "key": "idem-history",
+      "amount_minor": 400000,
+      "policy": "approval-eur-v1"
+    },
+    "new_request": {
+      "transaction_id": "T-NEW",
+      "key": "idem-new",
+      "amount_minor": 400000,
+      "policy": "approval-eur-v2"
+    }
+  },
+  "obligations": {
+    "new_v2": "REVIEW_REQUIRED",
+    "historical_replay": "Preserve original response and approval-eur-v1; no reevaluation or duplicate audit entry",
+    "same_key_changed_payload": "ConflictError; original record unchanged",
+    "same_transaction_new_key": "ConflictError",
+    "risk_and_cross_border": "Review required regardless of threshold",
+    "unknown_department": "No automatic eligibility"
+  },
+  "maintenance_episode": {
+    "kind": "DERIVED_SCHEMA_VIEW_EXERCISE",
+    "rule": "Evolve a derived policy configuration view; replay store and original v1/v2 semantics unchanged."
+  },
+  "canonical_hashes": {
+    "lab/case_study/policies/v1.json": "fbf5607aaab5816c74aeb0146d49589d35e8d10a0dfa388b3bdaac2367f10372",
+    "lab/case_study/policies/v2.json": "62f5a8d59370f14cebe340b5de968b0ca39f8cee451fc74aa10c492d55af73ca",
+    "lab/case_study/docs/01_intent_contract.json": "bd7aa555e0ed7246ea68176525e1a4fcd79ac6be47ef84f4e8b930728a58657b",
+    "lab/case_study/docs/02_late_intent_delta.json": "3eb546c8835a79b78385e158427c2374c82d83e017e36656fbe7f80c2f241f89"
+  },
+  "test_scope": "Real execution of the existing offline Python unit tests. No real model, production transaction, or participant study.",
+  "ledger_extension": {
+    "schema_version": "ndse-case-ledger-extension/2.0",
+    "prepared_date": "2026-11-08",
+    "provenance": {
+      "source_ledger_sha256": "e1e4e6fe7f6f6c2b5fd1c625b966f3a83944f81f6c935ee5f73ac299533a8164",
+      "source_archive_sha256": "648410d04b2c145c5a1678058744d901333d17ce5d1af80571ac4253969b9389",
+      "projection_rules": "PUBLIC_PROJECTION.json",
+      "operational_identities_and_obligations_preserved": true,
+      "canonical_policy_and_contract_bytes_preserved": true
+    },
+    "contract_interpretation": {
+      "kind": "CONSOLIDATED_TEACHING_CONTRACT",
+      "intent_record": "lab/case_study/docs/01_intent_contract.json",
+      "delta_record": "lab/case_study/docs/02_late_intent_delta.json",
+      "explanation": {
+        "en": "INT-001 names the first canonical intention. The distributed INT-001 contract consolidates requirements and already includes the v1/v2 comparison in AC-002. It must be read with INT-002; it is not an untouched snapshot from before that delta.",
+        "it": "INT-001 identifica la prima intenzione canonica. Il contratto INT-001 distribuito riunisce i requisiti e include già il confronto v1/v2 in AC-002. Va letto insieme a INT-002; non è un'istantanea rimasta intatta da prima di quella modifica."
+      }
+    },
+    "chronology": [
+      {
+        "order": 0,
+        "id": "initial_request",
+        "meaning": {
+          "en": "Make department rules configurable.",
+          "it": "Rendere configurabili le regole per reparto."
+        }
+      },
+      {
+        "order": 1,
+        "id": "legacy_behavior",
+        "ceiling_minor": 1000000,
+        "ignores": [
+          "department",
+          "risk",
+          "cross_border"
+        ],
+        "meaning": {
+          "en": "Observed flawed baseline behavior, to be characterized rather than accepted as the requirement.",
+          "it": "Comportamento ereditato difettoso da caratterizzare, non da assumere come requisito."
+        }
+      },
+      {
+        "order": 2,
+        "intent": "INT-001",
+        "policy": "approval-eur-v1",
+        "treasury_ceiling_minor": 500000
+      },
+      {
+        "order": 3,
+        "intent": "INT-002",
+        "policy": "approval-eur-v2",
+        "treasury_ceiling_minor": 300000,
+        "applies_to": "new_decisions",
+        "preserves": "stored_original_replay"
+      }
+    ],
+    "units": {
+      "currency": "EUR",
+      "minor_unit": "cent",
+      "minor_units_per_eur": 100,
+      "representation": "integer",
+      "threshold_comparison": "amount_minor <= department ceiling",
+      "examples": [
+        {
+          "eur": 5000,
+          "minor": 500000
+        },
+        {
+          "eur": 3000,
+          "minor": 300000
+        },
+        {
+          "eur": 4000,
+          "minor": 400000
+        }
+      ]
+    },
+    "department_names": {
+      "TREASURY": {
+        "en": "Treasury",
+        "it": "Tesoreria"
+      },
+      "OPS": {
+        "label": "OPS",
+        "expanded_name_documented": false,
+        "meaning": {
+          "en": "A department code; the teaching contracts do not define its expanded name.",
+          "it": "Una sigla di reparto; i contratti didattici non ne definiscono il nome esteso."
+        },
+        "v1_ceiling_minor": 1000000,
+        "v2_ceiling_minor": 1000000
+      }
+    },
+    "acceptance_criterion_AC_002": {
+      "criterion_id": "AC-002",
+      "transaction": {
+        "amount_minor": 400000,
+        "currency": "EUR",
+        "department": "TREASURY",
+        "risk": "LOW",
+        "cross_border": false
+      },
+      "new_decision_v1": "AUTO_APPROVAL_ELIGIBLE",
+      "new_decision_v2": "REVIEW_REQUIRED",
+      "meaning": {
+        "en": "The same valid input distinguishes the two policies for a new decision; historical replay remains a separate obligation.",
+        "it": "Lo stesso input valido distingue le due policy per una nuova decisione; la ripetizione storica resta un obbligo distinto."
+      }
+    },
+    "case_cards": {
+      "en": "CASE_CARD_EN.tex",
+      "it": "CASE_CARD_ITA.tex"
+    },
+    "state_registry": "STATE_REGISTRY.json",
+    "scenario_id_map": "SCENARIO_ID_MAP.json",
+    "canonical_execution_trace": "CANONICAL_CASE_TRACE.json",
+    "governance_execution_trace": "CH11_CASE_TIMELINE.json",
+    "execution_reproduction": {
+      "command": "python scripts/build_case_trace.py",
+      "cwd": "companion root",
+      "current_outputs": [
+        "audit/case_trace/CANONICAL_CASE_TRACE.json",
+        "audit/case_trace/CH11_CASE_TIMELINE.json"
+      ],
+      "reference_outputs": [
+        "series/CANONICAL_CASE_TRACE.json",
+        "series/CH11_CASE_TIMELINE.json"
+      ],
+      "meaning": "Reference outputs preserve the current edition check; the command writes fresh results under audit/case_trace."
+    },
+    "reader_status_key": "READER_STATUS_KEY.json"
+  },
+  "schema_version": "ndse-public-case-ledger/2.0",
+  "isolated_scenarios": {
+    "SCN-DATE": "Paper exercise: change to the effective date.",
+    "SCN-COORD": "Executable isolated controller token; no third policy.",
+    "SCN-EVIDENCE": "Executable isolated stale-evidence token; no third policy."
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "threat": "instruction smuggled through retrieved text",
+    "diagnosis": "text/injection scan",
+    "external_control": "deny operations outside task allowlist",
+    "residual": "allowed operations may still be misused; adaptive attacks not tested"
+  },
+  {
+    "threat": "untrusted package or skill",
+    "diagnosis": "identity/version/provenance/dependency review",
+    "external_control": "no install or network operation in demo",
+    "residual": "review does not prove artifact semantics"
+  },
+  {
+    "threat": "secret copied into context/log",
+    "diagnosis": "content scrubbing and minimization",
+    "external_control": "synthetic-only allowed data; no content logging",
+    "residual": "scrubber false negatives; external policy needed for real data"
+  }
+]

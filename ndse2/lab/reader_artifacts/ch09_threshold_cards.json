@@ -1,0 +1,35 @@
+{
+  "active_policy": "approval-eur-v2",
+  "cards": [
+    {
+      "card": {
+        "policy_version": "approval-eur-v1",
+        "department": "TREASURY",
+        "ceiling_minor": 500000,
+        "source_sha256": "fbf5607aaab5816c74aeb0146d49589d35e8d10a0dfa388b3bdaac2367f10372",
+        "source": "lab/case_study/policies/v1.json",
+        "owner": "illustrative policy steward",
+        "state": "SUPERSEDED"
+      },
+      "checks": {
+        "new_decision": "HOLD_STALE_FOR_NEW",
+        "historical_explanation": "HISTORICAL_SOURCE_MATCH_NOT_AUTHORIZATION"
+      }
+    },
+    {
+      "card": {
+        "policy_version": "approval-eur-v2",
+        "department": "TREASURY",
+        "ceiling_minor": 300000,
+        "source_sha256": "62f5a8d59370f14cebe340b5de968b0ca39f8cee451fc74aa10c492d55af73ca",
+        "source": "lab/case_study/policies/v2.json",
+        "owner": "illustrative policy steward",
+        "state": "CURRENT"
+      },
+      "checks": {
+        "new_decision": "CURRENT_SOURCE_MATCH_NOT_AUTHORIZATION",
+        "historical_explanation": "HISTORICAL_SOURCE_MATCH_NOT_AUTHORIZATION"
+      }
+    }
+  ]
+}
